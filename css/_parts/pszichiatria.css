@@ -1,0 +1,66 @@
+/* ============================================================
+   PSZICHIÁTRIA · body.p-pszichiatria · a legcsendesebb lap, nulla fotó
+   1 hero típó (is-quiet, cím bal alul, definíció jobb fent) · 2 két hasáb (lip) ·
+   3 mikor kell: jobbra zárt fej + sorok · 4 együtt: pull bal + szöveg jobb (wipe-d) ·
+   5 mit nem: középre zárt fej + kétoszlopos lista · hair · 6 CTA-sor (nincs sötét záró)
+   ============================================================ */
+.p-pszichiatria .hero{--lamp-x:86%;--lamp-y:16%}
+.p-pszichiatria .hero--type h1{font-size:clamp(2.8rem,7.6vw,6.8rem)}
+.p-pszichiatria .hero .lead{max-width:44ch}
+.p-pszichiatria .hero__def{position:absolute;top:clamp(1.5rem,5vh,3.5rem);right:var(--pad);max-width:30ch;text-align:right;font-size:.9rem;line-height:1.5}
+.p-pszichiatria .hero__def b{display:block;color:var(--w-ink);font-weight:400;font-family:var(--font-display);font-size:1.25rem;margin-bottom:.3rem}
+.p-pszichiatria .hero__foot .hero__cred{max-width:44ch}
+
+.p-pszichiatria #kulonbseg{--lamp-x:12%;--lamp-y:84%}
+.p-pszichiatria .hasab{row-gap:2rem}
+.p-pszichiatria .hasab__col{display:grid;gap:.9rem;align-content:start}
+.p-pszichiatria .hasab__col:first-child{grid-column:1 / 6}
+.p-pszichiatria .hasab__col:last-child{grid-column:7 / 12;border-left:1px solid var(--w-line);padding-left:2rem}
+.p-pszichiatria .hasab__lead{font-family:var(--font-display);font-weight:300;font-size:clamp(1.4rem,2.2vw,1.9rem);line-height:1.25;max-width:22ch}
+
+.p-pszichiatria #mikor{--lamp-x:90%;--lamp-y:30%}
+.p-pszichiatria .mikor__head{display:grid;grid-template-columns:repeat(12,1fr);column-gap:1.5rem;margin-bottom:clamp(2rem,5vh,3.2rem)}
+.p-pszichiatria .mikor__head > div{grid-column:6 / 13;text-align:right;display:grid;gap:.8rem;justify-items:end}
+.p-pszichiatria .mikor__head p{max-width:46ch}
+.p-pszichiatria #mikor .rows__d{max-width:56ch}
+
+.p-pszichiatria #egyutt{--lamp-x:18%;--lamp-y:18%}
+.p-pszichiatria .egyutt{display:grid;grid-template-columns:repeat(12,1fr);column-gap:1.5rem;align-items:start}
+.p-pszichiatria .egyutt .pull{grid-column:1 / 7;max-width:22ch;font-size:clamp(1.7rem,2.9vw,2.6rem)}
+.p-pszichiatria .egyutt__text{grid-column:7 / 13;display:grid;gap:1.1rem;padding-top:.4rem}
+.p-pszichiatria .egyutt__text .lead{max-width:34ch}
+
+.p-pszichiatria #nem{--lamp-x:82%;--lamp-y:88%}
+.p-pszichiatria .nem-head{text-align:center;display:grid;justify-items:center;gap:.7rem;margin-bottom:clamp(2rem,5vh,3.2rem)}
+.p-pszichiatria .nem-head p{max-width:52ch}
+.p-pszichiatria .nem{display:grid;grid-template-columns:1fr 1fr;column-gap:3.5rem;border-top:1px solid var(--gold)}
+.p-pszichiatria .nem__item{display:grid;grid-template-columns:3.2rem 1fr;column-gap:1rem;padding:clamp(1.1rem,2.4vh,1.6rem) 0;border-bottom:1px solid var(--w-line-soft);align-items:baseline}
+.p-pszichiatria .nem__n{font-family:var(--font-display);color:var(--w-gold-text);font-size:1.2rem;font-weight:300}
+.p-pszichiatria .nem__t{font-family:var(--font-display);font-size:clamp(1.15rem,1.7vw,1.5rem);font-weight:400;line-height:1.2}
+.p-pszichiatria .nem__d{grid-column:2;color:var(--w-muted);font-size:.95rem;margin-top:.3rem;max-width:44ch}
+
+.p-pszichiatria .hair{margin:0 var(--pad)}
+.p-pszichiatria #tovabb{--lamp-x:10%;--lamp-y:50%;padding-top:clamp(3rem,7vh,4.5rem)}
+.p-pszichiatria .tovabb{display:grid;grid-template-columns:repeat(12,1fr);column-gap:1.5rem;align-items:end}
+.p-pszichiatria .tovabb__head{grid-column:1 / 6;display:grid;gap:.7rem}
+.p-pszichiatria .tovabb__body{grid-column:7 / 13;display:grid;gap:1.2rem;justify-items:start}
+.p-pszichiatria .tovabb__body p{max-width:58ch}
+
+@media (min-width:901px) and (max-height:820px){
+  .p-pszichiatria .hero--type h1{font-size:clamp(2.6rem,6.6vw,5.6rem)}
+  .p-pszichiatria .hero .lead{font-size:1.2rem}
+  .p-pszichiatria .hero--type.is-quiet{padding-bottom:9vh}
+}
+@media (max-width:900px){
+  .p-pszichiatria .hero__def{position:static;text-align:left;max-width:100%;padding-top:.6rem;border-top:1px solid var(--w-line-soft)}
+  .p-pszichiatria .hasab__col:first-child,.p-pszichiatria .hasab__col:last-child{grid-column:1;border-left:0;padding-left:0}
+  .p-pszichiatria .hasab__col:last-child{border-top:1px solid var(--w-line);padding-top:1.6rem}
+  .p-pszichiatria .mikor__head{grid-template-columns:1fr}
+  .p-pszichiatria .mikor__head > div{grid-column:1;text-align:left;justify-items:start}
+  .p-pszichiatria .egyutt{grid-template-columns:1fr;row-gap:1.6rem}
+  .p-pszichiatria .egyutt .pull,.p-pszichiatria .egyutt__text{grid-column:1}
+  .p-pszichiatria .nem-head{text-align:left;justify-items:start}
+  .p-pszichiatria .nem{grid-template-columns:1fr}
+  .p-pszichiatria .tovabb{grid-template-columns:1fr;row-gap:1.4rem}
+  .p-pszichiatria .tovabb__head,.p-pszichiatria .tovabb__body{grid-column:1}
+}

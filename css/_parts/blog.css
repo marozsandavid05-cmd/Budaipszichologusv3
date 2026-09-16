@@ -1,0 +1,54 @@
+/* ============================================================
+   ÍRÁSOK · body.p-blog
+   1 hero típó: cím fent teljes szélességben, a hajtás alján a kiemelt írás SORA (kép bal 4, szöveg 5, meta jobb 3), arany felső él
+   2 minden írás (lip): bal sticky cím + számláló + statikus téma-chipek, jobb editorial sorok
+   ============================================================ */
+.p-blog .hero{--lamp-x:88%;--lamp-y:12%;align-content:space-between;gap:2vh;padding-top:clamp(1.5rem,3vh,2.5rem);padding-bottom:calc(7vh + 2.6rem)}
+.p-blog .blog-head{display:grid;grid-template-columns:repeat(12,1fr);column-gap:1.5rem;align-items:end}
+.p-blog .blog-head .eyebrow{grid-column:1 / 8;grid-row:1}
+.p-blog .blog-head h1{grid-column:1 / 10;grid-row:2;font-size:clamp(2.2rem,5.2vw,4.8rem);line-height:1;margin-top:.7rem}
+.p-blog .blog-head__meta{grid-column:10 / 13;grid-row:2;text-align:right;font-size:.86rem;color:var(--w-muted);max-width:none;line-height:1.5}
+.p-blog .feat{display:grid;grid-template-columns:repeat(12,1fr);column-gap:1.5rem;border-top:1px solid var(--gold);padding-top:1.4rem;align-self:end}
+.p-blog .feat__fig{grid-column:1 / 5;position:relative;height:clamp(220px,36vh,380px)}
+.p-blog .feat__fig img{width:100%;height:100%;object-fit:cover;object-position:50% 28%;border-radius:2px}
+.p-blog .feat__fig figcaption{position:absolute;left:0;bottom:-1.5rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--w-muted);white-space:nowrap}
+.p-blog .feat__body{grid-column:5 / 10;display:grid;gap:.7rem;align-content:start}
+.p-blog .feat__body h2{font-size:clamp(1.5rem,2.6vw,2.3rem);line-height:1.1;font-weight:400;max-width:20ch}
+.p-blog .feat__body h2 a{transition:color .2s}
+.p-blog .feat__body h2 a:hover{color:var(--w-gold-text)}
+.p-blog .feat__lead{color:var(--w-muted);max-width:50ch}
+.p-blog .feat__side{grid-column:10 / 13;display:grid;align-content:space-between;justify-items:end;text-align:right;gap:1rem}
+.p-blog .feat__meta{font-size:.86rem;color:var(--w-muted);line-height:1.55;max-width:none}
+.p-blog .feat__meta b{display:block;color:var(--w-ink);font-weight:500}
+.p-blog #irasok{--lamp-x:10%;--lamp-y:90%}
+.p-blog .blog-list{align-items:start}
+.p-blog .blog-list__side{grid-column:1 / 4;position:sticky;top:calc(var(--nav-h) + 1.5rem);display:grid;gap:1.3rem;align-content:start}
+.p-blog .blog-list__count{font-family:var(--font-display);font-size:clamp(2.6rem,5vw,4.4rem);font-weight:300;line-height:1}
+.p-blog .blog-list__count small{display:block;font-family:var(--font-body);font-size:.86rem;color:var(--w-muted);margin-top:.4rem;letter-spacing:.04em}
+.p-blog .chip{cursor:default}
+.p-blog .chip:hover{border-color:var(--w-line-soft)}
+.p-blog .blog-list__note{font-size:.86rem;color:var(--w-muted);max-width:30ch}
+.p-blog .blog-list__body{grid-column:5 / 13}
+.p-blog .rows__item{grid-template-columns:4rem 1.3fr 2fr auto;align-items:start;padding:clamp(1.4rem,3vh,2rem) 0}
+.p-blog .rows__item:hover{background:var(--w-surface-2)}
+.p-blog .rows__t{font-size:clamp(1.3rem,2vw,1.8rem);transition:color .2s}
+.p-blog .rows__item:hover .rows__t{color:var(--w-gold-text)}
+.p-blog .rows__end{display:grid;justify-items:end;gap:.9rem;font-size:.84rem;color:var(--w-muted);white-space:nowrap}
+.p-blog .blog-list__foot{margin-top:2.2rem;display:flex;gap:1rem 1.6rem;align-items:baseline;flex-wrap:wrap;color:var(--w-muted);max-width:none}
+@media (max-width:900px){
+  .p-blog .hero{padding-top:1rem;padding-bottom:calc(7vh + 2rem);gap:1.6rem}
+  .p-blog .blog-head{grid-template-columns:1fr}
+  .p-blog .blog-head .eyebrow,.p-blog .blog-head h1,.p-blog .blog-head__meta{grid-column:1;grid-row:auto;text-align:left}
+  .p-blog .blog-head h1{font-size:clamp(2rem,9vw,2.8rem)}
+  .p-blog .blog-head__meta{margin-top:.6rem}
+  .p-blog .feat{grid-template-columns:1fr;row-gap:.9rem}
+  .p-blog .feat__fig{grid-column:1;height:auto;margin:0 calc(-1 * var(--pad))}
+  .p-blog .feat__fig img{height:32svh;border-radius:0;object-position:50% 25%}
+  .p-blog .feat__fig figcaption{position:static;padding:.5rem var(--pad) 0}
+  .p-blog .feat__body,.p-blog .feat__side{grid-column:1;justify-items:start;text-align:left}
+  .p-blog .blog-list__side{position:static;grid-column:1}
+  .p-blog .blog-list__body{grid-column:1;margin-top:1.4rem}
+  .p-blog .rows__item{grid-template-columns:2.6rem 1fr;gap:.4rem 1rem}
+  .p-blog .rows__end{grid-column:2;justify-items:start}
+  .p-blog .rows__end .arrow{display:none}
+}

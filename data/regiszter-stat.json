@@ -1,0 +1,119 @@
+{
+  "n_klinikus": 37,
+  "letszam_kiirt": 44,
+  "temak": [
+    {
+      "k": "szorongas",
+      "c": "Szorongás, pánik",
+      "n": 25
+    },
+    {
+      "k": "hangulat",
+      "c": "Hangulat, depresszió",
+      "n": 13
+    },
+    {
+      "k": "kieges",
+      "c": "Kiégés, stressz",
+      "n": 25
+    },
+    {
+      "k": "gyasz",
+      "c": "Gyász, veszteség, trauma",
+      "n": 16
+    },
+    {
+      "k": "parkapcsolat",
+      "c": "Párkapcsolat",
+      "n": 23
+    },
+    {
+      "k": "csalad",
+      "c": "Család, gyereknevelés",
+      "n": 21
+    },
+    {
+      "k": "fuggoseg",
+      "c": "Függőség",
+      "n": 4
+    },
+    {
+      "k": "test",
+      "c": "Evés, test, alvás",
+      "n": 12
+    },
+    {
+      "k": "onismeret",
+      "c": "Önismeret, önértékelés",
+      "n": 27
+    },
+    {
+      "k": "eletvezetes",
+      "c": "Életvezetés, döntés",
+      "n": 27
+    },
+    {
+      "k": "karrier",
+      "c": "Karrier, vezetés",
+      "n": 18
+    },
+    {
+      "k": "krizis",
+      "c": "Krízis, változás",
+      "n": 21
+    },
+    {
+      "k": "sport",
+      "c": "Sport, teljesítmény",
+      "n": 2
+    }
+  ],
+  "kinek": [
+    {
+      "k": "magamnak",
+      "n": 37
+    },
+    {
+      "k": "gyereknek",
+      "n": 10
+    },
+    {
+      "k": "parkent",
+      "n": 9
+    },
+    {
+      "k": "csaladkent",
+      "n": 9
+    },
+    {
+      "k": "cegkent",
+      "n": 5
+    },
+    {
+      "k": "sportolokent",
+      "n": 2
+    }
+  ],
+  "szint": [
+    {
+      "s": "szakpszichoterapeuta",
+      "n": 2
+    },
+    {
+      "s": "klinikai szakpszichológus",
+      "n": 16
+    },
+    {
+      "s": "szakpszichológus-jelölt",
+      "n": 6
+    },
+    {
+      "s": "pszichológus",
+      "n": 11
+    },
+    {
+      "s": "coach",
+      "n": 2
+    }
+  ]
+}

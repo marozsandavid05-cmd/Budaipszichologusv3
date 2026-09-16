@@ -1,0 +1,49 @@
+/* ============================================================
+   CIKK · body.p-cikk (blog/<slug>.html, mindkét írás ezt használja)
+   1 hero statement: cím + lead, kép nincs, a lábban szerző · dátum · olvasási idő
+   2 szövegtest (lip): a próza 2/9, JOBB sticky tartalomjegyzék (.steps__index, a core.js jelöli az aktívat)
+   3 hair-varrat, „Másik írás" sor + Hogyan kezdjük
+   ============================================================ */
+.p-cikk .hero{--lamp-x:12%;--lamp-y:16%;padding-bottom:calc(7vh + 1rem)}
+.p-cikk .hero--statement h1{max-width:22ch;font-size:clamp(2rem,4.4vw,4rem)}
+.p-cikk .hero .lead{max-width:44ch;color:var(--w-muted)}
+.p-cikk .hero__foot{border-top:1px solid var(--w-line);padding-top:1.2rem;margin-top:1vh}
+.p-cikk .hero__foot .hero__cred{max-width:none}
+.p-cikk #cikk{--lamp-x:90%;--lamp-y:20%}
+.p-cikk .cikk{align-items:start}
+.p-cikk .cikk__body{grid-column:2 / 9}
+.p-cikk .cikk__side{grid-column:10 / 13;position:sticky;top:calc(var(--nav-h) + 1.5rem);display:grid;gap:1.4rem;align-content:start}
+.p-cikk .cikk__side .steps__index{position:static}
+.p-cikk .cikk__side .btn{justify-self:start}
+.p-cikk .cikk__author{font-size:.86rem;color:var(--w-muted);line-height:1.55;max-width:none}
+.p-cikk .cikk__author b{display:block;color:var(--w-ink);font-weight:500}
+.p-cikk .cikk__body p{font-size:var(--step-0);line-height:1.72;max-width:62ch;margin-bottom:1.1rem}
+.p-cikk .cikk__body p:last-child{margin-bottom:0}
+.p-cikk .cikk__note{font-family:var(--font-display);font-style:italic;font-weight:300;font-size:1.15rem;color:var(--w-muted);border-left:1px solid var(--gold);padding-left:1.1rem;max-width:54ch;margin-bottom:2rem}
+.p-cikk .cikk__body h2{font-size:clamp(1.5rem,2.4vw,2.1rem);font-weight:400;line-height:1.15;margin:2.4rem 0 .9rem;scroll-margin-top:calc(var(--nav-h) + 2rem);max-width:28ch}
+.p-cikk .cikk__body ul{display:grid;gap:.6rem;margin:0 0 1.3rem;max-width:62ch}
+.p-cikk .cikk__body li{position:relative;padding-left:1.6rem;line-height:1.6;max-width:none}
+.p-cikk .cikk__body li::before{content:"";position:absolute;left:0;top:.85em;width:14px;height:1px;background:var(--gold)}
+.p-cikk .cikk__body li b{font-weight:500}
+.p-cikk .cikk__crisis{border:1px solid var(--w-line);border-radius:2px;padding:1.2rem 1.4rem;margin-top:2.6rem;display:grid;gap:.4rem;max-width:62ch}
+.p-cikk .cikk__crisis b{font-weight:500}
+.p-cikk .cikk__crisis p{margin:0;font-size:.95rem;color:var(--w-muted)}
+.p-cikk .cikk__next{margin-top:2rem;display:flex;gap:1rem 1.6rem;flex-wrap:wrap;align-items:center}
+.p-cikk #tovabb{--lamp-x:20%;--lamp-y:80%;padding-top:clamp(2.5rem,6vh,4rem)}
+.p-cikk #tovabb .rows__item{grid-template-columns:4rem 1.3fr 2fr auto;align-items:start}
+.p-cikk #tovabb .rows__t{transition:color .2s}
+.p-cikk #tovabb .rows__item:hover .rows__t{color:var(--w-gold-text)}
+.p-cikk #tovabb .rows__end{display:grid;justify-items:end;gap:.9rem;font-size:.84rem;color:var(--w-muted);white-space:nowrap}
+@media (max-width:900px){
+  .p-cikk .hero{padding-bottom:calc(7vh + 1.6rem)}
+  .p-cikk .hero__foot{flex-direction:column;align-items:flex-start;gap:.9rem}
+  .p-cikk .cikk__body,.p-cikk .cikk__side{grid-column:1}
+  .p-cikk .cikk__side{position:static;order:-1;margin-bottom:1.6rem}
+  .p-cikk .cikk__side .steps__index{display:flex;overflow-x:auto;gap:.4rem;padding-bottom:.4rem}
+  .p-cikk .cikk__side .steps__index a{grid-template-columns:auto auto;gap:.5rem}
+  .p-cikk .cikk__side .steps__index a span:last-child{display:inline}
+  .p-cikk .cikk__author{display:none}
+  .p-cikk #tovabb .rows__item{grid-template-columns:2.6rem 1fr;gap:.4rem 1rem}
+  .p-cikk #tovabb .rows__end{grid-column:2;justify-items:start}
+  .p-cikk #tovabb .rows__end .arrow{display:none}
+}

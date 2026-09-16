@@ -1,0 +1,73 @@
+<!-- FEJLÉC · minden oldalra szó szerint ugyanez (gyökér-oldalon a linkek relatívak; szakemberek/ és blog/ almappában minden útvonal elé ../ kerül).
+     Az aktuális menüpontra aria-current="page". A panel csak a "Miben segítünk" alatt nyílik, kattintásra. -->
+<header class="nav" id="nav">
+  <a class="nav__logo" href="index.html" aria-label="Budai Pszichológus Központ, főoldal"><img src="img/logo.png" alt="Budai Pszichológus Központ" width="168" height="43"></a>
+  <nav class="nav__links" aria-label="Főmenü">
+    <div class="nav__item">
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="panel-segitunk">Miben segítünk <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></button>
+      <div class="panel" id="panel-segitunk">
+        <div class="panel__col">
+          <p class="eyebrow">Amivel küzd</p>
+          <a href="felnott-terapia.html#szorongas">Szorongás, pánik</a>
+          <a href="felnott-terapia.html#hangulat">Hangulat, depresszió</a>
+          <a href="felnott-terapia.html#kieges">Kiégés, stressz</a>
+          <a href="felnott-terapia.html#gyasz">Gyász, veszteség</a>
+          <a href="par-es-csaladterapia.html">Párkapcsolati válság</a>
+          <a href="gyermek-es-serdulo.html">Kamasz otthon</a>
+          <a href="felnott-terapia.html#fuggoseg">Függőség</a>
+          <a href="felnott-terapia.html#onismeret">Önismeret, életvezetés</a>
+        </div>
+        <div class="panel__col">
+          <p class="eyebrow">Amit kínálunk</p>
+          <a href="felnott-terapia.html">Felnőtt egyéni terápia</a>
+          <a href="par-es-csaladterapia.html">Pár- és családterápia</a>
+          <a href="gyermek-es-serdulo.html">Gyermek és serdülő</a>
+          <a href="csoportok.html">Csoportterápiák</a>
+          <a href="coaching.html">Coaching</a>
+          <a href="pszichiatria.html">Pszichiátriai szakrendelés</a>
+          <a href="sportpszichologia.html">Sportpszichológia</a>
+          <a href="cegeknek.html">Cégeknek</a>
+        </div>
+        <div class="panel__foot"><span>Nem tudja, melyik kell? Három kérdés, és megmondjuk.</span><a href="szakembereink.html#valaszto">Segítünk választani</a></div>
+      </div>
+    </div>
+    <a href="szakembereink.html">Szakembereink</a>
+    <a href="hogyan-kezdjuk.html">Hogyan kezdjük</a>
+    <a href="a-kozpont.html">A Központ</a>
+    <a class="btn btn--gold" href="kapcsolat.html">Időpontkérés</a>
+  </nav>
+  <button class="nav__burger" type="button" aria-expanded="false" aria-controls="sheet" aria-label="Menü megnyitása">Menü</button>
+</header>
+<div class="sheet" id="sheet" aria-hidden="true">
+  <nav class="sheet__links" aria-label="Mobil menü">
+    <details class="sheet__acc">
+      <summary>Miben segítünk</summary>
+      <div>
+        <p class="eyebrow">Amivel küzd</p>
+        <a href="felnott-terapia.html#szorongas">Szorongás, pánik</a>
+        <a href="felnott-terapia.html#hangulat">Hangulat, depresszió</a>
+        <a href="felnott-terapia.html#kieges">Kiégés, stressz</a>
+        <a href="felnott-terapia.html#gyasz">Gyász, veszteség</a>
+        <a href="par-es-csaladterapia.html">Párkapcsolati válság</a>
+        <a href="gyermek-es-serdulo.html">Kamasz otthon</a>
+        <p class="eyebrow">Amit kínálunk</p>
+        <a href="felnott-terapia.html">Felnőtt egyéni terápia</a>
+        <a href="par-es-csaladterapia.html">Pár- és családterápia</a>
+        <a href="gyermek-es-serdulo.html">Gyermek és serdülő</a>
+        <a href="csoportok.html">Csoportterápiák</a>
+        <a href="coaching.html">Coaching</a>
+        <a href="pszichiatria.html">Pszichiátriai szakrendelés</a>
+        <a href="sportpszichologia.html">Sportpszichológia</a>
+        <a href="cegeknek.html">Cégeknek</a>
+      </div>
+    </details>
+    <a href="szakembereink.html">Szakembereink</a>
+    <a href="hogyan-kezdjuk.html">Hogyan kezdjük</a>
+    <a href="a-kozpont.html">A Központ</a>
+  </nav>
+  <div class="sheet__foot">
+    <a class="btn btn--gold" href="kapcsolat.html">Időpontkérés</a>
+    <span>+36 30 961 1364 · ügyfélszolgálat hétköznap 9-15</span>
+    <span>Ha most van baj: Lelki Elsősegély 116-123 (ingyenes, éjjel-nappal), sürgősség 112.</span>
+  </div>
+</div>

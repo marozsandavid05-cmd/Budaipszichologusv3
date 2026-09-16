@@ -1,0 +1,61 @@
+/* ============================================================
+   CSOPORTOK · body.p-csoportok
+   1 hero strip (cím bal fent, bevezető jobb, marquee alul) · 2 miért csoport quote (peel, közép) ·
+   3 négy csoportforma rows (lip--r) · 4 induló: telefonszám nagyban (wipe-d, jobbra) ·
+   hair · 5 keretek két hasáb · 6 closer--text (sötét lip)
+   ============================================================ */
+.p-csoportok .hero{--lamp-x:10%;--lamp-y:14%}
+.p-csoportok #miert{--lamp-x:50%;--lamp-y:8%;padding-top:calc(var(--sec) + 5vh)}
+.p-csoportok #tipusok{--lamp-x:88%;--lamp-y:86%;padding-bottom:calc(var(--sec) + 4vh)}
+.p-csoportok #indulo{--lamp-x:14%;--lamp-y:22%;padding-top:calc(var(--sec) + 6vh)}
+.p-csoportok #keretek{--lamp-x:82%;--lamp-y:14%}
+.p-csoportok #zaro{--lamp-x:72%;--lamp-y:30%}
+
+/* hero: a marquee max-content sora ne nyújtsa a rács oszlopát (különben a fejléc jobb fele a képernyőn kívülre kerül) */
+.p-csoportok .hero--strip{grid-template-columns:minmax(0,1fr)}
+.p-csoportok .marq{min-width:0;max-width:100%}
+/* a képsor alja 6vh-t szabadon hagy a peel-nek */
+.p-csoportok .hero--strip .hero__head{padding-bottom:2.4vh}
+.p-csoportok .hero__title{display:grid;gap:.8rem}
+.p-csoportok .hero__lead{display:grid;gap:1rem;max-width:44ch;justify-items:start;padding-bottom:.4rem}
+.p-csoportok .hero__lead p{color:var(--w-muted)}
+.p-csoportok .marq__row{padding-bottom:calc(3vh + 6vh)}
+
+/* 2 · idézet */
+.p-csoportok .quote blockquote{grid-column:3 / 11;text-align:center}
+.p-csoportok .quote blockquote footer{text-align:center}
+
+/* 3 · sorok, a 4. cella: kinek */
+.p-csoportok .rows__kinek{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--w-muted);white-space:nowrap;justify-self:end}
+
+/* 4 · induló: telefonszám a domináns elem */
+.p-csoportok .indulo{align-items:start}
+.p-csoportok .indulo__side{grid-column:1 / 6;display:grid;gap:1rem;align-content:start}
+.p-csoportok .indulo__body{grid-column:7 / 13;display:grid;gap:clamp(1.4rem,3vh,2.2rem)}
+.p-csoportok .tel{font-family:var(--font-display);font-weight:300;font-size:clamp(2.2rem,4.6vw,4.4rem);line-height:1;letter-spacing:-.02em;color:var(--w-ink);display:inline-block;transition:color .25s}
+.p-csoportok .tel:hover{color:var(--w-gold-text)}
+.p-csoportok .indulo__body .small{margin-top:.7rem}
+.p-csoportok .menet{border-top:1px solid var(--gold)}
+.p-csoportok .menet li{display:grid;grid-template-columns:3rem 1fr;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--w-line-soft);align-items:baseline;max-width:none}
+.p-csoportok .menet .num{font-family:var(--font-display);color:var(--w-gold-text);font-size:1.2rem;font-weight:300}
+.p-csoportok .menet p{color:var(--w-muted);max-width:52ch}
+
+/* 5 · keretek két hasábban */
+.p-csoportok .kf{display:grid;grid-template-columns:1fr 1fr;gap:0 3rem;border-top:1px solid var(--gold)}
+.p-csoportok .kf > div{padding:1.1rem 0;border-bottom:1px solid var(--w-line-soft);display:grid;gap:.4rem;align-content:start}
+.p-csoportok .kf dt{font-family:var(--font-display);font-size:clamp(1.15rem,1.6vw,1.4rem)}
+.p-csoportok .kf dd{color:var(--w-muted);font-size:.98rem;max-width:52ch}
+.p-csoportok .kf dd a{color:var(--w-gold-text);border-bottom:1px solid var(--w-line)}
+
+@media (max-width:900px){
+  .p-csoportok .hero__lead{max-width:100%}
+  .p-csoportok .marq__row{padding-bottom:calc(2vh + 5vh)}
+  .p-csoportok .quote blockquote{grid-column:1;text-align:left}
+  .p-csoportok .quote blockquote footer{text-align:left}
+  .p-csoportok .rows__kinek{grid-column:2;justify-self:start}
+  .p-csoportok .indulo__side,.p-csoportok .indulo__body{grid-column:1}
+  .p-csoportok .tel{font-size:clamp(1.8rem,9vw,2.6rem)}
+  .p-csoportok .kf{grid-template-columns:1fr}
+  .p-csoportok #miert{padding-top:calc(var(--sec) + 3vh)}
+  .p-csoportok #indulo{padding-top:calc(var(--sec) + 4vh)}
+}

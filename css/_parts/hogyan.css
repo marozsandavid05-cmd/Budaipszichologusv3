@@ -1,0 +1,100 @@
+/* ============================================================
+   HOGYAN KEZDJÜK · body.p-hogyan
+   1 hero típó a 01-gyel (a bal oszlop óriás száma a lépés-indexben folytatódik) ·
+   2 lépések 01-04 sticky index + két fotó (lip--l, surface) · 3 mit vigyen, jobbra zárt band (wipe-d) ·
+   4 megérkezés főkönyv-sorok (peel, surface) · 5 fizetés és lemondás két egyenlő hasáb (lip) ·
+   6 hair + öt kérdés balra, magyarázat jobbra (surface) · 7 sötét záró névjegy (lip)
+   Csak tokenek, új hex nincs.
+   ============================================================ */
+
+/* 1 · hero */
+.p-hogyan .hero{--lamp-x:12%;--lamp-y:22%;grid-template-columns:repeat(12,1fr);grid-template-rows:1fr auto;column-gap:1.5rem;align-content:stretch;padding-top:2vh;padding-bottom:calc(7vh + 2.4rem)}
+.p-hogyan .hero__top{grid-column:1 / 13;grid-row:1;align-self:center;display:grid;grid-template-columns:repeat(12,1fr);column-gap:1.5rem}
+.p-hogyan .hero__num{grid-column:1 / 3;font-family:var(--font-display);font-size:clamp(4rem,9vw,8rem);line-height:.9;color:var(--w-gold-text);font-weight:300;align-self:start;margin-top:-.06em}
+.p-hogyan .hero__body{grid-column:3 / 12;display:grid;gap:1.3rem;align-content:start}
+.p-hogyan .hero h1{font-size:clamp(2.6rem,6.6vw,6rem)}
+.p-hogyan .hero .lead{max-width:46ch}
+.p-hogyan .hero__foot{grid-column:1 / 13;grid-row:2;border-top:1px solid var(--w-line);padding-top:1.4rem}
+.p-hogyan .hero__foot .hero__cred{max-width:56ch}
+
+/* 2 · lépések */
+.p-hogyan #lepesek{--lamp-x:88%;--lamp-y:14%}
+.p-hogyan .steps__index a{padding:.85rem 0}
+.p-hogyan .step{grid-template-columns:repeat(8,1fr);column-gap:1.5rem}
+.p-hogyan .step > *{grid-column:1 / 8}
+.p-hogyan .step p{max-width:58ch}
+.p-hogyan .step p a:not(.btn){color:var(--w-gold-text)}
+.p-hogyan .step__fig{grid-column:1 / 9;margin-top:.8rem;margin-right:calc(-1 * var(--pad) + 1.5rem)}
+.p-hogyan .step__fig img{aspect-ratio:3 / 2;object-fit:cover;object-position:50% 38%}
+.p-hogyan #elso-alkalom .step__fig{grid-column:3 / 9;margin-right:0}
+.p-hogyan .step .ctas{margin-top:.6rem}
+
+/* 3 · mit vigyen */
+.p-hogyan #vigyen{--lamp-x:20%;--lamp-y:80%;padding-top:calc(7vh + clamp(3rem,9vh,6rem));padding-bottom:calc(clamp(3rem,9vh,6rem) + 7vh)}
+.p-hogyan .band__in{display:grid;justify-items:end;gap:1.1rem}
+.p-hogyan .band__in .eyebrow{display:block;text-align:right}
+
+/* 4 · megérkezés */
+.p-hogyan #megkozelites{--lamp-x:84%;--lamp-y:80%;padding-top:calc(var(--sec) + 6vh)}
+.p-hogyan #megkozelites .ledger__year{font-size:clamp(1.05rem,1.5vw,1.35rem);font-style:italic;color:var(--w-gold-text);line-height:1.2}
+.p-hogyan #megkozelites .ledger__fact{font-size:clamp(1.15rem,1.7vw,1.5rem);font-weight:400}
+.p-hogyan #megkozelites .ledger__you{max-width:46ch}
+.p-hogyan #megkozelites .ledger__you a{color:var(--w-ink);border-bottom:1px solid var(--w-line)}
+
+/* 5 · fizetés és lemondás */
+.p-hogyan #fizetes{--lamp-x:8%;--lamp-y:30%}
+.p-hogyan .duo__eyebrow{margin-bottom:clamp(1.6rem,4vh,2.6rem)}
+.p-hogyan .duo{display:grid;grid-template-columns:repeat(12,1fr);column-gap:1.5rem;row-gap:2.4rem;align-items:start}
+.p-hogyan .duo__a{grid-column:1 / 6}
+.p-hogyan .duo__b{grid-column:7 / 12}
+.p-hogyan .duo > div{display:grid;gap:1rem;align-content:start}
+.p-hogyan .duo h2{font-size:var(--step-2);font-weight:400}
+.p-hogyan .duo p{max-width:52ch}
+.p-hogyan .duo p a:not(.btn){color:var(--w-gold-text)}
+
+/* 6 · öt kérdés: lista balra, oldalsó magyarázat jobbra tapad */
+.p-hogyan #gyik{--lamp-x:90%;--lamp-y:22%}
+.p-hogyan #gyik .grid12{align-items:start}
+.p-hogyan .gyik-list{grid-column:1 / 8}
+.p-hogyan .gyik-side{grid-column:9 / 13;display:grid;gap:1rem;align-content:start;justify-items:start;position:sticky;top:calc(var(--nav-h) + 1.5rem)}
+.p-hogyan .gyik-side h2{font-size:var(--step-2)}
+.p-hogyan .gyik-side p{max-width:32ch}
+
+/* 7 · záró névjegy */
+.p-hogyan .closer--text{--lamp-x:82%;--lamp-y:88%}
+.p-hogyan .closer--text .closer__body{max-width:none;display:grid;grid-template-columns:repeat(12,1fr);column-gap:1.5rem;row-gap:2.4rem;align-items:end}
+.p-hogyan .closer__lead{grid-column:1 / 7;display:grid;gap:1.1rem}
+.p-hogyan .closer__lead p:not(.eyebrow){max-width:44ch;color:var(--w-muted)}
+.p-hogyan .closer__card{grid-column:8 / 13;display:grid;gap:1.2rem;border-top:1px solid var(--gold);padding-top:1.4rem}
+.p-hogyan .closer__tel{font-family:var(--font-display);font-weight:300;font-size:clamp(2rem,3.4vw,3rem);line-height:1;letter-spacing:-.01em}
+.p-hogyan .closer__tel a{color:var(--w-ink)}
+.p-hogyan .closer__card .coord{border-top:0;border-bottom:1px solid var(--w-line-soft);padding:0 0 1.2rem;margin-top:0}
+.p-hogyan .closer__card .coord a{color:var(--w-gold-text)}
+
+@media (max-width:900px){
+  .p-hogyan .hero{grid-template-columns:1fr;grid-template-rows:1fr auto;padding-top:1rem;padding-bottom:calc(7vh + 1.8rem)}
+  .p-hogyan .hero__top{grid-column:1;grid-template-columns:1fr}
+  .p-hogyan .hero__num{display:none}
+  .p-hogyan .hero__body{grid-column:1}
+  .p-hogyan .hero__foot{grid-column:1}
+  .p-hogyan .steps__index{flex-wrap:wrap;overflow:visible}
+  .p-hogyan .steps__index a{display:flex;gap:.5rem;align-items:center}
+  .p-hogyan .steps__index a span:last-child{display:inline}
+  .p-hogyan .step{grid-template-columns:1fr}
+  .p-hogyan .step > *,.p-hogyan .step__fig,.p-hogyan #elso-alkalom .step__fig{grid-column:1;margin-right:0}
+  .p-hogyan #vigyen{padding-top:calc(7vh + 2.6rem);padding-bottom:calc(2.6rem + 7vh)}
+  .p-hogyan .band__in{justify-items:start}
+  .p-hogyan .band__in .eyebrow{text-align:left}
+  .p-hogyan #megkozelites{padding-top:calc(var(--sec) + 4vh)}
+  .p-hogyan #megkozelites .ledger__year{font-style:normal;font-size:.95rem}
+  .p-hogyan .duo__a,.p-hogyan .duo__b{grid-column:1}
+  .p-hogyan .gyik-list,.p-hogyan .gyik-side{grid-column:1;position:static}
+  .p-hogyan .gyik-side{order:-1;margin-bottom:1.6rem}
+  .p-hogyan .closer__lead,.p-hogyan .closer__card{grid-column:1}
+  .p-hogyan .closer__tel{font-size:clamp(1.6rem,7vw,2.2rem)}
+}
+@media (min-width:901px) and (max-height:820px){
+  .p-hogyan .hero h1{font-size:clamp(2.4rem,5.8vw,5rem)}
+  .p-hogyan .hero .lead{font-size:1.2rem}
+  .p-hogyan .hero__num{font-size:clamp(3.6rem,8vw,6.6rem)}
+}

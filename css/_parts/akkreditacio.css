@@ -1,0 +1,69 @@
+/* ============================================================
+   AKKREDITÁCIÓ ÉS KÉPZÉS · body.p-akkreditacio
+   1 hero főkönyv (4 sor, egy képernyő, aline 7vh-nál) · 2 mit jelent Önnek (wipe-d, bal sticky + sorok) ·
+   3 klinika / képzőhely két blokk lépcsőzve (peel) · 4 szakembereknek két photo-text (lip) ·
+   5 szupervízió + külső szupervízorok (hair) · 6 band jobbra zárt (lip lip--r)
+   ============================================================ */
+
+/* 1 · hero: a claim h1, a sorok szűkebbek, hogy 1366×768-on is egy képernyő legyen */
+.p-akkreditacio .hero{--lamp-x:90%;--lamp-y:12%}
+.p-akkreditacio .hero__head{display:grid;gap:1.2vh;align-content:start}
+.p-akkreditacio .hero--ledger .hero__claim{margin-bottom:1.4vh}
+.p-akkreditacio .hero--ledger .ledger__row{padding:clamp(.6rem,1.5vh,1.1rem) 0}
+.p-akkreditacio .hero--ledger .ledger__year:not(.num){font-style:italic}
+.p-akkreditacio .hero--ledger .hero__foot{padding-bottom:calc(7vh + 24px + .8rem)}
+.p-akkreditacio .hero--ledger .aline{bottom:7vh}
+
+/* 2 · mit jelent Önnek: bal sticky oszlop, jobbra a négy sor */
+.p-akkreditacio #onnek{--lamp-x:10%;--lamp-y:80%;padding-top:calc(var(--sec) + 6vh)}
+.p-akkreditacio .onn{align-items:start}
+.p-akkreditacio .onn__side{grid-column:1 / 5;display:grid;gap:.8rem;align-content:start;position:sticky;top:calc(var(--nav-h) + 1.5rem)}
+.p-akkreditacio .onn__side h2{max-width:16ch}
+.p-akkreditacio .onn__rows{grid-column:6 / 13}
+.p-akkreditacio .onn__rows .rows__item{grid-template-columns:4rem 1.1fr 2fr}
+
+/* 3 · klinika / képzőhely: két blokk, a második lejjebb kezd, arany bal-éllel */
+.p-akkreditacio #klinika-kepzohely{--lamp-x:82%;--lamp-y:20%;padding-top:calc(var(--sec) + 5vh)}
+.p-akkreditacio .kk{align-items:start;row-gap:2rem}
+.p-akkreditacio .kk__block{display:grid;gap:1rem;align-content:start}
+.p-akkreditacio .kk__block h2{max-width:14ch}
+.p-akkreditacio .kk__block .ctas{margin-top:.4rem}
+.p-akkreditacio .kk__block--klinika{grid-column:1 / 6}
+.p-akkreditacio .kk__block--kepzo{grid-column:7 / 13;margin-top:clamp(4rem,16vh,10rem);border-left:1px solid var(--gold);padding-left:clamp(1.2rem,3vw,2.6rem)}
+
+/* 4 · szakembereknek: a photo-text a szekción belül szűkebb függőleges ritmussal */
+.p-akkreditacio #szakembereknek{--lamp-x:14%;--lamp-y:16%;scroll-margin-top:var(--nav-h)}
+.p-akkreditacio #szakembereknek .sec__head h2{grid-column:1 / 9}
+.p-akkreditacio .szk__pt{padding:clamp(2rem,5vh,3.5rem) 0}
+.p-akkreditacio .szk__pt figure img{object-position:80% 22%}
+.p-akkreditacio .szk__pt.is-flip figure img{object-position:66% 28%}
+.p-akkreditacio .szk__pt h3{font-size:clamp(1.4rem,2.2vw,2rem);font-weight:300;max-width:22ch}
+.p-akkreditacio .szk__pt .photo-text__body{gap:.9rem}
+
+/* 5 · szupervízió: éles arany él fent, cím bal, sorok jobb; alul hely a lipnek */
+.p-akkreditacio #szupervizio{--lamp-x:88%;--lamp-y:84%;padding-top:clamp(3.5rem,8vh,5.5rem);padding-bottom:calc(var(--sec) + 4vh)}
+.p-akkreditacio #szupervizio .hair{position:absolute;top:0;left:0;right:0;z-index:2}
+.p-akkreditacio .szv{align-items:start}
+.p-akkreditacio .szv__side{grid-column:1 / 6;display:grid;gap:.8rem;align-content:start}
+.p-akkreditacio .szv__rows{grid-column:7 / 13;display:grid;gap:1rem}
+.p-akkreditacio .szv__rows .rows--2 .rows__item{grid-template-columns:4rem 1fr}
+.p-akkreditacio .szv__note{max-width:44ch}
+
+/* 6 · band: jobbra zárt mondat és link, a lip miatt több felső hely */
+.p-akkreditacio .band{--lamp-x:20%;--lamp-y:30%;padding-top:calc(clamp(3rem,9vh,6rem) + 5vh)}
+.p-akkreditacio .band__in{display:grid;gap:1.2rem;justify-items:end}
+
+@media (max-width:900px){
+  .p-akkreditacio .hero--ledger .hero__foot{padding-bottom:calc(7vh + 24px + .6rem)}
+  .p-akkreditacio #onnek{padding-top:calc(var(--sec) + 4vh)}
+  .p-akkreditacio .onn__side,.p-akkreditacio .onn__rows{grid-column:1;position:static}
+  .p-akkreditacio .onn__side h2{max-width:none}
+  .p-akkreditacio .onn__rows .rows__item{grid-template-columns:2.6rem 1fr}
+  .p-akkreditacio .kk__block--klinika,.p-akkreditacio .kk__block--kepzo{grid-column:1;margin-top:0;border-left:0;padding-left:0}
+  .p-akkreditacio .kk__block--kepzo{margin-top:1.5rem}
+  .p-akkreditacio #szakembereknek .sec__head h2{grid-column:1}
+  .p-akkreditacio .szv__side,.p-akkreditacio .szv__rows{grid-column:1}
+  .p-akkreditacio .szv__rows{margin-top:1.4rem}
+  .p-akkreditacio .szv__rows .rows--2 .rows__item{grid-template-columns:2.6rem 1fr}
+  .p-akkreditacio .band__in{justify-items:start}
+}

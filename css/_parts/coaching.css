@@ -1,0 +1,67 @@
+/* ============================================================
+   COACHING · body.p-coaching
+   1 hero spread (óriás 03, álló fotó jobbra kilóg, főkönyv-sáv) · 2 három irány rows-linkek (lip) ·
+   3 coaching vagy terápia, két tükrözött pull (peel) · 4 hogyan zajlik photo-text flip (wipe-d) ·
+   5 ár tükrözve, a szám jobbra (lip--l) · hair · 6 osztott band
+   ============================================================ */
+.p-coaching .hero{--lamp-x:8%;--lamp-y:12%}
+.p-coaching .hero__fig{--focus:50% 26%}
+.p-coaching .hero--spread .hero__num{font-size:clamp(3.6rem,8vw,7rem)}
+.p-coaching #iranyok{--lamp-x:90%;--lamp-y:82%}
+.p-coaching #vagy{--lamp-x:50%;--lamp-y:6%;padding-top:calc(var(--sec) + 5vh)}
+.p-coaching #ules{--lamp-x:14%;--lamp-y:86%;padding-top:calc(var(--sec) + 6vh)}
+.p-coaching #ar{--lamp-x:86%;--lamp-y:22%}
+.p-coaching #zaro{--lamp-x:30%;--lamp-y:50%}
+
+/* 2 · a sorok linkek, a 4. cella szám + nyíl */
+.p-coaching #iranyok .rows__item{grid-template-columns:4rem 1.2fr 2fr auto;color:inherit}
+.p-coaching .rows__go{display:inline-flex;align-items:center;gap:.8rem;font-size:.88rem;color:var(--w-muted);white-space:nowrap;justify-self:end}
+.p-coaching .rows__go b{color:var(--w-ink);font-weight:500}
+.p-coaching .rows-more{margin-top:1.4rem;max-width:none}
+
+/* 3 · két kihúzott mondat a középső ereszték két oldalán */
+.p-coaching .vagy{row-gap:clamp(2rem,5vh,3.2rem)}
+.p-coaching .vagy h2{grid-column:3 / 11;text-align:center}
+.p-coaching .vagy__a{grid-column:1 / 7;display:grid;justify-items:end}
+.p-coaching .vagy__a .pull{text-align:right}
+.p-coaching .vagy__b{grid-column:7 / 13}
+.p-coaching .vagy .pull{max-width:30ch}
+.p-coaching .vagy__foot{grid-column:3 / 11;text-align:center;display:grid;gap:.9rem;justify-items:center}
+.p-coaching .vagy__foot p{max-width:58ch}
+
+/* 4 · fotó: az arc a felső harmadban */
+.p-coaching .photo-text figure img{object-position:38% 32%}
+.p-coaching .photo-text .photo-text__body .btn--text{justify-self:start}
+.p-coaching .photo-text .photo-text__body h2{font-size:clamp(1.9rem,3.4vw,2.9rem)}
+
+/* 5 · ár tükrözve: sorok balra, a nagy szám jobbra kilóg */
+.p-coaching .price{grid-template-columns:7fr 5fr}
+.p-coaching .price > div:last-child{justify-self:end;text-align:right;display:grid;gap:.6rem;justify-items:end}
+.p-coaching .price__big{margin-left:0;margin-right:calc(-1 * var(--pad) / 3)}
+.p-coaching .price__big small{margin-left:auto;text-align:right}
+.p-coaching .price .lead{margin-bottom:1.2rem}
+.p-coaching .price__rows{margin-bottom:1.2rem}
+.p-coaching .price__row b a{color:var(--w-gold-text);border-bottom:1px solid var(--w-line)}
+.p-coaching .price > div:first-child{display:grid;gap:.6rem}
+
+/* 6 · osztott band: linkek balra, mondat jobbra */
+.p-coaching .band{justify-content:space-between;align-items:flex-end;gap:2rem 3rem;flex-wrap:wrap}
+.p-coaching .band > p{order:2}
+.p-coaching .band__links{order:1;display:grid;gap:1rem;justify-items:start}
+.p-coaching .band__links .eyebrow{font-family:var(--font-body);font-size:.78rem;line-height:1.4;text-align:left;max-width:none;margin-bottom:.2rem}
+
+@media (max-width:900px){
+  .p-coaching .vagy h2,.p-coaching .vagy__a,.p-coaching .vagy__b,.p-coaching .vagy__foot{grid-column:1;text-align:left;justify-items:start}
+  .p-coaching .vagy__a .pull{text-align:left}
+  .p-coaching #iranyok .rows__item{grid-template-columns:2.6rem 1fr}
+  .p-coaching .rows__go{grid-column:2;justify-self:start}
+  .p-coaching .price{grid-template-columns:1fr}
+  .p-coaching .price > div:last-child{order:-1;justify-self:start;text-align:left;justify-items:start}
+  .p-coaching .price__big{margin-right:0}
+  .p-coaching .price__big small{margin-left:0;text-align:left}
+  .p-coaching .band{flex-direction:column;align-items:flex-start}
+  .p-coaching .band > p{order:1}
+  .p-coaching .band__links{order:2}
+  .p-coaching #vagy{padding-top:calc(var(--sec) + 3vh)}
+  .p-coaching #ules{padding-top:calc(var(--sec) + 4vh)}
+}

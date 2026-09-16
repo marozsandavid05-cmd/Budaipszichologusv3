@@ -1,0 +1,50 @@
+/* ============================================================
+   CÉGEKNEK · body.p-cegeknek
+   1 hero statement jobbra · 2 ajánlat-sorok 01-05 meta-oszloppal (lip--l) · 3 photo-text tükrözve ·
+   4 bal ragadó fej + jobb nagy-számos lépések (wipe-d) · 5 középre zárt díj-blokk · 6 fotós sötét záró jobbra (lip)
+   ============================================================ */
+.p-cegeknek .hero{--lamp-x:10%;--lamp-y:84%}
+.p-cegeknek .hero--statement h1{max-width:26ch}
+.p-cegeknek .hero__foot .hero__cred{text-align:left;max-width:46ch}
+
+.p-cegeknek #ajanlat{--lamp-x:88%;--lamp-y:12%}
+.p-cegeknek #ajanlat .rows__item{grid-template-columns:4rem 1.1fr 2.2fr 13rem}
+.p-cegeknek #ajanlat .rows__d{max-width:58ch}
+.p-cegeknek .rows__meta{font-size:.8rem;color:var(--w-muted);text-align:right;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+
+.p-cegeknek .photo-text{--lamp-x:14%;--lamp-y:88%}
+.p-cegeknek .photo-text figure img{object-position:30% 35%}
+.p-cegeknek .photo-text__body{gap:1.1rem;justify-items:start}
+.p-cegeknek .photo-text__body p{max-width:50ch}
+
+.p-cegeknek #indul{--lamp-x:86%;--lamp-y:84%}
+.p-cegeknek .indul{display:grid;grid-template-columns:repeat(12,1fr);column-gap:1.5rem;align-items:start}
+.p-cegeknek .indul__head{grid-column:1 / 5;display:grid;gap:.8rem;position:sticky;top:calc(var(--nav-h) + 1.5rem)}
+.p-cegeknek .indul__head p{max-width:34ch}
+.p-cegeknek .indul__list{grid-column:6 / 13;border-top:1px solid var(--gold)}
+.p-cegeknek .ilep{display:grid;grid-template-columns:minmax(5.5rem,1fr) 6fr;column-gap:1.5rem;padding:clamp(1.4rem,3vh,2.2rem) 0;border-bottom:1px solid var(--w-line-soft);align-items:start}
+.p-cegeknek .ilep__n{font-family:var(--font-display);font-weight:300;font-size:clamp(2.4rem,4vw,3.6rem);line-height:.9;color:var(--w-gold-text)}
+.p-cegeknek .ilep h3{font-weight:300;font-size:clamp(1.4rem,2.2vw,1.9rem);margin-bottom:.6rem}
+.p-cegeknek .ilep p{color:var(--w-muted);max-width:56ch}
+
+.p-cegeknek #dij{--lamp-x:50%;--lamp-y:6%;padding-bottom:calc(var(--sec) + 7vh)}
+.p-cegeknek .dij{display:grid;justify-items:center;text-align:center;gap:1.1rem;max-width:64ch;margin-inline:auto}
+.p-cegeknek .dij .pull{max-width:26ch;font-size:clamp(1.7rem,3vw,2.6rem)}
+.p-cegeknek .dij p.muted{max-width:60ch}
+.p-cegeknek .dij .ctas{justify-content:center;align-items:center}
+
+.p-cegeknek .closer{--focus:50% 50%}
+.p-cegeknek .closer .closer__body{max-width:min(52%,720px)}
+
+@media (max-width:900px){
+  .p-cegeknek #ajanlat .rows__item{grid-template-columns:2.6rem 1fr}
+  .p-cegeknek .rows__meta{grid-column:2;text-align:left;white-space:normal}
+  .p-cegeknek .indul{grid-template-columns:1fr;row-gap:1.6rem}
+  .p-cegeknek .indul__head{grid-column:1;position:static}
+  .p-cegeknek .indul__list{grid-column:1}
+  .p-cegeknek .ilep{grid-template-columns:3.4rem 1fr;column-gap:1rem}
+  .p-cegeknek .ilep__n{font-size:1.6rem}
+  .p-cegeknek .dij{justify-items:start;text-align:left}
+  .p-cegeknek .dij .ctas{justify-content:flex-start}
+  .p-cegeknek .closer .closer__body{max-width:100%}
+}

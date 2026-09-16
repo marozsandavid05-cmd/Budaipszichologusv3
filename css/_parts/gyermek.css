@@ -1,0 +1,82 @@
+/* ============================================================
+   GYERMEK ÉS SERDÜLŐ · body.p-gyermek
+   1 hero panels (bal: szülő, fotón · jobb: kamasz, a fotó felül alfázik az alapra) ·
+   2 keret (lip, a tömeg jobbra) · 3 szülőkonzultáció (wipe-d, az egyetlen középre zárt) ·
+   4 első alkalom steps (peel) · 5 amivel jönnek rows (lip--r) · hair · 6 band + CTA
+   ============================================================ */
+.p-gyermek .hero{--lamp-x:12%;--lamp-y:12%}
+.p-gyermek #keret{--lamp-x:88%;--lamp-y:18%}
+.p-gyermek #szulo{--lamp-x:50%;--lamp-y:92%;padding-top:calc(var(--sec) + 6vh)}
+.p-gyermek #elso{--lamp-x:10%;--lamp-y:82%;padding-top:calc(var(--sec) + 5vh)}
+.p-gyermek #nehezsegek{--lamp-x:86%;--lamp-y:12%}
+.p-gyermek #zaro{--lamp-x:22%;--lamp-y:50%}
+
+/* hero: a lip 7vh-t ráúszik, a panelek alja szabad marad */
+.p-gyermek .hero--panels .pane{padding-bottom:calc(clamp(1.5rem,4vw,3.5rem) + 7vh);gap:.9rem}
+/* szülő-panel: a szoba jobb fele (fotelek, lámpa), a szöveg a padló és a fotelek középtónusára esik, nem fehérre */
+.p-gyermek .pane--szulo img{object-position:100% 50%}
+.p-gyermek .pane--szulo::before{height:78%;background:linear-gradient(to bottom,transparent 0,rgba(18,17,16,.5) 40%,rgba(18,17,16,.84) 100%)}
+.p-gyermek .pane--szulo p{color:rgba(237,230,217,.9)}
+.p-gyermek .pane--szulo .eyebrow{color:rgba(237,230,217,.82)}
+/* kamasz-panel: az ülés-fotó felül (a pszichológus arca a felső harmadban), alfázik az alapra, a szöveg az alapon tinta színnel; a hang tipográfiailag más (grotesk cím) */
+.p-gyermek .pane--neked{background-color:var(--w-base);color:var(--w-ink)}
+.p-gyermek .pane--neked img{bottom:auto;height:47%;object-position:42% 16%;
+  -webkit-mask-image:linear-gradient(to bottom,#000 0,#000 46%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0,#000 46%,transparent 100%)}
+.p-gyermek .pane--neked h2{font-family:var(--font-body);font-weight:500;font-size:clamp(1.5rem,2.5vw,2.25rem);line-height:1.15;letter-spacing:-.01em;max-width:22ch}
+.p-gyermek .pane--neked p{max-width:44ch}
+.p-gyermek .pane--neked .small{color:var(--w-muted)}
+.p-gyermek .pane--neked .btn--text{justify-self:start}
+.p-gyermek .pane .ctas{justify-content:flex-start}
+
+@media (min-width:901px) and (max-height:820px){
+  .p-gyermek .pane--neked img{height:40%;-webkit-mask-image:linear-gradient(to bottom,#000 0,#000 36%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0,#000 36%,transparent 100%)}
+  .p-gyermek .hero--panels .pane{gap:.7rem}
+}
+
+/* 2 · keret */
+.p-gyermek .keret{align-items:start}
+.p-gyermek .keret__side{grid-column:1 / 4;display:grid;gap:.8rem;align-content:start;position:sticky;top:calc(var(--nav-h) + 1.5rem)}
+.p-gyermek .keret__body{grid-column:5 / 13;display:grid;gap:clamp(1.6rem,4vh,2.6rem)}
+.p-gyermek .keret__body .pull{max-width:34ch;font-size:clamp(1.5rem,2.6vw,2.3rem)}
+.p-gyermek .facts{border-top:1px solid var(--gold)}
+.p-gyermek .facts > div{display:grid;grid-template-columns:minmax(120px,1fr) 4fr;gap:1.5rem;padding:.95rem 0;border-bottom:1px solid var(--w-line-soft);align-items:baseline}
+.p-gyermek .facts dt{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--w-gold-text)}
+.p-gyermek .facts dd{max-width:56ch}
+.p-gyermek .facts dd a{color:var(--w-gold-text);border-bottom:1px solid var(--w-line)}
+
+/* 3 · szülőkonzultáció, középre zárt oszlop */
+.p-gyermek .szulo{max-width:64ch;margin-inline:auto;text-align:center;display:grid;gap:1.2rem;justify-items:center}
+.p-gyermek .szulo h2{font-size:clamp(1.9rem,3.6vw,3rem);max-width:20ch}
+.p-gyermek .szulo p{max-width:60ch}
+.p-gyermek .szulo .ctas{justify-content:center;margin-top:.4rem}
+
+/* 5 · sorok: a 4. cella a szűrt regiszter-link */
+.p-gyermek #nehezsegek .rows__item{grid-template-columns:4rem 1.3fr 2fr auto}
+.p-gyermek .rows__go{font-size:.86rem;color:var(--w-muted);display:inline-flex;align-items:center;gap:.7rem;white-space:nowrap;justify-self:end}
+.p-gyermek .rows__go:hover{color:var(--w-ink)}
+
+/* 6 · band: mondat jobbra, a kiutak alatta jobbra */
+.p-gyermek .band{flex-direction:column;align-items:flex-end;gap:1.6rem}
+.p-gyermek .band .ctas{justify-content:flex-end}
+
+@media (max-width:900px){
+  .p-gyermek .hero--panels{height:auto;grid-template-rows:auto auto}
+  .p-gyermek .hero--panels .pane{padding-bottom:calc(1.5rem + 4vh)}
+  .p-gyermek .pane--szulo{min-height:max(calc(44svh - var(--nav-h) * .44),300px)}
+  .p-gyermek .pane--neked{min-height:max(calc(56svh - var(--nav-h) * .56),380px);padding-top:0}
+  .p-gyermek .pane--szulo img{object-position:100% 40%}
+  .p-gyermek .pane--szulo::before{height:82%}
+  .p-gyermek .pane--neked img{position:static;height:clamp(110px,19svh,170px);object-position:50% 22%;width:calc(100% + 2 * var(--pad));margin:0 calc(-1 * var(--pad)) .4rem;
+    -webkit-mask-image:linear-gradient(to bottom,#000 0,#000 60%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0,#000 60%,transparent 100%)}
+  .p-gyermek .keret__side{position:static;grid-column:1}
+  .p-gyermek .keret__body{grid-column:1}
+  .p-gyermek .facts > div{grid-template-columns:1fr;gap:.2rem}
+  .p-gyermek .szulo{text-align:left;justify-items:start}
+  .p-gyermek .szulo .ctas{justify-content:flex-start}
+  .p-gyermek #nehezsegek .rows__item{grid-template-columns:2.6rem 1fr}
+  .p-gyermek .rows__go{grid-column:2;justify-self:start}
+  .p-gyermek .band{align-items:flex-start}
+  .p-gyermek .band .ctas{justify-content:flex-start}
+  .p-gyermek #szulo{padding-top:calc(var(--sec) + 4vh)}
+  .p-gyermek #elso{padding-top:calc(var(--sec) + 3vh)}
+}

@@ -1,0 +1,57 @@
+/* ============================================================
+   SPORTPSZICHOLÓGIA · body.p-sport
+   1 hero cover, cím középen alul (szoba-szurke) · 2 sorok (lip) · 3 jobbra zárt fej + stats ·
+   4 pull bal + kapcsolódó sorok jobb (wipe-d) · 5 szöveg bal + óriás szám jobb (peel) · 6 closer--text (lip)
+   ============================================================ */
+.p-sport .hero{--lamp-x:50%;--lamp-y:0%}
+.p-sport .hero--cover .hero__img{--focus:50% 56%}
+.p-sport .hero--cover .hero__img img{filter:saturate(.9) brightness(.78)}
+.p-sport .hero--cover .hero__img::after{height:80vh;background:linear-gradient(to bottom,transparent 0,rgba(18,17,16,.42) 38%,rgba(18,17,16,.88) 100%)}
+.p-sport .hero--cover.is-bc .hero__body{max-width:min(84%,1040px)}
+.p-sport .hero--cover .hero__body{padding-bottom:calc(7vh + 2.6rem);gap:1.1rem;justify-items:center;text-shadow:0 1px 2px rgba(18,17,16,.55),0 2px 22px rgba(18,17,16,.45)}
+.p-sport .hero--cover h1{font-size:clamp(2.4rem,5.8vw,5.2rem)}
+.p-sport .hero--cover .eyebrow{color:var(--gold);max-width:none}
+.p-sport .hero--cover .hero__sub{max-width:54ch}
+.p-sport .hero--cover .hero__cred{max-width:none;font-size:.82rem}
+.p-sport .hero--cover .aline{position:absolute;left:0;right:0;bottom:0;z-index:1}
+
+.p-sport #teruletek{--lamp-x:86%;--lamp-y:14%}
+.p-sport #teruletek .rows__d{max-width:58ch}
+
+.p-sport #keretek{--lamp-x:12%;--lamp-y:86%}
+.p-sport .keretek__head{display:grid;grid-template-columns:repeat(12,1fr);column-gap:1.5rem;margin-bottom:clamp(2rem,5vh,3.2rem)}
+.p-sport .keretek__head > div{grid-column:6 / 13;text-align:right;display:grid;justify-items:end;gap:.7rem}
+.p-sport .keretek__head p{max-width:50ch}
+.p-sport .stats .stat span{max-width:26ch}
+
+.p-sport #hatter{--lamp-x:88%;--lamp-y:82%}
+.p-sport .hatter{display:grid;grid-template-columns:repeat(12,1fr);column-gap:1.5rem;align-items:start}
+.p-sport .hatter .pull{grid-column:1 / 6;font-size:clamp(1.5rem,2.6vw,2.3rem);max-width:22ch}
+.p-sport .hatter .rel{grid-column:7 / 13}
+
+.p-sport #regiszter{--lamp-x:14%;--lamp-y:22%}
+.p-sport .sreg{display:grid;grid-template-columns:repeat(12,1fr);column-gap:1.5rem;align-items:center}
+.p-sport .sreg__body{grid-column:1 / 8;display:grid;gap:1rem;justify-items:start}
+.p-sport .sreg__body p{max-width:56ch}
+.p-sport .sreg__num{grid-column:9 / 13;text-align:right;font-family:var(--font-display);font-weight:300;font-size:clamp(5rem,13vw,11rem);line-height:.9;color:var(--w-gold-text);letter-spacing:-.02em;max-width:none}
+.p-sport .sreg__num small{display:block;font-family:var(--font-body);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--w-muted);margin-top:.9rem}
+
+.p-sport .closer--text .closer__body{max-width:min(64%,860px)}
+.p-sport .closer__meta{font-size:.86rem;color:var(--w-muted);letter-spacing:.02em;padding-top:1rem;border-top:1px solid var(--w-line);max-width:none}
+
+@media (min-width:901px) and (max-height:820px){
+  .p-sport .hero--cover .hero__body{gap:.8rem;padding-bottom:calc(7vh + 2rem)}
+  .p-sport .hero--cover .hero__sub{font-size:.98rem}
+}
+@media (max-width:900px){
+  .p-sport .hero--cover .hero__body{justify-items:start;padding-bottom:calc(7vh + 2rem)}
+  .p-sport .hero--cover .hero__img::after{height:70%}
+  .p-sport .keretek__head{grid-template-columns:1fr}
+  .p-sport .keretek__head > div{grid-column:1;text-align:left;justify-items:start}
+  .p-sport .hatter{grid-template-columns:1fr;row-gap:1.6rem}
+  .p-sport .hatter .pull,.p-sport .hatter .rel{grid-column:1}
+  .p-sport .sreg{grid-template-columns:1fr;row-gap:1.4rem}
+  .p-sport .sreg__body,.p-sport .sreg__num{grid-column:1}
+  .p-sport .sreg__num{text-align:left;font-size:clamp(4rem,22vw,6rem);order:-1}
+  .p-sport .closer--text .closer__body{max-width:100%}
+}

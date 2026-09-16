@@ -1,0 +1,78 @@
+/* ============================================================
+   MIBEN SEGÍTÜNK · body.p-miben
+   1 hero típó, bal cím 8/12, jobb lead, a hajtás alján a két belépő szókincs ·
+   2 mátrix 13 sor (lip) · 3 ellátási formák 01-08 (wipe-d) · 4 hozzátartozó, három ajtó (lip--r) ·
+   5 kinek keres, hat szűrt belépő (hair) · 6 sötét záró fotó nélkül, bal cím, jobb koordinátor (lip)
+   ============================================================ */
+.p-miben .hero{--lamp-x:88%;--lamp-y:12%;grid-template-columns:repeat(12,1fr);column-gap:1.5rem;row-gap:1.1rem;align-content:end;padding-bottom:calc(7vh + 2.4rem)}
+.p-miben .hero > .eyebrow{grid-column:1 / 8}
+.p-miben .hero h1{grid-column:1 / 9;font-size:clamp(2.6rem,6vw,5.4rem)}
+.p-miben .hero .lead{grid-column:9 / 13;align-self:end;max-width:none;font-size:clamp(1.05rem,1.3vw,1.25rem);line-height:1.4;color:var(--w-muted);padding-bottom:.3rem}
+.p-miben .hero__vocab{grid-column:1 / 13;display:grid;grid-template-columns:repeat(12,1fr);column-gap:1.5rem;margin-top:clamp(1.4rem,3vh,2.4rem);padding-top:1.3rem;border-top:1px solid var(--gold)}
+.p-miben .vocab{grid-column:1 / 8;display:grid;grid-template-columns:1fr 1fr;column-gap:1.5rem;align-content:start}
+.p-miben .vocab--b{grid-column:8 / 13}
+.p-miben .vocab .eyebrow{grid-column:1 / -1;margin-bottom:.5rem}
+.p-miben .vocab a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;padding:.42rem 0;border-bottom:1px solid var(--w-line-soft);font-size:.95rem;transition:color .2s,padding-left .2s}
+.p-miben .vocab a:hover{color:var(--w-gold-text);padding-left:.3rem}
+.p-miben .vocab a b{font-weight:400;color:var(--w-muted);font-size:.86rem}
+.p-miben .hero .aline{bottom:calc(7vh + .8rem)}
+
+/* 2 · mátrix */
+.p-miben #matrix{--lamp-x:10%;--lamp-y:88%}
+.p-miben #matrix .sec__aside{max-width:none}
+.p-miben .mx__row{scroll-margin-top:calc(var(--nav-h) + 1.2rem)}
+.p-miben .mx__row:target{background:var(--w-surface-2)}
+.p-miben .mx__n a{display:inline-flex;align-items:baseline;gap:.5rem;white-space:nowrap;transition:color .2s}
+.p-miben .mx__n a:hover{color:var(--w-ink)}
+.p-miben .mx__n a .arrow{width:28px}
+.p-miben .mx__n a:hover .arrow{width:44px}
+.p-miben .mx-foot{margin-top:1.4rem;max-width:60ch}
+
+/* 3 · ellátási formák */
+.p-miben #formak{--lamp-x:90%;--lamp-y:20%;padding-top:calc(var(--sec) + 6vh)}
+.p-miben .formak-head{align-items:end;margin-bottom:clamp(2rem,5vh,3.2rem)}
+.p-miben .formak-head .eyebrow{grid-column:1 / 4;align-self:start}
+.p-miben .formak-head .lead{grid-column:6 / 13;text-align:right;max-width:none;justify-self:end}
+.p-miben .rows__item{color:inherit}
+.p-miben .rows__item .arrow{justify-self:end;align-self:center}
+
+/* 4 · hozzátartozó */
+.p-miben #hozzatartozo{--lamp-x:16%;--lamp-y:14%;padding-top:clamp(3rem,8vh,5rem)}
+.p-miben .doors__head > div{display:grid;gap:.6rem}
+.p-miben .doors__note{padding:1.4rem var(--pad) 0;max-width:60ch}
+
+/* 5 · kinek keres */
+.p-miben .hair{margin-inline:var(--pad)}
+.p-miben #kinek{--lamp-x:84%;--lamp-y:80%;padding-bottom:calc(clamp(2.5rem,6vh,4rem) + 8vh)}
+.p-miben .kinek{align-items:center}
+.p-miben .kinek .lead{grid-column:1 / 5}
+.p-miben .kinek__links{grid-column:5 / 13;display:flex;flex-wrap:wrap;gap:.7rem;justify-content:flex-end}
+.p-miben .kinek__links a{font-family:var(--font-display);font-size:clamp(1rem,1.2vw,1.15rem);padding:.55rem .95rem;border:1px solid var(--w-line-soft);border-radius:2px;transition:border-color .2s,color .2s,background .2s}
+.p-miben .kinek__links a:hover{border-color:var(--gold);color:var(--w-gold-text);background:rgba(194,167,97,.08)}
+
+/* 6 · záró: fotó nélküli sötét blokk */
+.p-miben .closer--text{--lamp-x:80%;--lamp-y:30%;min-height:0;align-content:center;padding:clamp(4rem,12vh,7rem) var(--pad) clamp(3.5rem,10vh,6rem)}
+.p-miben .closer__grid{display:grid;grid-template-columns:repeat(12,1fr);column-gap:1.5rem;align-items:end}
+.p-miben .closer__grid .closer__body{grid-column:1 / 8;max-width:none}
+.p-miben .closer__grid .closer__body p:not(.eyebrow){max-width:48ch;color:var(--w-muted)}
+.p-miben .closer__side{grid-column:9 / 13;display:grid;gap:1.4rem}
+.p-miben .closer__side .coord{border-bottom:0;border-top:1px solid var(--w-line);padding-top:1.2rem}
+.p-miben .closer__side p{max-width:none}
+
+@media (max-width:900px){
+  .p-miben .hero{grid-template-columns:1fr;row-gap:.8rem;padding-bottom:calc(7vh + 1.4rem)}
+  .p-miben .hero > .eyebrow,.p-miben .hero h1,.p-miben .hero .lead,.p-miben .hero__vocab{grid-column:1}
+  .p-miben .hero .lead{font-size:1rem;padding-bottom:0}
+  .p-miben .hero__vocab{grid-template-columns:1fr;margin-top:.6rem;padding-top:1rem}
+  .p-miben .vocab{grid-column:1;grid-template-columns:1fr}
+  .p-miben .vocab--b{display:none}
+  .p-miben .vocab a{font-size:.9rem;padding:.36rem 0}
+  .p-miben .formak-head .eyebrow,.p-miben .formak-head .lead{grid-column:1;text-align:left;justify-self:start}
+  .p-miben #formak{padding-top:calc(var(--sec) + 4vh)}
+  .p-miben .rows__item .arrow{display:none}
+  .p-miben .mx__n a{white-space:normal}
+  .p-miben .kinek .lead,.p-miben .kinek__links{grid-column:1;justify-content:flex-start}
+  .p-miben .kinek__links{margin-top:1rem}
+  .p-miben .closer__grid{grid-template-columns:1fr;row-gap:1.6rem}
+  .p-miben .closer__grid .closer__body,.p-miben .closer__side{grid-column:1}
+}

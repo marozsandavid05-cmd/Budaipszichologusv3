@@ -1,0 +1,81 @@
+/* ============================================================
+   FELNŐTT EGYÉNI TERÁPIA · body.p-felnott
+   1 hero cover, cím jobb alul (szoba-kanape) · 2 hat tünet-sor első személyben (wipe-d) ·
+   3 így zajlik: bal sticky cím, jobb három tétel (lip--l) · hair · 4 a keret, photo-text tükrözve (reszlet-jegyzet) ·
+   5 díjsávok: bal cím, jobb sorok (lip--r) · 6 jobbra zárt band + CTA (peel), sötét záró nincs
+   ============================================================ */
+.p-felnott .hero{--lamp-x:20%;--lamp-y:20%}
+.p-felnott .hero--cover .hero__img{--focus:50% 68%}
+/* a fotó világos, a komponens alsó átmenete magasabbra és erősebbre állítva, hogy a krém cím olvasható legyen */
+.p-felnott .hero--cover .hero__img::after{height:74vh;background:linear-gradient(to bottom,transparent 0,rgba(18,17,16,.22) 22%,rgba(18,17,16,.48) 50%,rgba(18,17,16,.8) 100%)}
+.p-felnott .hero--cover .hero__body{padding-bottom:calc(clamp(2rem,6vh,4rem) + 8vh);gap:1.1rem}
+.p-felnott .hero--cover h1{font-size:clamp(2.4rem,5.6vw,5rem)}
+/* a címke a lámpa fénye fölé esik: a kollázs-képaláírás mintájára kis sötét háttér, hogy minden szélességben olvasható legyen */
+.p-felnott .hero--cover .eyebrow{color:var(--gold);background:rgba(18,17,16,.55);padding:.42rem .7rem;border-radius:2px;justify-self:end;line-height:1}
+.p-felnott .hero--cover .hero__cred{justify-self:end}
+
+/* 2 · tünet-sorok */
+.p-felnott #tunetek{--lamp-x:88%;--lamp-y:12%;padding-top:calc(var(--sec) + 6vh)}
+.p-felnott #tunetek .sec__aside{max-width:none}
+.p-felnott .tunet .rows__item{grid-template-columns:4rem 1.1fr 2.1fr auto;align-items:start;scroll-margin-top:calc(var(--nav-h) + 1.4rem)}
+.p-felnott .tunet .rows__item:target{background:var(--w-surface)}
+.p-felnott .tunet .rows__t{font-style:italic;font-weight:300;font-size:clamp(1.3rem,2vw,1.8rem);line-height:1.2;max-width:22ch}
+.p-felnott .tunet .rows__d{max-width:58ch}
+.p-felnott .tunet .rows__d .small{display:block;margin-top:.55rem;color:var(--w-gold-text)}
+.p-felnott .rows__go{display:inline-flex;align-items:baseline;gap:.5rem;white-space:nowrap;font-size:.9rem;color:var(--w-muted);padding-top:.25rem;justify-self:end;transition:color .2s}
+.p-felnott .rows__go:hover{color:var(--w-ink)}
+.p-felnott .rows__go b{color:var(--w-ink);font-weight:500}
+.p-felnott .rows__go .arrow{width:28px}
+.p-felnott .rows__go:hover .arrow{width:44px}
+
+/* 3 · így zajlik */
+.p-felnott #igy{--lamp-x:8%;--lamp-y:80%}
+.p-felnott .igy{align-items:start}
+.p-felnott .igy__side{grid-column:1 / 5;position:sticky;top:calc(var(--nav-h) + 1.5rem);display:grid;gap:1rem;align-content:start}
+.p-felnott .igy__side .muted{max-width:30ch}
+.p-felnott .igy__body{grid-column:6 / 13;display:grid;border-top:1px solid var(--gold)}
+.p-felnott .tetel{display:grid;grid-template-columns:4rem 1fr;gap:1.5rem;padding:clamp(1.4rem,3vh,2rem) 0;border-bottom:1px solid var(--w-line-soft)}
+.p-felnott .tetel__n{font-family:var(--font-display);color:var(--w-gold-text);font-size:1.25rem;font-weight:300;padding-top:.35rem}
+.p-felnott .tetel h3{font-size:clamp(1.3rem,2vw,1.8rem);font-weight:300;margin-bottom:.5rem}
+.p-felnott .tetel p{color:var(--w-muted);max-width:56ch}
+
+/* 4 · a keret */
+.p-felnott .hair{margin-inline:var(--pad)}
+.p-felnott #keret{--lamp-x:78%;--lamp-y:18%}
+.p-felnott #keret figure img{aspect-ratio:3 / 2;object-position:50% 45%}
+.p-felnott .keret-list{border-top:1px solid var(--gold);margin-top:.4rem}
+.p-felnott .keret-list > div{display:grid;grid-template-columns:minmax(120px,1fr) 2.2fr;gap:1rem;padding:.7rem 0;border-bottom:1px solid var(--w-line-soft);align-items:baseline}
+.p-felnott .keret-list dt{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--w-muted)}
+.p-felnott .keret-list dd{font-family:var(--font-display);font-size:clamp(1.05rem,1.4vw,1.25rem);line-height:1.3}
+.p-felnott #keret .photo-text__body .btn--text{justify-self:start}
+
+/* 5 · díj */
+.p-felnott #ar{--lamp-x:12%;--lamp-y:30%}
+.p-felnott .ar{align-items:start}
+.p-felnott .ar__side{grid-column:1 / 5;display:grid;gap:.9rem}
+.p-felnott .ar__side .muted{max-width:30ch}
+.p-felnott .ar__body{grid-column:6 / 13;display:grid;gap:1.2rem}
+.p-felnott .ar__body .btn--text{justify-self:start}
+
+/* 6 · band záró */
+.p-felnott .band{--lamp-x:86%;--lamp-y:70%;padding-top:calc(clamp(3rem,9vh,6rem) + 4vh)}
+.p-felnott .band__in{display:grid;justify-items:end;gap:1.6rem}
+.p-felnott .band__in .ctas{justify-content:flex-end}
+
+@media (max-width:900px){
+  .p-felnott .hero--cover .hero__img::after{height:86%;background:linear-gradient(to bottom,transparent 0,rgba(18,17,16,.3) 25%,rgba(18,17,16,.56) 55%,rgba(18,17,16,.84) 100%)}
+  .p-felnott .hero--cover .hero__body{padding-bottom:calc(1.6rem + 8vh);gap:.9rem}
+  .p-felnott .hero--cover .hero__cred,.p-felnott .hero--cover .eyebrow{justify-self:start}
+  .p-felnott #tunetek{padding-top:calc(var(--sec) + 4vh)}
+  .p-felnott .tunet .rows__item{grid-template-columns:2.6rem 1fr}
+  .p-felnott .tunet .rows__t{max-width:none}
+  .p-felnott .rows__go{grid-column:2;justify-self:start;white-space:normal}
+  .p-felnott .igy__side,.p-felnott .igy__body,.p-felnott .ar__side,.p-felnott .ar__body{grid-column:1;position:static}
+  .p-felnott .igy__body{margin-top:1.4rem}
+  .p-felnott .ar__body{margin-top:1.2rem}
+  .p-felnott .tetel{grid-template-columns:2.6rem 1fr;gap:1rem}
+  .p-felnott .keret-list > div{grid-template-columns:1fr;gap:.2rem}
+  .p-felnott .band{padding-top:calc(clamp(3rem,9vh,6rem) + 3vh)}
+  .p-felnott .band__in{justify-items:start}
+  .p-felnott .band__in .ctas{justify-content:flex-start}
+}

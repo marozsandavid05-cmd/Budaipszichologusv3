@@ -1,0 +1,9 @@
+/* ============================================================
+   BUDAI PSZICHOLÓGUS KÖZPONT · pages.css
+   Oldalankénti többlet, body.p-<oldal> alatt. A közös rész a main.css-ben.
+   Csak a tokenek hexei szerepelhetnek (+ rgba variálás).
+   ============================================================ */
+
+/* SplitText sor-maszk: padding az Ő/Ű-nek, negatív margó, hogy a ritmus ne változzon */
+.sline{padding-block:.07em;margin-block:-.07em}
+

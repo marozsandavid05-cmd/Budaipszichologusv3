@@ -1,0 +1,55 @@
+/* ============================================================
+   KARRIER · body.p-karrier (az egyetlen tegező oldal, kollégáknak)
+   1 hero statement, a vonal a mondat és a lábsor között · 2 pozíciók (lip, cím jobbra) ·
+   3 hét értékajánlat két oszlopban (wipe-d) · 4 jelentkezés nagy e-mail címmel (peel) ·
+   5 band balra zárt (lip lip--l)
+   ============================================================ */
+
+/* 1 · hero: statikus vonal a rácsban, 9vh hely alul a lipnek */
+.p-karrier .hero{--lamp-x:8%;--lamp-y:14%}
+.p-karrier .hero--statement{padding-bottom:9vh;gap:clamp(1.2rem,3vh,2rem)}
+.p-karrier .hero--statement h1{max-width:22ch}
+.p-karrier .hero--statement .aline{position:static;margin-top:1vh}
+.p-karrier .hero--statement .hero__foot{padding-top:0}
+.p-karrier .hero--statement .hero__cred{max-width:52ch}
+
+/* 2 · pozíciók: cím jobbra fent, aside balra, sorok teljes szélesség */
+.p-karrier #poziciok{--lamp-x:86%;--lamp-y:16%;scroll-margin-top:var(--nav-h)}
+.p-karrier .poz__head{align-items:end;margin-bottom:clamp(1.8rem,4vh,2.8rem)}
+.p-karrier .poz__aside{grid-column:1 / 6;color:var(--w-muted);font-size:.95rem;max-width:40ch;align-self:end;padding-bottom:.5rem}
+.p-karrier .poz__title{grid-column:8 / 13;text-align:right;display:grid;gap:.6rem;justify-items:end}
+.p-karrier #poziciok .rows__item{grid-template-columns:4rem 1fr 2.4fr}
+.p-karrier #poziciok .rows__d{max-width:60ch}
+
+/* 3 · hét értékajánlat: két oszlop, a hetedik teljes szélességű zárósor */
+.p-karrier #ajanlat{--lamp-x:12%;--lamp-y:84%;padding-top:calc(var(--sec) + 6vh)}
+.p-karrier .aj{display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(2rem,4vw,4rem)}
+.p-karrier .aj .rows__item{grid-template-columns:3.2rem 1fr;row-gap:.4rem;align-items:baseline;padding-right:.5rem}
+.p-karrier .aj .rows__d{grid-column:2;max-width:46ch}
+.p-karrier .aj .rows__item:last-child{grid-column:1 / -1}
+.p-karrier .aj .rows__item:last-child .rows__d{max-width:66ch}
+
+/* 4 · jelentkezés: cím bal, nagy e-mail cím jobb; alul hely a lipnek */
+.p-karrier #jelentkezes{--lamp-x:82%;--lamp-y:22%;padding-bottom:calc(var(--sec) + 4vh)}
+.p-karrier .jel{align-items:start}
+.p-karrier .jel__side{grid-column:1 / 5;display:grid;gap:.8rem;align-content:start}
+.p-karrier .jel__body{grid-column:6 / 13;display:grid;gap:1.4rem}
+.p-karrier .jel__mail{justify-self:start;font-family:var(--font-display);font-weight:300;font-size:clamp(1.5rem,3.2vw,3rem);line-height:1.1;letter-spacing:-.01em;color:var(--w-ink);border-bottom:1px solid var(--gold);padding-bottom:.35rem;overflow-wrap:anywhere;transition:color .25s}
+.p-karrier .jel__mail:hover{color:var(--w-gold-text)}
+
+/* 5 · band: balra zárt, a lip miatt több felső hely */
+.p-karrier .band{--lamp-x:18%;--lamp-y:40%;padding-top:calc(clamp(3rem,9vh,6rem) + 5vh)}
+.p-karrier .band__in{display:grid;gap:1.2rem;justify-items:start}
+
+@media (max-width:900px){
+  .p-karrier .hero--statement{padding-bottom:calc(2rem + 7vh)}
+  .p-karrier .poz__aside,.p-karrier .poz__title{grid-column:1;text-align:left;justify-items:start;max-width:none}
+  .p-karrier .poz__title{order:-1;margin-bottom:.8rem}
+  .p-karrier #poziciok .rows__item{grid-template-columns:2.6rem 1fr}
+  .p-karrier #ajanlat{padding-top:calc(var(--sec) + 4vh)}
+  .p-karrier .aj{grid-template-columns:1fr}
+  .p-karrier .aj .rows__item{grid-template-columns:2.6rem 1fr;padding-right:0}
+  .p-karrier .aj .rows__item:last-child{grid-column:1}
+  .p-karrier .jel__side,.p-karrier .jel__body{grid-column:1}
+  .p-karrier .jel__body{margin-top:1.2rem}
+}

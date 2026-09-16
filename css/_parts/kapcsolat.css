@@ -1,0 +1,35 @@
+/* ============================================================
+   KAPCSOLAT · body.p-kapcsolat
+   4. család kollázs-hero (megérkezés-panelek) · megérkezés-sorok (lip--l, bal sticky) ·
+   egy jobbra zárt mondat · űrlap legalul (wipe-d)
+   ============================================================ */
+.p-kapcsolat .hero{--lamp-x:6%;--lamp-y:10%}
+.p-kapcsolat #megerkezes{--lamp-x:90%;--lamp-y:80%}
+.p-kapcsolat #lejovunk{--lamp-x:20%;--lamp-y:50%}
+.p-kapcsolat #urlap{--lamp-x:85%;--lamp-y:15%;padding-top:calc(var(--sec) + 6vh)}
+.p-kapcsolat .hero--collage .hero__title{padding-top:2vh;padding-right:2rem}
+.p-kapcsolat .hero--collage .hero__title p{max-width:44ch}
+.p-kapcsolat .hero--collage .pan img{filter:saturate(.94)}
+.p-kapcsolat .hero--collage .pan--a img{object-position:50% 40%}
+.p-kapcsolat .hero--collage .pan--b img{object-position:50% 30%}
+.p-kapcsolat .hero--collage .pan--c{margin-bottom:0}
+.kap-grid{align-items:start}
+.kap-side{grid-column:1 / 5;position:sticky;top:calc(var(--nav-h) + 1.5rem);display:grid;gap:1.1rem;align-content:start}
+.kap-side .coord{border-bottom:0;border-top:1px solid var(--w-line);padding-top:1.1rem;margin-top:.4rem}
+.kap-side--form{position:static}
+.kap-body{grid-column:5 / 13}
+.kap-body h2{margin-bottom:1.6rem}
+.kap-hours{display:grid;gap:.15rem;max-width:none}
+.kap-hours b{font-family:var(--font-display);font-weight:400;font-size:1.35rem;line-height:1.15}
+.kap-hours span{color:var(--w-muted);font-size:.92rem;font-variant-numeric:normal}
+.kap-contact{display:grid;gap:.25rem;max-width:none}
+.kap-contact a{color:var(--w-gold-text);font-size:1.05rem;word-break:break-all}
+.p-kapcsolat .rows--2 .rows__item{grid-template-columns:4rem 1fr;align-items:start}
+.p-kapcsolat .rows__t{margin-bottom:.25rem}
+.p-kapcsolat .form{max-width:none}
+.p-kapcsolat .form .ctas{padding-top:.4rem}
+@media (max-width:900px){
+  .kap-side{position:static;grid-column:1}
+  .kap-body{grid-column:1}
+  .p-kapcsolat #urlap{padding-top:calc(var(--sec) + 4vh)}
+}

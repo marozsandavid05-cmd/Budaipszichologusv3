@@ -1,0 +1,56 @@
+/* ============================================================
+   GYAKORI KÉRDÉSEK · body.p-gyik
+   1 tool-hero: a kereső a hős, mellette a számláló, alatta az öt csoport horgonya ·
+   2 öt csoport sticky bal indexszel (a JS jelöli az aktívat), minden válasz saját id-vel (lip, surface) ·
+   3 hair + CTA-sor. Sötét záró nincs. Csak tokenek, új hex nincs.
+   ============================================================ */
+
+/* 1 · hero */
+.p-gyik .hero{--lamp-x:14%;--lamp-y:20%;grid-template-columns:repeat(12,1fr);column-gap:1.5rem;row-gap:1.2rem;align-content:end;padding-bottom:calc(7vh + 2.6rem)}
+.p-gyik .hero .eyebrow{grid-column:1 / 13}
+.p-gyik .hero h1{grid-column:1 / 12;font-size:clamp(2.4rem,6.8vw,6.2rem);margin-bottom:1.6vh}
+.p-gyik .hero__search{grid-column:1 / 9;max-width:none;padding:.7rem 0 .9rem;gap:1rem;color:var(--w-ink)}
+.p-gyik .hero__search svg{width:26px;height:26px;color:var(--w-gold-text);flex:none}
+.p-gyik .hero__search input{font-family:var(--font-display);font-weight:300;font-size:clamp(1.25rem,1.9vw,1.75rem);padding:.15rem 0;min-width:0}
+.p-gyik .hero__search input::-webkit-search-cancel-button{-webkit-appearance:none;appearance:none}
+.p-gyik .hero__count{grid-column:9 / 13;align-self:end;text-align:right;font-size:.9rem;color:var(--w-muted);max-width:none;padding-bottom:.9rem;line-height:1.45}
+.p-gyik .hero__count b{display:block;font-family:var(--font-display);font-weight:300;font-size:clamp(2rem,3.2vw,3rem);color:var(--w-ink);line-height:1;margin-bottom:.35rem}
+.p-gyik .hero__chips{grid-column:1 / 13;padding-top:.4rem}
+.p-gyik .chip{display:inline-flex;align-items:center}
+.p-gyik .chip:hover{color:var(--w-gold-text)}
+
+/* 2 · a kérdések */
+.p-gyik #kerdesek{--lamp-x:90%;--lamp-y:10%}
+.p-gyik .gyik-index a{padding:.85rem 0}
+.p-gyik .gyik-index__note{margin-top:1.4rem;max-width:26ch}
+.p-gyik .gyik-body{gap:clamp(3.5rem,9vh,6.5rem)}
+.p-gyik .faq__group{margin-bottom:0;scroll-margin-top:calc(var(--nav-h) + 1.5rem)}
+.p-gyik .faq__group h3{display:flex;align-items:baseline;gap:.9rem;font-weight:300;font-size:clamp(1.6rem,2.6vw,2.3rem);margin-bottom:1.2rem}
+.p-gyik .gyik-n{font-size:.55em;color:var(--w-gold-text);font-weight:300}
+.p-gyik .faq__item{scroll-margin-top:calc(var(--nav-h) + 1.5rem)}
+.p-gyik .faq__item summary{padding:1.15rem 0}
+.p-gyik .faq__a p{max-width:62ch}
+.p-gyik .gyik-empty{display:none;padding:1rem 0;max-width:52ch}
+.p-gyik .gyik-empty a{color:var(--w-gold-text)}
+.p-gyik .gyik-body:not(:has(.faq__group:not([hidden]))) .gyik-empty{display:block}
+
+/* 3 · CTA-sor */
+.p-gyik #tovabb{--lamp-x:80%;--lamp-y:70%}
+.p-gyik .ctarow{display:flex;justify-content:space-between;align-items:end;gap:2rem 3rem;flex-wrap:wrap}
+.p-gyik .ctarow__text{display:grid;gap:.8rem}
+.p-gyik .ctarow .lead{max-width:44ch;font-size:clamp(1.15rem,1.7vw,1.5rem)}
+.p-gyik .ctarow .lead a{color:var(--w-gold-text)}
+
+@media (max-width:900px){
+  .p-gyik .hero{grid-template-columns:1fr;padding-bottom:calc(7vh + 1.8rem);row-gap:1rem}
+  .p-gyik .hero .eyebrow,.p-gyik .hero h1,.p-gyik .hero__search,.p-gyik .hero__count,.p-gyik .hero__chips{grid-column:1}
+  .p-gyik .hero h1{font-size:clamp(2rem,9.4vw,2.8rem)}
+  .p-gyik .hero__search input{font-size:1.1rem}
+  .p-gyik .hero__count{text-align:left;padding-bottom:0}
+  .p-gyik .hero__count b{display:inline;font-size:1.3rem;margin-right:.3rem}
+  .p-gyik .steps__index{flex-wrap:wrap;overflow:visible}
+  .p-gyik .steps__index a{display:flex;gap:.5rem;align-items:center}
+  .p-gyik .steps__index a span:last-child{display:inline}
+  .p-gyik .gyik-index__note{display:none}
+  .p-gyik .faq__group h3{font-size:1.45rem}
+}

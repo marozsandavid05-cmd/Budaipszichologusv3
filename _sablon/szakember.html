@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.className += ' js';</script>
+<title>{{NEV}} · {{SZINT_CIMKE}} · Budai Pszichológus Központ</title>
+<meta name="description" content="{{DESC}}">
+<link rel="icon" href="../img/favicon.png">
+<link rel="canonical" href="https://budaipszichologus.hu/szakemberek/{{SLUG}}">
+<meta property="og:locale" content="hu_HU">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="{{NEV}} · Budai Pszichológus Központ">
+<meta property="og:description" content="{{DESC}}">
+<meta property="og:image" content="https://budaipszichologus.hu/img/portrek/{{SLUG}}-nagy.jpg">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/pages.css">
+<script type="application/ld+json">{{JSONLD}}</script>
+</head>
+<body class="p-szakember" data-world="nap">
+<!-- FEJ -->
+<main>
+  <section class="hero hero--spread amb reg-lines" data-world="nap">
+    <figure class="hero__fig">
+      <img src="../img/portrek/{{SLUG}}-nagy.jpg" alt="{{NEV}} portréja" width="960" height="1200" fetchpriority="high">
+      <figcaption>Regiszter · {{SORSZAM}}</figcaption>
+    </figure>
+    <div class="hero__num num h-in" aria-hidden="true">{{SORSZAM}}</div>
+    <div class="hero__body">
+      <p class="eyebrow h-in">{{SZINT_CIMKE}}</p>
+      <h1 data-split>{{NEV_TORT}}</h1>
+      <p class="prof__title h-in">{{TITULUS}}</p>
+      <div class="tags h-in">{{CHIPS}}</div>
+      <p class="prof__meta h-in">{{META}}</p>
+      <div class="ctas h-in">
+        <a class="btn btn--gold" href="../kapcsolat.html?szakember={{SLUG}}">Időpont {{NEV_NEL}}</a>
+        <a class="btn btn--line" href="#bemutatkozas">Bemutatkozás</a>
+      </div>
+    </div>
+    <div class="hero__ledger">
+      <p class="hero__cred cred">Fogadó kolléga: <strong>Vajas Zsuzsanna</strong>, pszichológus asszisztens. +36 30 961 1364, hétköznap 9-15. Ő segít, ha nem biztos, hogy {{NEV_ROVID}} a megfelelő választás.</p>
+      <p class="hero__meta meta num">Rendelés hétköznap 8-20 · Mészáros utca 18.</p>
+    </div>
+    <svg class="aline" viewBox="0 0 1440 24" preserveAspectRatio="none" aria-hidden="true"><path d="M0 12 H1440" stroke-dasharray="{{DASH}}"/></svg>
+  </section>
+
+  <section class="sec amb prof-intro-sec" data-world="nap" id="bemutatkozas">
+    <div class="prof-intro">
+      <aside class="prof-intro__side" data-reveal>
+        <nav class="prof-intro__nav" aria-label="Profil szakaszai">
+          <a href="#bemutatkozas">Bemutatkozás</a>
+          {{NAV_EXTRA}}
+          <a href="#kollegak">Kapcsolódó kollégák</a>
+        </nav>
+        {{MOTTO}}
+      </aside>
+      <div class="prof-intro__body" data-reveal>
+        {{ROLAM}}
+      </div>
+    </div>
+  </section>
+
+  {{AMIBEN}}
+
+  {{KEPZES}}
+
+  {{MESTEREK}}
+
+  {{MONDTAK}}
+
+  <section class="sec amb surface lip" data-world="nap" id="kollegak">
+    <div class="sec__head">
+      <h2 data-split>Ha inkább mást keresne</h2>
+      <p class="sec__aside">Három kolléga hasonló területekkel. A teljes regiszterben {{N_KLINIKUS}} szakember szűrhető.</p>
+    </div>
+    <div class="rel" data-stagger>
+      {{ROKON}}
+    </div>
+    <p class="right rel-more"><a class="btn btn--text" href="../szakembereink.html">A teljes regiszter <span class="arrow"></span></a></p>
+  </section>
+
+  <section class="closer closer--text lip" data-world="ej">
+    <div class="closer__body">
+      <p class="eyebrow">Következő lépés</p>
+      <h2 data-split>Időpont {{NEV_NEL}}</h2>
+      <p>Írjon nekünk, vagy hívja ügyfélszolgálatunkat hétköznap 9 és 15 óra között. Az első alkalom 50 perc, {{AR_MONDAT}} Ha {{NEV_ROVID}} naptára tele van, megmondjuk, ki tud hasonló területen fogadni.</p>
+      <div class="ctas">
+        <a class="btn btn--gold" href="../kapcsolat.html?szakember={{SLUG}}">Időpontkérés</a>
+        <a class="btn btn--line" href="../hogyan-kezdjuk.html">Hogyan kezdjük</a>
+      </div>
+      <div class="coord">
+        <img src="../img/portrek/vajas-zsuzsanna.jpg" alt="Vajas Zsuzsanna" width="52" height="52" loading="lazy">
+        <div><b>Vajas Zsuzsanna</b><span>pszichológus asszisztens, ügyfélszolgálat · +36 30 961 1364 · bejelentkezes@budaipszichologus.hu</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- LAB -->
+</body>
+</html>
