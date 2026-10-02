@@ -8,7 +8,13 @@
 /* 1 · hero: statikus vonal a rácsban, 9vh hely alul a lipnek */
 .p-karrier .hero{--lamp-x:8%;--lamp-y:14%}
 .p-karrier .hero--statement{padding-bottom:9vh;gap:clamp(1.2rem,3vh,2rem)}
-.p-karrier .hero--statement h1{max-width:22ch}
+.p-karrier .hero--statement{align-content:end}
+.p-karrier .kar-top{display:grid;grid-template-columns:repeat(12,1fr);column-gap:1.5rem;align-items:end;width:100%}
+.p-karrier .kar-top h1{grid-column:1 / 9;max-width:20ch}
+.p-karrier .kar-facts{grid-column:10 / 13;border-top:1px solid var(--gold)}
+.p-karrier .kar-facts li{display:grid;grid-template-columns:auto 1fr;column-gap:1rem;align-items:baseline;padding:.8rem 0;border-bottom:1px solid var(--w-line-soft);max-width:none}
+.p-karrier .kar-facts b{font-family:var(--font-display);font-weight:300;font-size:clamp(1.8rem,2.6vw,2.6rem);line-height:1;color:var(--w-ink);min-width:2.6ch}
+.p-karrier .kar-facts span{font-size:.9rem;color:var(--w-muted);line-height:1.35}
 .p-karrier .hero--statement .aline{position:static;margin-top:1vh}
 .p-karrier .hero--statement .hero__foot{padding-top:0}
 .p-karrier .hero--statement .hero__cred{max-width:52ch}
@@ -39,9 +45,15 @@
 
 /* 5 · band: balra zárt, a lip miatt több felső hely */
 .p-karrier .band{--lamp-x:18%;--lamp-y:40%;padding-top:calc(clamp(3rem,9vh,6rem) + 5vh)}
-.p-karrier .band__in{display:grid;gap:1.2rem;justify-items:start}
+.p-karrier .band__in{display:grid;grid-template-columns:repeat(12,1fr);column-gap:1.5rem;align-items:end;width:100%}
+.p-karrier .band__in > p{grid-column:1 / 8}
+.p-karrier .band__in > .btn{grid-column:9 / 13;justify-self:end}
 
 @media (max-width:900px){
+  .p-karrier .band__in{grid-template-columns:1fr;row-gap:1.2rem}
+  .p-karrier .band__in > p,.p-karrier .band__in > .btn{grid-column:1;justify-self:start}
+  .p-karrier .kar-top{grid-template-columns:1fr;row-gap:1.4rem}
+  .p-karrier .kar-top h1,.p-karrier .kar-facts{grid-column:1}
   .p-karrier .hero--statement{padding-bottom:calc(2rem + 7vh)}
   .p-karrier .poz__aside,.p-karrier .poz__title{grid-column:1;text-align:left;justify-items:start;max-width:none}
   .p-karrier .poz__title{order:-1;margin-bottom:.8rem}

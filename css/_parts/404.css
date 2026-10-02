@@ -5,12 +5,15 @@
 .p-404 .hero{--lamp-x:82%;--lamp-y:18%}
 .p-404 .hero--type h1{font-size:clamp(2.6rem,7vw,6.4rem)}
 .p-404 .hero .lead{color:var(--w-muted);max-width:40ch}
-.p-404 .exits{border-top:1px solid var(--gold);max-width:640px;width:100%;margin-top:1vh}
+.p-404 .hero--type{grid-template-columns:repeat(12,1fr);column-gap:1.5rem;align-content:end}
+.p-404 .hero--type > .eyebrow,.p-404 .hero--type > h1,.p-404 .hero--type > .lead{grid-column:1 / 7}
+.p-404 .exits{grid-column:8 / 13;grid-row:1 / 4;align-self:end;border-top:1px solid var(--gold);width:100%}
 .p-404 .exit{display:grid;grid-template-columns:3.2rem 1fr auto;gap:1.2rem;align-items:center;padding:1rem 0;border-bottom:1px solid var(--w-line-soft);font-family:var(--font-display);font-size:clamp(1.25rem,2vw,1.8rem);font-weight:300;line-height:1.15;transition:background .25s,padding-left .25s}
 .p-404 .exit:hover{background:var(--w-surface);padding-left:.4rem}
 .p-404 .exit .num{font-size:1.1rem;color:var(--w-gold-text)}
 .p-404 .exit small{display:block;font-family:var(--font-body);font-size:.84rem;color:var(--w-muted);margin-top:.15rem}
 @media (max-width:900px){
+  .p-404 .hero--type > *,.p-404 .exits{grid-column:1!important;grid-row:auto}
   .p-404 .exit{grid-template-columns:2.4rem 1fr;gap:.8rem}
   .p-404 .exit .arrow{display:none}
 }

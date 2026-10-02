@@ -6,7 +6,12 @@
    ============================================================ */
 .p-jogi .hero{--lamp-x:85%;--lamp-y:30%;height:auto;min-height:0;padding-top:clamp(3rem,9vh,6rem);padding-bottom:calc(7vh + 3rem);gap:.9rem}
 .p-jogi .hero--type h1{font-size:clamp(2rem,4.4vw,3.8rem);max-width:20ch;line-height:1.02}
-.p-jogi .jogi-hero__meta{font-size:.92rem;color:var(--w-muted);max-width:70ch;line-height:1.6}
+.p-jogi .hero--type{grid-template-columns:repeat(12,1fr);column-gap:1.5rem;align-content:end}
+.p-jogi .hero--type > .eyebrow,.p-jogi .hero--type > h1{grid-column:1 / 8}
+.p-jogi .jogi-hero__meta{grid-column:9 / 13;grid-row:1 / 3;align-self:end;font-size:.9rem;color:var(--w-muted);border-top:1px solid var(--gold)}
+.p-jogi .jogi-hero__meta div{display:grid;grid-template-columns:6.5rem 1fr;gap:.8rem;padding:.6rem 0;border-bottom:1px solid var(--w-line-soft)}
+.p-jogi .jogi-hero__meta dt{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--w-gold-text);padding-top:.15rem}
+.p-jogi .jogi-hero__meta dd{color:var(--w-ink);margin:0}
 .p-jogi #szoveg{--lamp-x:8%;--lamp-y:88%}
 .p-jogi .jogi{align-items:start}
 .p-jogi .jogi__side{grid-column:1 / 5;position:sticky;top:calc(var(--nav-h) + 1.5rem);display:grid;gap:1.2rem;align-content:start;padding-right:2rem}
@@ -30,6 +35,8 @@
 .p-jogi .todo{display:inline-block;font-family:var(--font-body);font-style:normal;font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--w-gold-text);border:1px solid var(--w-line);border-radius:2px;padding:.12rem .45rem;line-height:1.4;vertical-align:baseline;background:rgba(194,167,97,.08)}
 .p-jogi .jogi__cross{margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid var(--w-line);display:flex;gap:1rem 1.6rem;flex-wrap:wrap;align-items:baseline;color:var(--w-muted)}
 @media (max-width:900px){
+  .p-jogi .hero--type{grid-template-columns:1fr}
+  .p-jogi .hero--type > *,.p-jogi .jogi-hero__meta{grid-column:1!important;grid-row:auto}
   .p-jogi .hero{min-height:0;padding-top:2rem;padding-bottom:calc(7vh + 2.4rem)}
   .p-jogi .jogi__side{position:static;grid-column:1;padding-right:0}
   .p-jogi .jogi__body{grid-column:1;margin-top:1.4rem}

@@ -4,7 +4,13 @@
    4 bal ragadó fej + jobb nagy-számos lépések (wipe-d) · 5 középre zárt díj-blokk · 6 fotós sötét záró jobbra (lip)
    ============================================================ */
 .p-cegeknek .hero{--lamp-x:10%;--lamp-y:84%}
-.p-cegeknek .hero--statement h1{max-width:26ch}
+.p-cegeknek .hero--statement{align-content:end}
+.p-cegeknek .ceg-top{display:grid;grid-template-columns:repeat(12,1fr);column-gap:1.5rem;align-items:end;width:100%}
+.p-cegeknek .ceg-top h1{grid-column:5 / 13;max-width:24ch;justify-self:end}
+.p-cegeknek .ceg-forms{grid-column:1 / 4;grid-row:1;text-align:left;border-top:1px solid var(--gold)}
+.p-cegeknek .ceg-forms a{display:grid;grid-template-columns:2.2rem 1fr;padding:.62rem 0;border-bottom:1px solid var(--w-line-soft);font-size:.95rem;color:var(--w-ink);transition:padding-left .25s}
+.p-cegeknek .ceg-forms a:hover{padding-left:.3rem}
+.p-cegeknek .ceg-forms .num{color:var(--w-gold-text);font-family:var(--font-display)}
 .p-cegeknek .hero__foot .hero__cred{text-align:left;max-width:46ch}
 
 .p-cegeknek #ajanlat{--lamp-x:88%;--lamp-y:12%}
@@ -37,6 +43,9 @@
 .p-cegeknek .closer .closer__body{max-width:min(52%,720px)}
 
 @media (max-width:900px){
+  .p-cegeknek .ceg-top{grid-template-columns:1fr}
+  .p-cegeknek .ceg-top h1{grid-column:1;justify-self:start}
+  .p-cegeknek .ceg-forms{display:none}
   .p-cegeknek #ajanlat .rows__item{grid-template-columns:2.6rem 1fr}
   .p-cegeknek .rows__meta{grid-column:2;text-align:left;white-space:normal}
   .p-cegeknek .indul{grid-template-columns:1fr;row-gap:1.6rem}

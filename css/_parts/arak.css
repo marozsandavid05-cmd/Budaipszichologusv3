@@ -55,10 +55,13 @@
 
 /* 7 · záró band */
 .p-arak #zaro{--lamp-x:6%;--lamp-y:60%;padding-top:calc(7vh + clamp(3rem,9vh,6rem));padding-bottom:clamp(3rem,9vh,6rem)}
-.p-arak .band__in{display:grid;gap:1.6rem;justify-items:start}
-.p-arak .band__in p{max-width:34ch}
+.p-arak .band__in{display:grid;grid-template-columns:repeat(12,1fr);column-gap:1.5rem;align-items:end;width:100%}
+.p-arak .band__in p{grid-column:1 / 8;max-width:34ch}
+.p-arak .band__in .ctas{grid-column:9 / 13;justify-content:flex-end}
 
 @media (max-width:900px){
+  .p-arak .band__in{grid-template-columns:1fr;row-gap:1.4rem}
+  .p-arak .band__in p,.p-arak .band__in .ctas{grid-column:1;justify-content:flex-start}
   .p-arak .hero{grid-template-columns:1fr;grid-template-rows:auto auto 1fr auto;padding-top:1rem;padding-bottom:calc(7vh + 1.8rem);row-gap:1rem}
   .p-arak .hero .eyebrow{grid-column:1;grid-row:1}
   .p-arak .hero__lead{grid-column:1;grid-row:2;font-size:1.15rem;max-width:100%}

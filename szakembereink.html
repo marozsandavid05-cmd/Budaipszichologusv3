@@ -92,123 +92,64 @@
 <!-- GEN:FEJ:end -->
 <main>
 
-  <!-- HERO · 1b tool-hero: a kiegészíthető mondat maga a fejléc, a szűrők állítják a regisztert -->
-  <section class="hero hero--tool amb reg-lines reg" data-world="nap" id="valaszto">
-    <p class="eyebrow h-in">Szakembereink · regiszter 01-<!-- GEN:n-klinikus -->37<!-- /GEN --></p>
-    <h1 data-split>Kivel kezdjük?</h1>
-    <p class="madlib h-in">Olyan szakembert keresek, aki
-      <select data-filter="miben" aria-label="Miben segítsen">
+  <!-- HERO · osztott fejléc (David kérése, 2026-10-02): bal oldalt a cím és a kompakt kereső, jobb oldalt egy fotó.
+       A két hasáb közös felső és alsó éllel, egy képernyőben; a kereső három legördülője a lenti listát szűri. -->
+  <section class="hero hero--split amb" data-world="nap" id="valaszto">
+    <div class="split__text">
+      <div class="split__top">
+        <p class="eyebrow h-in">Szakembereink · regiszter 01-<!-- GEN:n-klinikus -->35<!-- /GEN --></p>
+        <h1 data-split>Kivel<br>kezdjük?</h1>
+      </div>
+      <div class="split__bottom h-in">
+        <p class="lead"><!-- GEN:letszam-szo-nagy -->Harmincöt<!-- /GEN --> szakember egy szakmai vezetés alatt. Adja meg, miben és kinek keres segítséget, a lista ennek megfelelően szűkül.</p>
+        <div class="coord split__coord">
+          <img src="img/portrek/vajas-zsuzsanna.jpg" alt="Vajas Zsuzsanna" width="52" height="52" loading="lazy">
+          <div><b>Ha nem tud dönteni, Vajas Zsuzsanna segít</b><span>fogadó kolléga · <a href="tel:+36309611364">+36 30 961 1364</a> · hétköznap 9-15</span></div>
+        </div>
+      <div class="finder" role="group" aria-label="Szakember keresése">
+        <label class="finder__f"><span>Téma</span><select data-filter="miben">
         <!-- GEN:options-miben:start -->
 <option value="">bármelyik</option><option value="szorongas">szorongás, pánik</option><option value="hangulat">hangulat, depresszió</option><option value="kieges">kiégés, stressz</option><option value="gyasz">gyász, veszteség, trauma</option><option value="parkapcsolat">párkapcsolat</option><option value="csalad">család, gyereknevelés</option><option value="fuggoseg">függőség</option><option value="test">evés, test, alvás</option><option value="onismeret">önismeret, önértékelés</option><option value="eletvezetes">életvezetés, döntés</option><option value="karrier">karrier, vezetés</option><option value="krizis">krízis, változás</option><option value="sport">sport, teljesítmény</option>
 <!-- GEN:options-miben:end -->
-      </select>
-      területen segít,
-      <select data-filter="kinek" aria-label="Kinek keres">
-        <option value="">bárkinek</option>
-        <option value="magamnak">nekem, felnőttként</option>
-        <option value="gyereknek">a gyerekemnek, kamaszomnak</option>
-        <option value="parkent">nekünk, párként</option>
-        <option value="csaladkent">a családunknak</option>
-        <option value="cegkent">a cégünknek</option>
-        <option value="sportolokent">sportolóként</option>
-      </select>
-      és
-      <select data-filter="mod" aria-label="Személyesen vagy online">
-        <option value="">személyesen vagy online</option>
-        <option value="szemelyes">személyesen fogad</option>
-        <option value="online">online is fogad</option>
-      </select>
-      dolgozik.
-    </p>
-    <div class="hero__foot h-in">
-      <p class="hero__cred cred">A sorszám <strong>azonosító, nem sorrend</strong>. Szűréskor a szám nem változik: aki 22 volt, 22 marad, a listát alul találja.</p>
-      <p class="hero__meta meta num"><span data-reg-count>37</span> szakember a szűrés szerint · <a class="gold" href="#regiszter">a regiszterhez</a></p>
+        </select></label>
+        <label class="finder__f"><span>Kinek</span><select data-filter="kinek"><option value="">bárkinek</option><option value="magamnak">nekem, felnőttként</option><option value="gyereknek">gyereknek, kamasznak</option><option value="parkent">párként</option><option value="csaladkent">családként</option><option value="cegkent">cégként</option><option value="sportolokent">sportolóként</option></select></label>
+        <label class="finder__f"><span>Mód</span><select data-filter="mod"><option value="">mindegy</option><option value="szemelyes">személyesen</option><option value="online">online is</option></select></label>
+        <a class="finder__go" href="#regiszter"><b class="num" data-reg-count>35</b><span>szakember a listában</span><span class="arrow"></span></a>
+      </div>
+      </div>
     </div>
-    <svg class="aline" viewBox="0 0 1440 24" preserveAspectRatio="none" aria-hidden="true"><path d="M0 12 H1440" stroke-dasharray="58.7 21.1 33.5 10.5 75.4 31.6 25.1 10.5 50.3 21.1 92.2 42.1 16.8 10.5 41.9 21.1 67.1 31.6 33.5 10.5 83.8 52.7 25.1 10.5 50.3 21.1 58.7 21.1 16.8 10.5 75.4 31.6 41.9 21.1 33.5 10.5 67.1 31.6 50.3 21.1"/></svg>
+    <figure class="split__img">
+      <img src="img/hero-szakembereink.webp" srcset="img/hero-szakembereink-960.webp 960w, img/hero-szakembereink.webp 1920w" sizes="(max-width:900px) 100vw, 50vw" alt="Szakemberünk mosolyogva ül egy rendelőben, előtte virág" width="1920" height="1280" fetchpriority="high">
+    </figure>
   </section>
 
-  <!-- REGISZTER · sticky szűrő-oszlop + sorok, minden sor helyben nyílik -->
-  <section class="reg reg--full amb surface lip" data-world="nap" id="regiszter">
-    <aside class="reg__side">
-      <p class="reg__count"><span class="num" data-reg-count>37</span><small>szakember a szűrés szerint</small></p>
-      <div>
-        <p class="eyebrow reg__label">Kinek</p>
-        <div class="chips">
-          <button class="chip" type="button" data-filter="kinek" data-value="magamnak" aria-pressed="false">Magamnak</button>
-          <button class="chip" type="button" data-filter="kinek" data-value="gyereknek" aria-pressed="false">Gyereknek, kamasznak</button>
-          <button class="chip" type="button" data-filter="kinek" data-value="parkent" aria-pressed="false">Párként</button>
-          <button class="chip" type="button" data-filter="kinek" data-value="csaladkent" aria-pressed="false">Családként</button>
-          <button class="chip" type="button" data-filter="kinek" data-value="cegkent" aria-pressed="false">Cégként</button>
-          <button class="chip" type="button" data-filter="kinek" data-value="sportolokent" aria-pressed="false">Sportolóként</button>
-        </div>
-      </div>
-      <div>
-        <p class="eyebrow reg__label">Miben</p>
-        <div class="chips">
-          <!-- GEN:chips-miben:start -->
-<button class="chip" type="button" data-filter="miben" data-value="szorongas" aria-pressed="false">Szorongás, pánik</button>
-<button class="chip" type="button" data-filter="miben" data-value="hangulat" aria-pressed="false">Hangulat, depresszió</button>
-<button class="chip" type="button" data-filter="miben" data-value="kieges" aria-pressed="false">Kiégés, stressz</button>
-<button class="chip" type="button" data-filter="miben" data-value="gyasz" aria-pressed="false">Gyász, veszteség, trauma</button>
-<button class="chip" type="button" data-filter="miben" data-value="parkapcsolat" aria-pressed="false">Párkapcsolat</button>
-<button class="chip" type="button" data-filter="miben" data-value="csalad" aria-pressed="false">Család, gyereknevelés</button>
-<button class="chip" type="button" data-filter="miben" data-value="fuggoseg" aria-pressed="false">Függőség</button>
-<button class="chip" type="button" data-filter="miben" data-value="test" aria-pressed="false">Evés, test, alvás</button>
-<button class="chip" type="button" data-filter="miben" data-value="onismeret" aria-pressed="false">Önismeret, önértékelés</button>
-<button class="chip" type="button" data-filter="miben" data-value="eletvezetes" aria-pressed="false">Életvezetés, döntés</button>
-<button class="chip" type="button" data-filter="miben" data-value="karrier" aria-pressed="false">Karrier, vezetés</button>
-<button class="chip" type="button" data-filter="miben" data-value="krizis" aria-pressed="false">Krízis, változás</button>
-<button class="chip" type="button" data-filter="miben" data-value="sport" aria-pressed="false">Sport, teljesítmény</button>
-<!-- GEN:chips-miben:end -->
-        </div>
-      </div>
-      <div>
-        <p class="eyebrow reg__label">Forma</p>
-        <div class="chips">
-          <button class="chip" type="button" data-filter="forma" data-value="egyeni" aria-pressed="false">Egyéni</button>
-          <button class="chip" type="button" data-filter="forma" data-value="par" aria-pressed="false">Pár</button>
-          <button class="chip" type="button" data-filter="forma" data-value="csalad" aria-pressed="false">Család</button>
-          <button class="chip" type="button" data-filter="forma" data-value="csoport" aria-pressed="false">Csoport</button>
-          <button class="chip" type="button" data-filter="forma" data-value="ceges" aria-pressed="false">Céges</button>
-        </div>
-      </div>
-      <div>
-        <p class="eyebrow reg__label">Mód és nyelv</p>
-        <div class="chips">
-          <button class="chip" type="button" data-filter="mod" data-value="szemelyes" aria-pressed="false">Személyesen</button>
-          <button class="chip" type="button" data-filter="mod" data-value="online" aria-pressed="false">Online is</button>
-          <button class="chip" type="button" data-filter="nyelv" data-value="angol" aria-pressed="false">Angolul is</button>
-        </div>
-      </div>
-      <div>
-        <p class="eyebrow reg__label">Díjsáv, 50 perc</p>
-        <div class="chips">
-          <button class="chip num" type="button" data-filter="ar" data-value="15-18" aria-pressed="false">15-18 ezer Ft</button>
-          <button class="chip num" type="button" data-filter="ar" data-value="15-20" aria-pressed="false">15-20 ezer Ft</button>
-          <button class="chip num" type="button" data-filter="ar" data-value="18-25" aria-pressed="false">18-25 ezer Ft</button>
-          <button class="chip num" type="button" data-filter="ar" data-value="25-30" aria-pressed="false">25-30 ezer Ft</button>
-        </div>
-      </div>
-      <div>
-        <p class="eyebrow reg__label">Szerep a szakképzőhelyen</p>
-        <div class="chips">
-          <button class="chip" type="button" data-filter="szerep" data-value="oktato" aria-pressed="false">Oktató</button>
-          <button class="chip" type="button" data-filter="szerep" data-value="szupervizor" aria-pressed="false">Szupervízor</button>
-        </div>
-      </div>
-      <button class="btn btn--text" type="button" data-reg-reset hidden>Szűrők törlése</button>
-      <p class="reg__note">Az arany pont a sorszám mellett: a szakképzőhely oktatója vagy szupervízora. Kattintson a sorra: három mondat, két gomb.</p>
-    </aside>
-    <div>
-      <div class="reg__bar">
-        <div class="coord">
-          <img src="img/portrek/vajas-zsuzsanna.jpg" alt="Vajas Zsuzsanna" width="52" height="52" loading="lazy">
-          <div><b>Vajas Zsuzsanna</b><span>pszichológus asszisztens, fogadó kolléga · <a href="tel:+36309611364">+36 30 961 1364</a> · hétköznap 9-15. Ha nem tud dönteni, ő segít választani.</span></div>
-        </div>
-        <div class="reg__sort" role="group" aria-label="Rendezés">
-          <span class="small muted">Rendezés</span>
-          <button class="chip" type="button" data-sort="alap" aria-pressed="true">sorszám</button>
-          <button class="chip" type="button" data-sort="nev" aria-pressed="false">névsor</button>
+  <!-- REGISZTER · egysoros eszköztár (darabszám, lenyíló Szűrők, rendezés) a lista fölött, a sorok teljes szélességben, minden sor helyben nyílik -->
+  <section class="reg reg--full amb surface" data-world="nap" id="regiszter">
+    <div class="reg__main">
+      <div class="reg__tools" role="group" aria-label="Szűrés és rendezés">
+        <p class="reg__count"><b class="num" data-reg-count>35</b> szakember</p>
+        <details class="tools__more">
+          <summary>Szűrők <b data-reg-active hidden></b></summary>
+          <div class="tools__grid">
+            <label class="tool"><span>Téma</span><select data-filter="miben">
+        <!-- GEN:options-miben:start -->
+<option value="">bármelyik</option><option value="szorongas">szorongás, pánik</option><option value="hangulat">hangulat, depresszió</option><option value="kieges">kiégés, stressz</option><option value="gyasz">gyász, veszteség, trauma</option><option value="parkapcsolat">párkapcsolat</option><option value="csalad">család, gyereknevelés</option><option value="fuggoseg">függőség</option><option value="test">evés, test, alvás</option><option value="onismeret">önismeret, önértékelés</option><option value="eletvezetes">életvezetés, döntés</option><option value="karrier">karrier, vezetés</option><option value="krizis">krízis, változás</option><option value="sport">sport, teljesítmény</option>
+<!-- GEN:options-miben:end -->
+        </select></label>
+            <label class="tool"><span>Kinek</span><select data-filter="kinek"><option value="">bárkinek</option><option value="magamnak">nekem, felnőttként</option><option value="gyereknek">gyereknek, kamasznak</option><option value="parkent">párként</option><option value="csaladkent">családként</option><option value="cegkent">cégként</option><option value="sportolokent">sportolóként</option></select></label>
+            <label class="tool"><span>Forma</span><select data-filter="forma"><option value="">bármilyen</option><option value="egyeni">egyéni</option><option value="par">pár</option><option value="csalad">család</option><option value="csoport">csoport</option><option value="ceges">céges</option></select></label>
+            <label class="tool"><span>Mód</span><select data-filter="mod"><option value="">mindegy</option><option value="szemelyes">személyesen</option><option value="online">online is</option></select></label>
+            <label class="tool"><span>Díjsáv, 50 perc</span><select data-filter="ar"><option value="">bármelyik</option><option value="15-18">15-18 ezer Ft</option><option value="15-20">15-20 ezer Ft</option><option value="18-25">18-25 ezer Ft</option><option value="25-30">25-30 ezer Ft</option></select></label>
+            <label class="tool"><span>Nyelv</span><select data-filter="nyelv"><option value="">magyarul</option><option value="angol">angolul is</option></select></label>
+            <label class="tool"><span>Szerep a képzőhelyen</span><select data-filter="szerep"><option value="">mindegy</option><option value="oktato">oktató</option><option value="szupervizor">szupervízor</option></select></label>
+          </div>
+        </details>
+        <p class="tools__note small muted">Az arany pont a sorszám mellett: oktató vagy szupervízor</p>
+        <div class="tools__end">
+          <button class="btn btn--text tools__reset" type="button" data-reg-reset hidden>Szűrők törlése</button>
+          <div class="seg" role="group" aria-label="Rendezés">
+            <button type="button" data-sort="alap" aria-pressed="true">sorszám</button><button type="button" data-sort="nev" aria-pressed="false">névsor</button>
+          </div>
         </div>
       </div>
       <div class="reg__list">
@@ -465,24 +406,10 @@
     <div class="ctas"><a class="btn btn--line" href="szakemberek/kodela-julia.html">Teljes profil</a><a class="btn btn--text" href="kapcsolat.html?szakember=kodela-julia">Időpont Kodela Júlianál <span class="arrow"></span></a></div>
   </div></div>
 </article>
-<article class="row" tabindex="0" aria-expanded="false" data-portrait="kovacs-mate" data-nev="Kovács Máté Zsolt"
-  data-kinek="magamnak" data-miben="fuggoseg|test|szorongas|onismeret|parkapcsolat|csalad" data-forma="egyeni"
-  data-mod="szemelyes" data-nyelv="magyar" data-ar="18-25" data-szerep="">
-  <span class="row__n num">19</span>
-  <div><h3 class="row__name">Kovács Máté Zsolt</h3><p class="row__title">Pszichológus, addiktológiai tanácsadó szakpszichológus</p></div>
-  <div class="row__tags"><span class="tag">Függőség</span><span class="tag">Evés, test, alvás</span><span class="tag">Szorongás, pánik</span></div>
-  <span class="row__price num">18-25 ezer Ft</span>
-  <span class="avail avail--none" aria-hidden="true"></span>
-  <div class="row__more"><div>
-    <p>Azzal, hogy elkezdte a segítség keresését már egy igen fontos lépést tett a gyógyulás irányába. Kívánom Önnek, hogy megtalálja azt a szakembert, aki segítségére lehet az úton, ami sokszor rögös és nehéz, de az idő teltével meghozza az eredményét.</p>
-    <p class="small muted">felnőtt · egyéni · személyes · magyar</p>
-    <div class="ctas"><a class="btn btn--line" href="szakemberek/kovacs-mate.html">Teljes profil</a><a class="btn btn--text" href="kapcsolat.html?szakember=kovacs-mate">Időpont Kovács Máté Zsoltnál <span class="arrow"></span></a></div>
-  </div></div>
-</article>
 <article class="row" tabindex="0" aria-expanded="false" data-portrait="kuszka-adrienn" data-nev="Kuszka Adrienn"
   data-kinek="magamnak|parkent|csaladkent" data-miben="fuggoseg" data-forma="egyeni|par|csalad|csoport"
   data-mod="szemelyes" data-nyelv="magyar" data-ar="18-25" data-szerep="oktato">
-  <span class="row__n num">20<span class="dot" title="Oktató vagy szupervízor"></span></span>
+  <span class="row__n num">19<span class="dot" title="Oktató vagy szupervízor"></span></span>
   <div><h3 class="row__name">Kuszka Adrienn</h3><p class="row__title">Pszichológus, addiktológiai tanácsadó szakpszichológus jelölt</p></div>
   <div class="row__tags"><span class="tag">Függőség</span></div>
   <span class="row__price num">18-25 ezer Ft</span>
@@ -496,7 +423,7 @@
 <article class="row" tabindex="0" aria-expanded="false" data-portrait="laki-eva" data-nev="Laki Éva"
   data-kinek="magamnak" data-miben="kieges|csalad|szorongas|hangulat|gyasz|eletvezetes|krizis" data-forma="egyeni|csoport"
   data-mod="szemelyes" data-nyelv="magyar" data-ar="18-25" data-szerep="oktato">
-  <span class="row__n num">21<span class="dot" title="Oktató vagy szupervízor"></span></span>
+  <span class="row__n num">20<span class="dot" title="Oktató vagy szupervízor"></span></span>
   <div><h3 class="row__name">Laki Éva</h3><p class="row__title">Klinikai szakpszichológus, coach</p></div>
   <div class="row__tags"><span class="tag">Kiégés, stressz</span><span class="tag">Család, gyereknevelés</span><span class="tag">Szorongás, pánik</span></div>
   <span class="row__price num">18-25 ezer Ft</span>
@@ -510,7 +437,7 @@
 <article class="row" tabindex="0" aria-expanded="false" data-portrait="laszlo-anna" data-nev="László Anna Márta"
   data-kinek="magamnak" data-miben="szorongas|test|hangulat|kieges|gyasz|onismeret|krizis|parkapcsolat" data-forma="egyeni"
   data-mod="szemelyes" data-nyelv="magyar" data-ar="18-25" data-szerep="oktato">
-  <span class="row__n num">22<span class="dot" title="Oktató vagy szupervízor"></span></span>
+  <span class="row__n num">21<span class="dot" title="Oktató vagy szupervízor"></span></span>
   <div><h3 class="row__name">László Anna Márta</h3><p class="row__title">Klinikai szakpszichológus, Sématerapeuta</p></div>
   <div class="row__tags"><span class="tag">Szorongás, pánik</span><span class="tag">Evés, test, alvás</span><span class="tag">Hangulat, depresszió</span></div>
   <span class="row__price num">18-25 ezer Ft</span>
@@ -524,7 +451,7 @@
 <article class="row" tabindex="0" aria-expanded="false" data-portrait="marozsi-zoltan" data-nev="Marozsi Zoltán"
   data-kinek="magamnak" data-miben="eletvezetes|onismeret|krizis|szorongas|hangulat|kieges|parkapcsolat" data-forma="egyeni|csoport"
   data-mod="szemelyes" data-nyelv="magyar" data-ar="15-20" data-szerep="">
-  <span class="row__n num">23</span>
+  <span class="row__n num">22</span>
   <div><h3 class="row__name">Marozsi Zoltán</h3><p class="row__title">pszichológus, képzésben lévő CBT Konzultáns</p></div>
   <div class="row__tags"><span class="tag">Életvezetés, döntés</span><span class="tag">Önismeret, önértékelés</span><span class="tag">Krízis, változás</span></div>
   <span class="row__price num">15-20 ezer Ft</span>
@@ -538,7 +465,7 @@
 <article class="row" tabindex="0" aria-expanded="false" data-portrait="mikus-robert" data-nev="Mikus Róbert"
   data-kinek="magamnak|csaladkent" data-miben="kieges|gyasz|parkapcsolat|onismeret|eletvezetes|krizis|hangulat" data-forma="egyeni|csalad|csoport"
   data-mod="szemelyes|online" data-nyelv="magyar" data-ar="18-25" data-szerep="oktato">
-  <span class="row__n num">24<span class="dot" title="Oktató vagy szupervízor"></span></span>
+  <span class="row__n num">23<span class="dot" title="Oktató vagy szupervízor"></span></span>
   <div><h3 class="row__name">Mikus Róbert</h3><p class="row__title">Alkalmazott egészség szakpszichológus, integratív pszichoterapeuta jelölt</p></div>
   <div class="row__tags"><span class="tag">Kiégés, stressz</span><span class="tag">Gyász, veszteség, trauma</span><span class="tag">Párkapcsolat</span></div>
   <span class="row__price num">18-25 ezer Ft</span>
@@ -552,7 +479,7 @@
 <article class="row" tabindex="0" aria-expanded="false" data-portrait="molnar-adrienn" data-nev="Molnár Adrienn"
   data-kinek="magamnak" data-miben="" data-forma="egyeni"
   data-mod="szemelyes" data-nyelv="magyar" data-ar="15-20" data-szerep="">
-  <span class="row__n num">25</span>
+  <span class="row__n num">24</span>
   <div><h3 class="row__name">Molnár Adrienn</h3><p class="row__title">Pszichológus, személyközpontú (Rogers-i) tanácsadó</p></div>
   <div class="row__tags"></div>
   <span class="row__price num">15-20 ezer Ft</span>
@@ -566,7 +493,7 @@
 <article class="row" tabindex="0" aria-expanded="false" data-portrait="nadas-beata" data-nev="Nádas Beáta"
   data-kinek="magamnak|cegkent" data-miben="kieges|szorongas|onismeret|eletvezetes|karrier|hangulat|gyasz|krizis" data-forma="egyeni|ceges"
   data-mod="szemelyes" data-nyelv="magyar|angol" data-ar="18-25" data-szerep="">
-  <span class="row__n num">26</span>
+  <span class="row__n num">25</span>
   <div><h3 class="row__name">Nádas Beáta</h3><p class="row__title">Klinikai szakpszichológus, Munka- és szervezet szakpszichológus</p></div>
   <div class="row__tags"><span class="tag">Kiégés, stressz</span><span class="tag">Szorongás, pánik</span><span class="tag">Önismeret, önértékelés</span></div>
   <span class="row__price num">18-25 ezer Ft</span>
@@ -580,7 +507,7 @@
 <article class="row" tabindex="0" aria-expanded="false" data-portrait="peteri-david" data-nev="Péteri Dávid"
   data-kinek="magamnak|gyereknek" data-miben="onismeret|eletvezetes|parkapcsolat|krizis|szorongas|csalad|kieges|hangulat|fuggoseg|gyasz" data-forma="egyeni|csoport"
   data-mod="szemelyes" data-nyelv="magyar|angol" data-ar="18-25" data-szerep="oktato">
-  <span class="row__n num">27<span class="dot" title="Oktató vagy szupervízor"></span></span>
+  <span class="row__n num">26<span class="dot" title="Oktató vagy szupervízor"></span></span>
   <div><h3 class="row__name">Péteri Dávid</h3><p class="row__title">Klinikai szakpszichológus, pszichoterapeuta-jelölt</p></div>
   <div class="row__tags"><span class="tag">Önismeret, önértékelés</span><span class="tag">Életvezetés, döntés</span><span class="tag">Párkapcsolat</span></div>
   <span class="row__price num">18-25 ezer Ft</span>
@@ -594,7 +521,7 @@
 <article class="row" tabindex="0" aria-expanded="false" data-portrait="ronai-zsofia" data-nev="Rónai Zsófia"
   data-kinek="magamnak|gyereknek|parkent|csaladkent" data-miben="csalad|parkapcsolat|onismeret|krizis|szorongas|kieges|test|eletvezetes|karrier" data-forma="egyeni|par|csalad"
   data-mod="szemelyes" data-nyelv="magyar" data-ar="18-25" data-szerep="oktato">
-  <span class="row__n num">28<span class="dot" title="Oktató vagy szupervízor"></span></span>
+  <span class="row__n num">27<span class="dot" title="Oktató vagy szupervízor"></span></span>
   <div><h3 class="row__name">Rónai Zsófia</h3><p class="row__title">Pszichológus, integratív gyermekterapeuta</p></div>
   <div class="row__tags"><span class="tag">Család, gyereknevelés</span><span class="tag">Párkapcsolat</span><span class="tag">Önismeret, önértékelés</span></div>
   <span class="row__price num">18-25 ezer Ft</span>
@@ -608,7 +535,7 @@
 <article class="row" tabindex="0" aria-expanded="false" data-portrait="szabo-andras" data-nev="Szabó András"
   data-kinek="magamnak|gyereknek|parkent|cegkent" data-miben="csalad|parkapcsolat|szorongas|kieges" data-forma="egyeni|par|csoport"
   data-mod="szemelyes" data-nyelv="magyar" data-ar="15-18" data-szerep="oktato">
-  <span class="row__n num">29<span class="dot" title="Oktató vagy szupervízor"></span></span>
+  <span class="row__n num">28<span class="dot" title="Oktató vagy szupervízor"></span></span>
   <div><h3 class="row__name">Szabó András</h3><p class="row__title">Coach, párkapcsolati konzultáns</p></div>
   <div class="row__tags"><span class="tag">Család, gyereknevelés</span><span class="tag">Párkapcsolat</span><span class="tag">Szorongás, pánik</span></div>
   <span class="row__price num">15-18 ezer Ft</span>
@@ -622,7 +549,7 @@
 <article class="row" tabindex="0" aria-expanded="false" data-portrait="szabo-brigitta" data-nev="Szabó Brigitta"
   data-kinek="magamnak|gyereknek|parkent|csaladkent" data-miben="csalad|test|szorongas|hangulat|kieges|gyasz|parkapcsolat|onismeret|krizis" data-forma="egyeni|par|csalad"
   data-mod="szemelyes" data-nyelv="magyar" data-ar="18-25" data-szerep="oktato">
-  <span class="row__n num">30<span class="dot" title="Oktató vagy szupervízor"></span></span>
+  <span class="row__n num">29<span class="dot" title="Oktató vagy szupervízor"></span></span>
   <div><h3 class="row__name">Szabó Brigitta</h3><p class="row__title">klinikai- és mentálhigiéniai gyermek- és ifjúsági szakpszichológus, illetve pár- és családterapeuta.</p></div>
   <div class="row__tags"><span class="tag">Család, gyereknevelés</span><span class="tag">Evés, test, alvás</span><span class="tag">Szorongás, pánik</span></div>
   <span class="row__price num">18-25 ezer Ft</span>
@@ -636,7 +563,7 @@
 <article class="row" tabindex="0" aria-expanded="false" data-portrait="szatmari-zsolt" data-nev="Szatmári Zsolt"
   data-kinek="magamnak" data-miben="kieges|eletvezetes|onismeret|gyasz|parkapcsolat|csalad|karrier" data-forma="egyeni|csoport"
   data-mod="szemelyes" data-nyelv="magyar" data-ar="18-25" data-szerep="">
-  <span class="row__n num">31</span>
+  <span class="row__n num">30</span>
   <div><h3 class="row__name">Szatmári Zsolt</h3><p class="row__title">Pszichológus, doktorjelölt</p></div>
   <div class="row__tags"><span class="tag">Kiégés, stressz</span><span class="tag">Életvezetés, döntés</span><span class="tag">Önismeret, önértékelés</span></div>
   <span class="row__price num">18-25 ezer Ft</span>
@@ -647,24 +574,10 @@
     <div class="ctas"><a class="btn btn--line" href="szakemberek/szatmari-zsolt.html">Teljes profil</a><a class="btn btn--text" href="kapcsolat.html?szakember=szatmari-zsolt">Időpont Szatmári Zsoltnál <span class="arrow"></span></a></div>
   </div></div>
 </article>
-<article class="row" tabindex="0" aria-expanded="false" data-portrait="szelenyi-bence" data-nev="Szelényi Bence"
-  data-kinek="magamnak|sportolokent" data-miben="onismeret|kieges|szorongas|eletvezetes|gyasz|parkapcsolat|csalad|krizis|sport|test|karrier" data-forma="egyeni|csoport"
-  data-mod="szemelyes|online" data-nyelv="magyar|angol" data-ar="15-20" data-szerep="oktato">
-  <span class="row__n num">32<span class="dot" title="Oktató vagy szupervízor"></span></span>
-  <div><h3 class="row__name">Szelényi Bence</h3><p class="row__title">Pszichológus, Relaxációs gyakorlatvezető</p></div>
-  <div class="row__tags"><span class="tag">Önismeret, önértékelés</span><span class="tag">Kiégés, stressz</span><span class="tag">Szorongás, pánik</span></div>
-  <span class="row__price num">15-20 ezer Ft</span>
-  <span class="avail avail--none" aria-hidden="true"></span>
-  <div class="row__more"><div>
-    <p>Megnyugvással tölt el, hogy felkeresett bennünket, ugyanis az első és egyik legnehezebb lépés a gyógyulás útján maga a probléma felismerése. Empátiával gondolok Önre ennek a kihívásokkal teli folyamatnak a kezdetén.</p>
-    <p class="small muted">felnőtt · egyéni, csoport · személyes és online · magyar, angol</p>
-    <div class="ctas"><a class="btn btn--line" href="szakemberek/szelenyi-bence.html">Teljes profil</a><a class="btn btn--text" href="kapcsolat.html?szakember=szelenyi-bence">Időpont Szelényi Bencenél <span class="arrow"></span></a></div>
-  </div></div>
-</article>
 <article class="row" tabindex="0" aria-expanded="false" data-portrait="tenk-virag" data-nev="Tenk Virág Lotti"
   data-kinek="magamnak" data-miben="kieges|gyasz|szorongas|parkapcsolat|test|onismeret|eletvezetes|karrier" data-forma="egyeni|csoport"
   data-mod="szemelyes" data-nyelv="magyar" data-ar="18-25" data-szerep="oktato">
-  <span class="row__n num">33<span class="dot" title="Oktató vagy szupervízor"></span></span>
+  <span class="row__n num">31<span class="dot" title="Oktató vagy szupervízor"></span></span>
   <div><h3 class="row__name">Tenk Virág Lotti</h3><p class="row__title">Alkalmazott egészségpszichológiai szakpszichológus, pszichoterapeuta jelölt</p></div>
   <div class="row__tags"><span class="tag">Kiégés, stressz</span><span class="tag">Gyász, veszteség, trauma</span><span class="tag">Szorongás, pánik</span></div>
   <span class="row__price num">18-25 ezer Ft</span>
@@ -678,7 +591,7 @@
 <article class="row" tabindex="0" aria-expanded="false" data-portrait="varga-nora" data-nev="Varga Nóra"
   data-kinek="magamnak|cegkent" data-miben="karrier|eletvezetes" data-forma="egyeni|csoport|ceges"
   data-mod="szemelyes" data-nyelv="magyar" data-ar="15-18" data-szerep="">
-  <span class="row__n num">34</span>
+  <span class="row__n num">32</span>
   <div><h3 class="row__name">Varga Nóra</h3><p class="row__title">Stratégiai coaching, Vezető támogatás</p></div>
   <div class="row__tags"><span class="tag">Karrier, vezetés</span><span class="tag">Életvezetés, döntés</span></div>
   <span class="row__price num">15-18 ezer Ft</span>
@@ -692,7 +605,7 @@
 <article class="row" tabindex="0" aria-expanded="false" data-portrait="vass-abraham" data-nev="Vass Ábrahám"
   data-kinek="magamnak|gyereknek|parkent|csaladkent" data-miben="kieges|onismeret|csalad|eletvezetes|krizis|gyasz|parkapcsolat|karrier" data-forma="egyeni|par|csalad|csoport"
   data-mod="szemelyes" data-nyelv="magyar" data-ar="18-25" data-szerep="oktato">
-  <span class="row__n num">35<span class="dot" title="Oktató vagy szupervízor"></span></span>
+  <span class="row__n num">33<span class="dot" title="Oktató vagy szupervízor"></span></span>
   <div><h3 class="row__name">Vass Ábrahám</h3><p class="row__title">Pszichológus, egészségpszichológiai szakpszichológus jelölt</p></div>
   <div class="row__tags"><span class="tag">Kiégés, stressz</span><span class="tag">Önismeret, önértékelés</span><span class="tag">Család, gyereknevelés</span></div>
   <span class="row__price num">18-25 ezer Ft</span>
@@ -706,7 +619,7 @@
 <article class="row" tabindex="0" aria-expanded="false" data-portrait="vizkeleti-ildiko" data-nev="Vízkeleti Ildikó"
   data-kinek="magamnak" data-miben="kieges|eletvezetes|karrier|szorongas" data-forma="egyeni|csoport"
   data-mod="szemelyes" data-nyelv="magyar" data-ar="15-20" data-szerep="">
-  <span class="row__n num">36</span>
+  <span class="row__n num">34</span>
   <div><h3 class="row__name">Vízkeleti Ildikó</h3><p class="row__title">Pszichológus</p></div>
   <div class="row__tags"><span class="tag">Kiégés, stressz</span><span class="tag">Életvezetés, döntés</span><span class="tag">Karrier, vezetés</span></div>
   <span class="row__price num">15-20 ezer Ft</span>
@@ -720,7 +633,7 @@
 <article class="row" tabindex="0" aria-expanded="false" data-portrait="vukov-johanna" data-nev="Vukov Johanna"
   data-kinek="magamnak" data-miben="onismeret|eletvezetes|gyasz|karrier" data-forma="egyeni|csoport"
   data-mod="szemelyes" data-nyelv="magyar" data-ar="15-20" data-szerep="oktato">
-  <span class="row__n num">37<span class="dot" title="Oktató vagy szupervízor"></span></span>
+  <span class="row__n num">35<span class="dot" title="Oktató vagy szupervízor"></span></span>
   <div><h3 class="row__name">Vukov Johanna</h3><p class="row__title">Pszichológus, irodalomterapeuta</p></div>
   <div class="row__tags"><span class="tag">Önismeret, önértékelés</span><span class="tag">Életvezetés, döntés</span><span class="tag">Gyász, veszteség, trauma</span></div>
   <span class="row__price num">15-20 ezer Ft</span>
@@ -762,7 +675,6 @@
 <img src="img/portrek/katona-etelka.jpg" alt="" width="600" height="750" loading="lazy" data-for="katona-etelka">
 <img src="img/portrek/kis-ferenc-balazs.jpg" alt="" width="600" height="750" loading="lazy" data-for="kis-ferenc-balazs">
 <img src="img/portrek/kodela-julia.jpg" alt="" width="600" height="750" loading="lazy" data-for="kodela-julia">
-<img src="img/portrek/kovacs-mate.jpg" alt="" width="600" height="750" loading="lazy" data-for="kovacs-mate">
 <img src="img/portrek/kuszka-adrienn.jpg" alt="" width="600" height="750" loading="lazy" data-for="kuszka-adrienn">
 <img src="img/portrek/laki-eva.jpg" alt="" width="600" height="750" loading="lazy" data-for="laki-eva">
 <img src="img/portrek/laszlo-anna.jpg" alt="" width="600" height="750" loading="lazy" data-for="laszlo-anna">
@@ -775,7 +687,6 @@
 <img src="img/portrek/szabo-andras.jpg" alt="" width="600" height="750" loading="lazy" data-for="szabo-andras">
 <img src="img/portrek/szabo-brigitta.jpg" alt="" width="600" height="750" loading="lazy" data-for="szabo-brigitta">
 <img src="img/portrek/szatmari-zsolt.jpg" alt="" width="600" height="750" loading="lazy" data-for="szatmari-zsolt">
-<img src="img/portrek/szelenyi-bence.jpg" alt="" width="600" height="750" loading="lazy" data-for="szelenyi-bence">
 <img src="img/portrek/tenk-virag.jpg" alt="" width="600" height="750" loading="lazy" data-for="tenk-virag">
 <img src="img/portrek/varga-nora.jpg" alt="" width="600" height="750" loading="lazy" data-for="varga-nora">
 <img src="img/portrek/vass-abraham.jpg" alt="" width="600" height="750" loading="lazy" data-for="vass-abraham">
@@ -789,7 +700,7 @@
   <section class="sec amb prom-sec" data-world="nap" id="oktatok">
     <div class="sec__head">
       <h2 data-split>Akik tanítanak is</h2>
-      <p class="sec__aside"><!-- GEN:n-oktato -->20<!-- /GEN --> kollégánk a szakképzőhely oktatója, a klinikai munkát belső és külső szupervízorok kísérik. <a class="gold" href="akkreditacio-es-kepzes.html">Mit jelent ez Önnek</a></p>
+      <p class="sec__aside"><!-- GEN:n-oktato -->19<!-- /GEN --> kollégánk a szakképzőhely oktatója, a klinikai munkát belső és külső szupervízorok kísérik. <a class="gold" href="akkreditacio-es-kepzes.html">Mit jelent ez Önnek</a></p>
     </div>
     <div class="prom" data-reveal>
       <!-- GEN:oktatok:start -->
@@ -835,62 +746,57 @@
   </a>
 <a class="prom__item" href="szakemberek/kuszka-adrienn.html">
     <img src="img/portrek/kuszka-adrienn.jpg" alt="Kuszka Adrienn" width="600" height="750" loading="lazy">
-    <span class="row__n num">20 · oktató</span>
+    <span class="row__n num">19 · oktató</span>
     <b>Kuszka Adrienn</b><span>Pszichológus, addiktológiai tanácsadó szakpszichológus jelölt</span>
   </a>
 <a class="prom__item" href="szakemberek/laki-eva.html">
     <img src="img/portrek/laki-eva.jpg" alt="Laki Éva" width="600" height="750" loading="lazy">
-    <span class="row__n num">21 · oktató</span>
+    <span class="row__n num">20 · oktató</span>
     <b>Laki Éva</b><span>Klinikai szakpszichológus, coach</span>
   </a>
 <a class="prom__item" href="szakemberek/laszlo-anna.html">
     <img src="img/portrek/laszlo-anna.jpg" alt="László Anna Márta" width="600" height="750" loading="lazy">
-    <span class="row__n num">22 · oktató</span>
+    <span class="row__n num">21 · oktató</span>
     <b>László Anna Márta</b><span>Klinikai szakpszichológus, Sématerapeuta</span>
   </a>
 <a class="prom__item" href="szakemberek/mikus-robert.html">
     <img src="img/portrek/mikus-robert.jpg" alt="Mikus Róbert" width="600" height="750" loading="lazy">
-    <span class="row__n num">24 · oktató</span>
+    <span class="row__n num">23 · oktató</span>
     <b>Mikus Róbert</b><span>Alkalmazott egészség szakpszichológus, integratív pszichoterapeuta jelölt</span>
   </a>
 <a class="prom__item" href="szakemberek/peteri-david.html">
     <img src="img/portrek/peteri-david.jpg" alt="Péteri Dávid" width="600" height="750" loading="lazy">
-    <span class="row__n num">27 · oktató</span>
+    <span class="row__n num">26 · oktató</span>
     <b>Péteri Dávid</b><span>Klinikai szakpszichológus, pszichoterapeuta-jelölt</span>
   </a>
 <a class="prom__item" href="szakemberek/ronai-zsofia.html">
     <img src="img/portrek/ronai-zsofia.jpg" alt="Rónai Zsófia" width="600" height="750" loading="lazy">
-    <span class="row__n num">28 · oktató</span>
+    <span class="row__n num">27 · oktató</span>
     <b>Rónai Zsófia</b><span>Pszichológus, integratív gyermekterapeuta</span>
   </a>
 <a class="prom__item" href="szakemberek/szabo-andras.html">
     <img src="img/portrek/szabo-andras.jpg" alt="Szabó András" width="600" height="750" loading="lazy">
-    <span class="row__n num">29 · oktató</span>
+    <span class="row__n num">28 · oktató</span>
     <b>Szabó András</b><span>Coach, párkapcsolati konzultáns</span>
   </a>
 <a class="prom__item" href="szakemberek/szabo-brigitta.html">
     <img src="img/portrek/szabo-brigitta.jpg" alt="Szabó Brigitta" width="600" height="750" loading="lazy">
-    <span class="row__n num">30 · oktató</span>
+    <span class="row__n num">29 · oktató</span>
     <b>Szabó Brigitta</b><span>klinikai- és mentálhigiéniai gyermek- és ifjúsági szakpszichológus, illetve pár- és családterapeuta.</span>
-  </a>
-<a class="prom__item" href="szakemberek/szelenyi-bence.html">
-    <img src="img/portrek/szelenyi-bence.jpg" alt="Szelényi Bence" width="600" height="750" loading="lazy">
-    <span class="row__n num">32 · oktató</span>
-    <b>Szelényi Bence</b><span>Pszichológus, Relaxációs gyakorlatvezető</span>
   </a>
 <a class="prom__item" href="szakemberek/tenk-virag.html">
     <img src="img/portrek/tenk-virag.jpg" alt="Tenk Virág Lotti" width="600" height="750" loading="lazy">
-    <span class="row__n num">33 · oktató</span>
+    <span class="row__n num">31 · oktató</span>
     <b>Tenk Virág Lotti</b><span>Alkalmazott egészségpszichológiai szakpszichológus, pszichoterapeuta jelölt</span>
   </a>
 <a class="prom__item" href="szakemberek/vass-abraham.html">
     <img src="img/portrek/vass-abraham.jpg" alt="Vass Ábrahám" width="600" height="750" loading="lazy">
-    <span class="row__n num">35 · oktató</span>
+    <span class="row__n num">33 · oktató</span>
     <b>Vass Ábrahám</b><span>Pszichológus, egészségpszichológiai szakpszichológus jelölt</span>
   </a>
 <a class="prom__item" href="szakemberek/vukov-johanna.html">
     <img src="img/portrek/vukov-johanna.jpg" alt="Vukov Johanna" width="600" height="750" loading="lazy">
-    <span class="row__n num">37 · oktató</span>
+    <span class="row__n num">35 · oktató</span>
     <b>Vukov Johanna</b><span>Pszichológus, irodalomterapeuta</span>
   </a>
 <!-- GEN:oktatok:end -->

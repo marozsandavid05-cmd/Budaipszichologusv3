@@ -1,18 +1,10 @@
 /* ============================================================
    FELNŐTT EGYÉNI TERÁPIA · body.p-felnott
-   1 hero cover, cím jobb alul (szoba-kanape) · 2 hat tünet-sor első személyben (wipe-d) ·
+   1 teljes képes hero, szöveg jobb középen (a kanapés szoba) · 2 hat tünet-sor első személyben (wipe-d) ·
    3 így zajlik: bal sticky cím, jobb három tétel (lip--l) · hair · 4 a keret, photo-text tükrözve (reszlet-jegyzet) ·
    5 díjsávok: bal cím, jobb sorok (lip--r) · 6 jobbra zárt band + CTA (peel), sötét záró nincs
    ============================================================ */
-.p-felnott .hero{--lamp-x:20%;--lamp-y:20%}
-.p-felnott .hero--cover .hero__img{--focus:50% 68%}
-/* a fotó világos, a komponens alsó átmenete magasabbra és erősebbre állítva, hogy a krém cím olvasható legyen */
-.p-felnott .hero--cover .hero__img::after{height:74vh;background:linear-gradient(to bottom,transparent 0,rgba(18,17,16,.22) 22%,rgba(18,17,16,.48) 50%,rgba(18,17,16,.8) 100%)}
-.p-felnott .hero--cover .hero__body{padding-bottom:calc(clamp(2rem,6vh,4rem) + 8vh);gap:1.1rem}
-.p-felnott .hero--cover h1{font-size:clamp(2.4rem,5.6vw,5rem)}
-/* a címke a lámpa fénye fölé esik: a kollázs-képaláírás mintájára kis sötét háttér, hogy minden szélességben olvasható legyen */
-.p-felnott .hero--cover .eyebrow{color:var(--gold);background:rgba(18,17,16,.55);padding:.42rem .7rem;border-radius:2px;justify-self:end;line-height:1}
-.p-felnott .hero--cover .hero__cred{justify-self:end}
+.p-felnott .hero{--focus:42% 60%;--focus-m:30% 60%;--vx:86%;--vy:46%;--vw:52%;--vh:110%;--veil-a:.9;--veil-b:.62}
 
 /* 2 · tünet-sorok */
 .p-felnott #tunetek{--lamp-x:88%;--lamp-y:12%;padding-top:calc(var(--sec) + 6vh)}
@@ -63,9 +55,6 @@
 .p-felnott .band__in .ctas{justify-content:flex-end}
 
 @media (max-width:900px){
-  .p-felnott .hero--cover .hero__img::after{height:86%;background:linear-gradient(to bottom,transparent 0,rgba(18,17,16,.3) 25%,rgba(18,17,16,.56) 55%,rgba(18,17,16,.84) 100%)}
-  .p-felnott .hero--cover .hero__body{padding-bottom:calc(1.6rem + 8vh);gap:.9rem}
-  .p-felnott .hero--cover .hero__cred,.p-felnott .hero--cover .eyebrow{justify-self:start}
   .p-felnott #tunetek{padding-top:calc(var(--sec) + 4vh)}
   .p-felnott .tunet .rows__item{grid-template-columns:2.6rem 1fr}
   .p-felnott .tunet .rows__t{max-width:none}

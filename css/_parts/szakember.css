@@ -35,7 +35,7 @@
 .rel__row .row__n{font-size:1.1rem}
 .rel-more{margin-top:1.4rem}
 .closer--text{min-height:0;background-color:var(--w-base);align-content:start;padding:calc(var(--sec) + 4vh) var(--pad) var(--sec)}
-.closer--text .closer__body{max-width:min(72%,920px)}
+.closer--text .closer__body{max-width:none}
 .closer--text .coord{border-bottom:0;border-top:1px solid var(--w-line);padding-top:1.2rem;margin-top:.4rem}
 @media (max-width:900px){
   .p-szakember .prof__title{font-size:1rem}

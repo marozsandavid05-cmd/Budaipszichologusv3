@@ -1,11 +1,11 @@
 {
-  "n_klinikus": 37,
-  "letszam_kiirt": 44,
+  "n_klinikus": 35,
+  "letszam_kiirt": 35,
   "temak": [
     {
       "k": "szorongas",
       "c": "Szorongás, pánik",
-      "n": 25
+      "n": 23
     },
     {
       "k": "hangulat",
@@ -15,63 +15,63 @@
     {
       "k": "kieges",
       "c": "Kiégés, stressz",
-      "n": 25
+      "n": 24
     },
     {
       "k": "gyasz",
       "c": "Gyász, veszteség, trauma",
-      "n": 16
+      "n": 15
     },
     {
       "k": "parkapcsolat",
       "c": "Párkapcsolat",
-      "n": 23
+      "n": 21
     },
     {
       "k": "csalad",
       "c": "Család, gyereknevelés",
-      "n": 21
+      "n": 19
     },
     {
       "k": "fuggoseg",
       "c": "Függőség",
-      "n": 4
+      "n": 3
     },
     {
       "k": "test",
       "c": "Evés, test, alvás",
-      "n": 12
+      "n": 10
     },
     {
       "k": "onismeret",
       "c": "Önismeret, önértékelés",
-      "n": 27
+      "n": 25
     },
     {
       "k": "eletvezetes",
       "c": "Életvezetés, döntés",
-      "n": 27
+      "n": 26
     },
     {
       "k": "karrier",
       "c": "Karrier, vezetés",
-      "n": 18
+      "n": 17
     },
     {
       "k": "krizis",
       "c": "Krízis, változás",
-      "n": 21
+      "n": 20
     },
     {
       "k": "sport",
       "c": "Sport, teljesítmény",
-      "n": 2
+      "n": 1
     }
   ],
   "kinek": [
     {
       "k": "magamnak",
-      "n": 37
+      "n": 35
     },
     {
       "k": "gyereknek",
@@ -91,7 +91,7 @@
     },
     {
       "k": "sportolokent",
-      "n": 2
+      "n": 1
     }
   ],
   "szint": [
@@ -101,7 +101,7 @@
     },
     {
       "s": "klinikai szakpszichológus",
-      "n": 16
+      "n": 15
     },
     {
       "s": "szakpszichológus-jelölt",
@@ -109,7 +109,7 @@
     },
     {
       "s": "pszichológus",
-      "n": 11
+      "n": 10
     },
     {
       "s": "coach",

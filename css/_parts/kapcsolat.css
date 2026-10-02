@@ -1,18 +1,12 @@
 /* ============================================================
    KAPCSOLAT · body.p-kapcsolat
-   4. család kollázs-hero (megérkezés-panelek) · megérkezés-sorok (lip--l, bal sticky) ·
+   teljes képes hero, szöveg bal fent (a fogadótér és a folyosó) · megérkezés-sorok (lip--l, bal sticky) ·
    egy jobbra zárt mondat · űrlap legalul (wipe-d)
    ============================================================ */
-.p-kapcsolat .hero{--lamp-x:6%;--lamp-y:10%}
+.p-kapcsolat .hero{--focus:56% 50%;--focus-m:46% 50%;--vx:12%;--vy:24%;--vw:58%;--vh:78%;--veil-a:.9;--veil-b:.62}
 .p-kapcsolat #megerkezes{--lamp-x:90%;--lamp-y:80%}
 .p-kapcsolat #lejovunk{--lamp-x:20%;--lamp-y:50%}
 .p-kapcsolat #urlap{--lamp-x:85%;--lamp-y:15%;padding-top:calc(var(--sec) + 6vh)}
-.p-kapcsolat .hero--collage .hero__title{padding-top:2vh;padding-right:2rem}
-.p-kapcsolat .hero--collage .hero__title p{max-width:44ch}
-.p-kapcsolat .hero--collage .pan img{filter:saturate(.94)}
-.p-kapcsolat .hero--collage .pan--a img{object-position:50% 40%}
-.p-kapcsolat .hero--collage .pan--b img{object-position:50% 30%}
-.p-kapcsolat .hero--collage .pan--c{margin-bottom:0}
 .kap-grid{align-items:start}
 .kap-side{grid-column:1 / 5;position:sticky;top:calc(var(--nav-h) + 1.5rem);display:grid;gap:1.1rem;align-content:start}
 .kap-side .coord{border-bottom:0;border-top:1px solid var(--w-line);padding-top:1.1rem;margin-top:.4rem}

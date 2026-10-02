@@ -1,19 +1,14 @@
 /* ============================================================
    A KÖZPONT · body.p-kozpont
-   1 hero cover (szoba-lampak, cím bal alul) · 2 történet főkönyv (lip, cím jobbra) ·
+   1 teljes képes hero, szöveg középen lent (a csilláros rendelő) · 2 történet főkönyv (lip, cím jobbra) ·
    3 a vezető photo-text (wipe-d, kép bal) · 4 számok + értékek (peel, cím bal) ·
    5 a ház spread tükrözve (álló kép bal, fekvő jobb fent, szöveg jobb alatt) ·
    6 partnerek (hair, cím bal sticky, sorok jobb) · 7 sötét szöveges záró (lip, cím bal, coord jobb)
    ============================================================ */
 
-/* 1 · hero: világos fotó, ezért erősebb alsó árnyalat a fehér címnek; 7vh hely a lipnek */
-.p-kozpont .hero{--lamp-x:12%;--lamp-y:10%}
-.p-kozpont .hero--cover .hero__img{--focus:50% 48%}
-.p-kozpont .hero--cover .hero__img::after{inset:0;height:auto;background:linear-gradient(to right,rgba(18,17,16,.62) 0,rgba(18,17,16,.38) 42%,transparent 72%),linear-gradient(to bottom,transparent 30%,rgba(18,17,16,.3) 62%,rgba(18,17,16,.8) 100%)}
-.p-kozpont .hero--cover .eyebrow{color:var(--gold)}
-.p-kozpont .hero--cover h1{font-size:clamp(2.2rem,5.2vw,4.6rem)}
-.p-kozpont .hero--cover .hero__body{padding-bottom:calc(clamp(2rem,6vh,4rem) + 7vh);gap:1.1rem}
-.p-kozpont .hero--cover .hero__cred{margin-top:.3rem}
+/* 1 · hero: teljes képes, a csilláros rendelő, a szöveg középen lent a padló világos sávján */
+.p-kozpont .hero{--focus:50% 62%;--focus-m:40% 62%;--vx:50%;--vy:92%;--vw:76%;--vh:70%;--veil-a:.92;--veil-b:.66}
+.p-kozpont #vezeto figure img{aspect-ratio:4 / 5;object-position:50% 30%}
 
 /* 2 · történet: cím jobbra fent, aside balra, főkönyv három oszloppal */
 .p-kozpont #tortenet{--lamp-x:88%;--lamp-y:18%}
@@ -27,7 +22,7 @@
 /* 3 · a vezető: kép bal 1/7, szöveg jobb 8/13, idézet arany bal-éllel */
 .p-kozpont #vezeto{--lamp-x:10%;--lamp-y:86%;padding-top:calc(var(--sec) + 6vh)}
 .p-kozpont #vezeto figure{grid-column:1 / 7}
-.p-kozpont #vezeto figure img{object-position:72% 30%}
+
 .p-kozpont #vezeto .photo-text__body{grid-column:8 / 13;gap:1.1rem}
 .p-kozpont .vez__title{color:var(--w-muted);max-width:44ch;line-height:1.45}
 .p-kozpont .vez__quote{border-left:1px solid var(--gold);padding-left:1.1rem;font-family:var(--font-display);font-weight:300;font-style:italic;font-size:clamp(1.15rem,1.6vw,1.45rem);line-height:1.4;max-width:34ch}
@@ -68,7 +63,6 @@
 .p-kozpont .closer--text .coord{border-bottom:0;border-top:1px solid var(--w-line);padding:1.2rem 0 0}
 
 @media (max-width:900px){
-  .p-kozpont .hero--cover .hero__body{padding-bottom:calc(1.6rem + 7vh)}
   .p-kozpont .tor__aside,.p-kozpont .tor__title{grid-column:1;text-align:left;justify-items:start;max-width:none}
   .p-kozpont .tor__title{order:-1;margin-bottom:.8rem}
   .p-kozpont #vezeto{padding-top:calc(var(--sec) + 4vh)}

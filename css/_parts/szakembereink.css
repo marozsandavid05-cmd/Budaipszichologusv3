@@ -1,35 +1,65 @@
 /* ============================================================
-   SZAKEMBEREINK · body.p-szakembereink
-   1b tool-hero (a kiegészíthető mondat a fejléc) · regiszter sticky szűrővel (lip) ·
-   oktatók promenádja (vízszintes) · sötét fotós záró (lip, jobbra zárt)
+   SZAKEMBEREINK · body.p-szakembereink (2026-10-02 átdolgozás)
+   1 osztott hero (David kérése): bal cím + kompakt kereső (3 legördülő egy sorban), jobb fotó; közös felső és alsó él ·
+   2 regiszter: egysoros eszköztár (szám, lenyíló Szűrők, rendezés), alatta a sorok teljes szélességben (a hajtás alatt kezdődik) ·
+   3 oktatók promenádja (vízszintes) · 4 sötét fotós záró (lip, jobbra zárt)
    ============================================================ */
-.p-szakembereink .hero{--lamp-x:88%;--lamp-y:12%}
 .p-szakembereink #regiszter{--lamp-x:10%;--lamp-y:8%}
 .p-szakembereink #oktatok{--lamp-x:80%;--lamp-y:80%}
-/* a hero maga is .reg (a JS így találja a szelektorokat), de nem kétoszlopos */
-.p-szakembereink .hero.reg{display:grid;grid-template-columns:1fr;gap:1.4rem;padding:0 var(--pad) calc(3vh + 7vh);align-content:end}
-.p-szakembereink .hero h1{font-size:clamp(2.6rem,7vw,6.4rem)}
-.p-szakembereink .hero .madlib{max-width:30ch;font-size:clamp(1.5rem,2.9vw,2.6rem);line-height:1.45}
-.p-szakembereink .hero .madlib select{font-size:inherit;font-family:inherit;font-weight:300;max-width:100%;text-overflow:ellipsis;padding-right:1.1em;
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><path d='M1 3l4 4 4-4' fill='none' stroke='%2374602C' stroke-width='1.2'/></svg>");background-repeat:no-repeat;background-position:right .1em center;background-size:.55em}
-.p-szakembereink .hero .hero__foot{display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap}
-.p-szakembereink .hero .hero__cred{max-width:44ch}
-.p-szakembereink .hero .hero__meta a{margin-left:.2rem}
-/* regiszter */
-.p-szakembereink .reg--full{padding-top:calc(var(--sec) + 2vh)}
-.p-szakembereink .reg__side{gap:1.2rem;max-height:calc(100vh - var(--nav-h) - 2rem);overflow:auto;padding-right:.4rem;scrollbar-width:thin}
-.p-szakembereink .reg__side .btn--text{justify-self:start}
-.reg__label{margin-bottom:.5rem}
-.reg__bar{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;padding-bottom:.6rem}
-.reg__bar .coord{border-bottom:0;padding:0;flex:1 1 380px}
-.reg__sort{display:flex;align-items:center;gap:.5rem}
-.reg__sort .chip{min-height:32px;padding:.3rem .7rem;font-size:.8rem}
+/* 1 · osztott hero: két hasáb, közös felső él (a cím teteje = a kép teteje), közös alsó él (a kereső alja = a kép alja) */
+.hero--split{grid-template-columns:repeat(12,1fr);column-gap:1.5rem;padding:clamp(1.6rem,4.5vh,3rem) var(--pad) clamp(1.6rem,4.5vh,3rem);align-items:stretch}
+.hero--split .split__text{grid-column:1 / 7;display:grid;grid-template-rows:1fr auto;gap:2rem;min-height:0;padding-right:clamp(0rem,2vw,2rem)}
+.hero--split .split__bottom{display:grid;gap:1.3rem}
+.hero--split .split__bottom .lead{max-width:24ch;font-size:clamp(1.45rem,min(2.3vw,4vh),2.4rem);line-height:1.22;color:var(--w-ink)}
+.split__coord{border-bottom:0;padding:0;grid-template-columns:44px 1fr}
+.split__coord img{width:44px;height:44px}
+.split__coord b{font-family:var(--font-display);font-weight:400;font-size:1.15rem}
+.hero--split .split__top{display:grid;align-content:start;gap:1.1rem}
+.hero--split h1{max-width:7ch}
+.hero--split h1{font-size:clamp(3.4rem,min(8.8vw,15.5vh),10rem);line-height:.92;letter-spacing:-.025em}
+.hero--split .lead{max-width:30ch;color:var(--w-ink)}
+.hero--split .split__img{grid-column:7 / 13;position:relative;overflow:clip;border-radius:2px;min-height:0;margin:0}
+.hero--split .split__img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:46% 40%}
+/* kompakt kereső: három címkézett legördülő egy sorban, a végén a találatszám mint ugrás a listához */
+.finder{display:grid;grid-template-columns:1.25fr 1fr 1fr auto;border-top:1px solid var(--gold);border-bottom:1px solid var(--w-line-soft)}
+.finder__f{display:grid;gap:.15rem;padding:.75rem 1rem .8rem 0;border-right:1px solid var(--w-line-soft);min-width:0}
+.finder__f + .finder__f{padding-left:1rem}
+.finder__f span,.tool span{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--w-gold-text)}
+.finder select,.tool select{font:inherit;font-size:.98rem;color:var(--w-ink);background:transparent;border:0;padding:.2rem 1.3rem .2rem 0;min-height:36px;width:100%;cursor:pointer;appearance:none;-webkit-appearance:none;border-radius:0;text-overflow:ellipsis;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><path d='M1 3l4 4 4-4' fill='none' stroke='%2374602C' stroke-width='1.2'/></svg>");background-repeat:no-repeat;background-position:right .1rem center;background-size:.62rem}
+.finder select:focus-visible,.tool select:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.finder__go{display:grid;grid-template-columns:auto auto;grid-template-rows:auto auto;column-gap:.8rem;align-items:center;align-content:center;padding:.6rem 0 .6rem 1.2rem;color:var(--w-ink)}
+.finder__go b{grid-row:1 / 3;font-family:var(--font-display);font-weight:300;font-size:2.4rem;line-height:1}
+.finder__go span:not(.arrow){font-size:.8rem;color:var(--w-muted);line-height:1.2;max-width:10ch}
+.finder__go .arrow{width:28px}
+.finder__go:hover .arrow{width:44px}
+/* 2 · regiszter: egysoros eszköztár */
+.p-szakembereink .reg--full{display:block;padding-top:calc(var(--sec) + 1vh)}
+.reg__tools{display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap;padding:.4rem 0 .9rem;border-bottom:1px solid var(--w-line)}
+.reg__tools .reg__count{font-size:.95rem;color:var(--w-muted);margin-right:auto}
+.reg__tools .reg__count b{font-family:var(--font-display);font-weight:300;font-size:1.9rem;color:var(--w-ink);margin-right:.35rem;vertical-align:-.12em}
+.tools__more{order:2}
+.tools__more > summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:.6rem;min-height:40px;padding:.45rem .95rem;border:1px solid var(--w-line);border-radius:2px;font-size:.92rem}
+.tools__more > summary::-webkit-details-marker{display:none}
+.tools__more > summary::after{content:"";width:7px;height:7px;border-right:1px solid var(--gold-dk);border-bottom:1px solid var(--gold-dk);transform:rotate(45deg) translateY(-2px);transition:transform .25s}
+.tools__more[open] > summary::after{transform:rotate(-135deg) translateY(-1px)}
+.tools__more > summary b{font-weight:500;color:var(--w-gold-text)}
+.tools__grid{position:absolute;left:0;right:0;margin-top:.9rem;display:grid;grid-template-columns:repeat(4,1fr);gap:0 1.5rem;padding:1rem 1.2rem .6rem;background:var(--w-surface-2);border:1px solid var(--w-line);border-radius:2px;box-shadow:0 26px 50px -34px rgba(20,25,27,.45);z-index:6}
+.tool{display:grid;gap:.15rem;padding:.4rem 0 .6rem;border-bottom:1px solid var(--w-line-soft)}
+.reg__tools{position:relative}
+.tools__end{order:3;display:flex;align-items:center;gap:1.2rem}
+.seg{display:inline-flex;border:1px solid var(--w-line);border-radius:2px;overflow:hidden}
+.seg button{min-height:40px;padding:.4rem .85rem;font-size:.86rem;color:var(--w-muted)}
+.seg button + button{border-left:1px solid var(--w-line)}
+.seg button[aria-pressed="true"]{color:var(--w-ink);background:rgba(194,167,97,.14)}
+.tools__note{order:1;max-width:none}
+.p-szakembereink .reg__list{border-top:0}
 .reg__empty .lead{margin-bottom:.6rem}
 .reg__empty .ctas{margin-top:1rem}
 .reg__many{display:none;margin-top:1.4rem;padding:1.1rem 1.2rem;border:1px solid var(--w-line);border-radius:2px;color:var(--w-muted);max-width:none}
 .reg__many p{max-width:none}
 .reg.is-many .reg__many{display:block}
-.reg.is-empty .reg__bar,.reg.is-empty .reg__many{display:none}
+.reg.is-empty .reg__many{display:none}
 /* promenád */
 .prom{display:flex;gap:1.2rem;overflow-x:auto;scroll-snap-type:x proximity;padding:.4rem 0 1.2rem;margin:0 calc(-1 * var(--pad));padding-inline:var(--pad);scrollbar-width:thin}
 .prom__item{flex:0 0 clamp(150px,14vw,200px);scroll-snap-align:start;display:grid;gap:.5rem;color:inherit}
@@ -40,11 +70,34 @@
 .prom__item .row__n{font-size:.9rem}
 .prom-note{margin-top:.4rem}
 .p-szakembereink .closer .closer__body{max-width:min(52%,700px)}
+@media (min-width:901px) and (max-height:820px){
+  .hero--split .split__text{gap:1rem}
+  .hero--split .split__bottom{gap:.9rem}
+  .hero--split .split__bottom .lead{font-size:clamp(1.25rem,1.9vw,1.6rem)}
+  .hero--split h1{font-size:clamp(3rem,min(8vw,14vh),8rem)}
+  .finder__f{padding-top:.55rem;padding-bottom:.55rem}
+}
+@media (max-width:1180px) and (min-width:901px){
+  .finder{grid-template-columns:1fr 1fr}
+  .finder__f:nth-child(2){border-right:0}
+  .finder__f:nth-child(3){padding-left:0;border-top:1px solid var(--w-line-soft)}
+  .finder__go{border-top:1px solid var(--w-line-soft)}
+  .tools__grid{grid-template-columns:repeat(3,1fr)}
+}
 @media (max-width:900px){
-  .p-szakembereink .hero.reg{padding-bottom:calc(2rem + 7vh)}
-  .p-szakembereink .hero .madlib{font-size:1.3rem;max-width:100%}
-  .p-szakembereink .hero .madlib select{white-space:normal}
-  .p-szakembereink .reg__side{max-height:none;overflow:visible}
-  .reg__bar{flex-direction:column;align-items:flex-start}
+  .hero--split{grid-template-columns:1fr;grid-template-rows:auto auto;row-gap:1.2rem;padding:1rem var(--pad) 1.6rem;height:auto}
+  .tools__note{display:none}
+  .hero--split .split__text{grid-column:1;grid-row:2;gap:1.2rem}
+  .hero--split .split__img{grid-column:1;grid-row:1;aspect-ratio:16 / 10;margin:0 calc(-1 * var(--pad))}
+  .hero--split h1{font-size:clamp(2.4rem,11vw,3.4rem)}
+  .finder{grid-template-columns:1fr 1fr}
+  .finder__f{padding:.6rem .8rem .6rem 0}
+  .finder__f:first-child{grid-column:1 / -1;border-right:0;border-bottom:1px solid var(--w-line-soft)}
+  .finder__f:nth-child(2){padding-left:0}
+  .finder__f:nth-child(3){border-right:0}
+  .finder__go{grid-column:1 / -1;border-top:1px solid var(--w-line-soft);padding-left:0}
+  .reg__tools{gap:.8rem}
+  .reg__tools .reg__count{flex-basis:100%}
+  .tools__grid{grid-template-columns:1fr 1fr;padding:.8rem .9rem .4rem}
   .prom__item{flex-basis:44vw}
 }

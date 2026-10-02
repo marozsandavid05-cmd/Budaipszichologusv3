@@ -5,7 +5,11 @@
    3 hair-varrat, „Másik írás" sor + Hogyan kezdjük
    ============================================================ */
 .p-cikk .hero{--lamp-x:12%;--lamp-y:16%;padding-bottom:calc(7vh + 1rem)}
-.p-cikk .hero--statement h1{max-width:22ch;font-size:clamp(2rem,4.4vw,4rem)}
+.p-cikk .hero--statement{grid-template-columns:repeat(12,1fr);column-gap:1.5rem;align-content:end}
+.p-cikk .hero--statement > .eyebrow,.p-cikk .hero--statement > h1{grid-column:1 / 9}
+.p-cikk .hero--statement > .lead{grid-column:9 / 13;grid-row:2;align-self:end;font-size:clamp(1.1rem,1.4vw,1.3rem);padding-left:1.4rem;border-left:1px solid var(--gold)}
+.p-cikk .hero--statement > .hero__foot{grid-column:1 / 13}
+.p-cikk .hero--statement h1{max-width:18ch;font-size:clamp(2.4rem,5.4vw,5rem)}
 .p-cikk .hero .lead{max-width:44ch;color:var(--w-muted)}
 .p-cikk .hero__foot{border-top:1px solid var(--w-line);padding-top:1.2rem;margin-top:1vh}
 .p-cikk .hero__foot .hero__cred{max-width:none}
@@ -35,6 +39,8 @@
 .p-cikk #tovabb .rows__item:hover .rows__t{color:var(--w-gold-text)}
 .p-cikk #tovabb .rows__end{display:grid;justify-items:end;gap:.9rem;font-size:.84rem;color:var(--w-muted);white-space:nowrap}
 @media (max-width:900px){
+  .p-cikk .hero--statement > *{grid-column:1!important;grid-row:auto!important}
+  .p-cikk .hero--statement > .lead{padding-left:1rem}
   .p-cikk .hero{padding-bottom:calc(7vh + 1.6rem)}
   .p-cikk .hero__foot{flex-direction:column;align-items:flex-start;gap:.9rem}
   .p-cikk .cikk__body,.p-cikk .cikk__side{grid-column:1}

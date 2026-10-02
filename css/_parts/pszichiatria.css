@@ -7,8 +7,11 @@
 .p-pszichiatria .hero{--lamp-x:86%;--lamp-y:16%}
 .p-pszichiatria .hero--type h1{font-size:clamp(2.8rem,7.6vw,6.8rem)}
 .p-pszichiatria .hero .lead{max-width:44ch}
-.p-pszichiatria .hero__def{position:absolute;top:clamp(1.5rem,5vh,3.5rem);right:var(--pad);max-width:30ch;text-align:right;font-size:.9rem;line-height:1.5}
-.p-pszichiatria .hero__def b{display:block;color:var(--w-ink);font-weight:400;font-family:var(--font-display);font-size:1.25rem;margin-bottom:.3rem}
+.p-pszichiatria .hero--type{grid-template-columns:repeat(12,1fr);column-gap:1.5rem;align-content:end}
+.p-pszichiatria .hero--type > :not(.hero__def):not(.aline){grid-column:1 / 8}
+.p-pszichiatria .hero__def{grid-column:9 / 13;grid-row:1 / 4;align-self:end;max-width:none;font-size:1rem;line-height:1.55;padding:1.4rem 0 1.4rem 1.6rem;border-left:1px solid var(--gold)}
+.p-pszichiatria .hero__def b{display:block;color:var(--w-ink);font-weight:300;font-family:var(--font-display);font-size:clamp(2rem,3.4vw,3.2rem);line-height:1;margin-bottom:.8rem}
+.p-pszichiatria .hero__foot{grid-column:1 / 13!important}
 .p-pszichiatria .hero__foot .hero__cred{max-width:44ch}
 
 .p-pszichiatria #kulonbseg{--lamp-x:12%;--lamp-y:84%}
@@ -52,7 +55,9 @@
   .p-pszichiatria .hero--type.is-quiet{padding-bottom:9vh}
 }
 @media (max-width:900px){
-  .p-pszichiatria .hero__def{position:static;text-align:left;max-width:100%;padding-top:.6rem;border-top:1px solid var(--w-line-soft)}
+  .p-pszichiatria .hero--type > *,.p-pszichiatria .hero__def{grid-column:1!important;grid-row:auto}
+  .p-pszichiatria .hero__def{display:none}
+  .p-pszichiatria .hero__def b{font-size:1.5rem;margin-bottom:.4rem}
   .p-pszichiatria .hasab__col:first-child,.p-pszichiatria .hasab__col:last-child{grid-column:1;border-left:0;padding-left:0}
   .p-pszichiatria .hasab__col:last-child{border-top:1px solid var(--w-line);padding-top:1.6rem}
   .p-pszichiatria .mikor__head{grid-template-columns:1fr}

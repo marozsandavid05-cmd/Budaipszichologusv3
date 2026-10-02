@@ -60,9 +60,14 @@
 
   /* ---------- NAV: rejtés görgetésre hiszterézissel, aktuális menüpont ---------- */
   var nav = doc.querySelector('.nav');
+  /* teljes képes hero: a nav a kép fölött átlátszó, a hero végén tömörré válik */
+  var fullHero = hero && hero.classList.contains('hero--cover') ? hero : null;
+  if (fullHero) body.classList.add('has-full');
   var lastY = scrollY || 0, downAcc = 0, upAcc = 0, scrollP = 0;
   function onScroll() {
     var y = scrollY || 0, d = y - lastY;
+    if (nav && fullHero) nav.classList.toggle('is-solid', y > fullHero.offsetHeight - nav.offsetHeight - 8);
+    else if (nav) nav.classList.toggle('is-solid', y > 4);
     if (nav && !body.classList.contains('no-scroll')) {
       if (d > 0) { downAcc += d; upAcc = 0; } else if (d < 0) { upAcc -= d; downAcc = 0; }
       if (downAcc > 28 && y > 240) { if (!nav.classList.contains('nav--hidden')) { nav.classList.add('nav--hidden'); closePanels(); } }
@@ -240,6 +245,8 @@
       var any = KEYS.some(function (k) { return !!active[k]; });
       reg.classList.toggle('is-filtered', any);
       resetBtns.forEach(function (b) { b.hidden = !any; });
+      var nAct = KEYS.filter(function (k) { return !!active[k]; }).length;
+      [].forEach.call(doc.querySelectorAll('[data-reg-active]'), function (el) { el.textContent = nAct ? '· ' + nAct : ''; el.hidden = !nAct; });
       chips.forEach(function (c) { c.setAttribute('aria-pressed', active[c.dataset.filter] === c.dataset.value ? 'true' : 'false'); });
       selects.forEach(function (s) { var v = active[s.dataset.filter] || ''; if (s.value !== v) s.value = v; });
       fits.forEach(function (f) { f(); });

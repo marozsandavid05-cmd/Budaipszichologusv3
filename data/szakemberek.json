@@ -2,8 +2,8 @@
   "meta": {
     "forras": "https://budaipszichologus.hu",
     "gyujtes_datuma": "2026-09-15",
-    "rekordok": 40,
-    "portrek_letoltve": 40,
+    "rekordok": 38,
+    "portrek_letoltve": 38,
     "szint_eloszlas": {
       "pszichológus": 11,
       "szakpszichológus-jelölt": 6,
@@ -13,8 +13,7 @@
       "coach": 2
     },
     "angol_profilok_linkjei": [
-      "https://budaipszichologus.hu/pszichologusaink-munkatarsaink/nadas-beata/nadas-beata-eng/",
-      "https://budaipszichologus.hu/pszichologusaink-munkatarsaink/szelenyi-bence/szelenyi-bence-eng/"
+      "https://budaipszichologus.hu/pszichologusaink-munkatarsaink/nadas-beata/nadas-beata-eng/"
     ],
     "sablon_idezetek_szama": 21,
     "megjegyzes": "A foto mező ideiglenes relatív út a _anyag/portrek mappára, a végleges build a weboldal/media alá másolja. A rolam_mondtak-ból a több profilon szó szerint ismétlődő sablon-idézetek kiszűrve; ahol rolam_mondtak_rejtett_a_forrason igaz, az élő oldal a szekciót nem is mutatja. A szint a titulus komponenseiből a legmagasabb rang; a szint_megjegyzes jelzi az egyeztetendőt. korosztaly/forma/helyszin/oktat szöveg-heurisztika, kézi ellenőrzés javasolt.",
@@ -26,7 +25,6 @@
       "kasza-zsuzsanna: eltérő titulus-változatok a lapon (asztali/mobil): „Szakmai vezető, Szakpszichoterapeuta, Klinikai szakpszichológus, Integratív hipnoterapeuta, Pszichodráma vezető” vs „Szakmai vezető, Pszichoterapeuta, Klinikai szakpszichológus, Integratív hipnoterapeuta, Pszichodráma vezető”",
       "katona-etelka: eltérő titulus-változatok a lapon (asztali/mobil): „Pszichológus, egészségpszichológiai szakpszichológus, képzésben lévő családterapeuta, hipnoterapeuta jelölt” vs „Pszichológus, egészségpszichológiai szakpszichológus jelölt, képzésben lévő családterapeuta, hipnoterapeuta jelölt”",
       "katona-etelka: nem klinikai, hanem „egészségpszichológiai szakpszichológus” (szakvizsgás, a klinikai ársávba sorolva, egyeztetendő)",
-      "kovacs-mate: nem klinikai, hanem „addiktológiai tanácsadó szakpszichológus” (szakvizsgás, a klinikai ársávba sorolva, egyeztetendő)",
       "laki-eva: a portré fájlneve más személyre utal (feher-agnes): copy-of-feher-agnes.png",
       "laki-eva: „Copy of” fájlnév, ellenőrizendő: copy-of-feher-agnes.png",
       "mikus-robert: nem klinikai, hanem „alkalmazott egészség szakpszichológus” (szakvizsgás, a klinikai ársávba sorolva, egyeztetendő)",
@@ -49,7 +47,6 @@
       "kasza-zsuzsanna: 3 sablon-idézet kiszűrve (más profilon is szó szerint ugyanaz)",
       "katona-etelka: 3 sablon-idézet kiszűrve (más profilon is szó szerint ugyanaz)",
       "kodela-julia: 3 sablon-idézet kiszűrve (más profilon is szó szerint ugyanaz)",
-      "kovacs-mate: 3 sablon-idézet kiszűrve (más profilon is szó szerint ugyanaz)",
       "laki-eva: 2 sablon-idézet kiszűrve (más profilon is szó szerint ugyanaz)",
       "molnar-adrienn: 4 sablon-idézet kiszűrve (más profilon is szó szerint ugyanaz)",
       "nadas-beata: 2 sablon-idézet kiszűrve (más profilon is szó szerint ugyanaz)",
@@ -60,8 +57,8 @@
       "vizkeleti-ildiko: 3 sablon-idézet kiszűrve (más profilon is szó szerint ugyanaz)",
       "vukov-johanna: 2 sablon-idézet kiszűrve (más profilon is szó szerint ugyanaz)"
     ],
-    "letszam_kiirt": 44,
-    "letszam_megjegyzes": "Az ügyfél által közölt létszám (kb. 44). A regiszter a valós profilok számát mutatja. TARTALOM-KERES.md 1. pont.",
+    "letszam_kiirt": 35,
+    "letszam_megjegyzes": "2026-10-02, David döntése: a kiírt létszám 35, ennyi szakember profilja él az ügyfél oldalán (budaipszichologus.hu/pszichologusaink-munkatarsaink). Kovács Máté és Szelényi Bence kikerült (az élő oldalon a profiljuk 404).",
     "kiemelt_index": [
       "kasza-zsuzsanna",
       "dr-feher-palma-virag",
@@ -1827,100 +1824,6 @@
       "rolam_mondtak_sablon_kiszurve": 3
     },
     {
-      "slug": "kovacs-mate",
-      "nev": "Kovács Máté Zsolt",
-      "titulus": "Pszichológus, addiktológiai tanácsadó szakpszichológus, komplex művészetterapeuta",
-      "titulus_variansok": [],
-      "szint": "klinikai szakpszichológus",
-      "szint_megjegyzes": "nem klinikai, hanem „addiktológiai tanácsadó szakpszichológus” (szakvizsgás, a klinikai ársávba sorolva, egyeztetendő)",
-      "szerep": "klinikus",
-      "szakteruletek": [
-        "káros szenvedélyek, függőségek",
-        "szorongás, pánik",
-        "önismeret, identitás keresés",
-        "párkapcsolati problémák",
-        "családi problémák",
-        "fejfájás, vagy egyéb enyhe szomatikus problémák",
-        "Addiktológia",
-        "Pszichoszomatika",
-        "Művészetterápia",
-        "Zeneterápia"
-      ],
-      "korosztaly": [
-        "felnőtt"
-      ],
-      "forma": [
-        "egyéni"
-      ],
-      "helyszin": [
-        "személyes"
-      ],
-      "nyelv": [
-        "magyar"
-      ],
-      "ar_sav": "18-25 ezer",
-      "elerhetoseg": "",
-      "kapcsolat": "",
-      "foto": "../_anyag/portrek/kovacs-mate.png",
-      "foto_url": "https://budaipszichologus.hu/wp-content/uploads/2024/06/Kovacs_Mate_profil.png",
-      "foto_meret": "655x960",
-      "foto_jeloltek": [
-        "https://budaipszichologus.hu/wp-content/uploads/2024/06/Kovacs_Mate_profil.png"
-      ],
-      "foto_figyelmeztetes": [],
-      "motto": "„Az ember nem egyszer s mindenkorra ilyen, és semmilyen más nem lehet, hanem mindig másmilyenné is válhat, és ha elvitatnánk tőle ezt a másmilyenné válás képességet – még akkor is, ha bűnt követett el, az odavezetne, hogy akkor a magunk részéről mi is bűnt követnénk el.” Viktor E. Frankl",
-      "bemutatkozo_rovid": "Azzal, hogy elkezdte a segítség keresését már egy igen fontos lépést tett a gyógyulás irányába. Kívánom Önnek, hogy megtalálja azt a szakembert, aki segítségére lehet az úton, ami sokszor rögös és nehéz, de az idő teltével meghozza az eredményét.",
-      "rolam": "Kedves Látogató!\n\nAzzal, hogy elkezdte a segítség keresését már egy igen fontos lépést tett a gyógyulás irányába. Kívánom Önnek, hogy megtalálja azt a szakembert, aki segítségére lehet az úton, ami sokszor rögös és nehéz, de az idő teltével meghozza az eredményét. Ahhoz, hogy ez a folyamat végbe mehessen, elengedhetetlennek tartom, hogy egy olyan légkört biztosítsak szakemberként, mely az empátiára és a feltétel nélküli elfogadásra alapszik. Ebben a légkörben minden érzés, gondolat vagy emlék kifejezésre kerülhet és ezáltal érthetőbbé, átérezhetőbbé válik. Hiszek abban, hogy mind magunkban hordozzuk a változás kulcsát, viszont abban is hiszek, hogy a változást nem lehet erőltetni. Lelkünknek időre van szüksége, hogy befoltozza a sebeit. Ha látunk egy pipacsot a réten, mely védőburkában várakozik a kinyílás megfelelő pillanatára, ugyan kinyithatjuk, hogy megnézzük milyen színű a virága, de az a pipacs már örökre gyűrött marad. Viszont ha kijárunk a rétre, türelmesek vagyunk, ha kell, locsoljuk, ápoljuk, egyszer csak magától kipattan és saját erejéből gyönyörű virágzásba kezd.\n\nEbben a kinyílásban kívánok segíteni Önnek.",
-      "hitvallas": "„Az ember nem egyszer s mindenkorra ilyen, és semmilyen más nem lehet, hanem mindig másmilyenné is válhat, és ha elvitatnánk tőle ezt a másmilyenné válás képességet – még akkor is, ha bűnt követett el, az odavezetne, hogy akkor a magunk részéről mi is bűnt követnénk el.”\n\nViktor E. Frankl",
-      "amiben_segit": [
-        "káros szenvedélyek, függőségek",
-        "szorongás, pánik",
-        "önismeret, identitás keresés",
-        "párkapcsolati problémák",
-        "családi problémák",
-        "fejfájás, vagy egyéb enyhe szomatikus problémák",
-        "Addiktológia",
-        "Pszichoszomatika",
-        "Művészetterápia",
-        "Zeneterápia"
-      ],
-      "amiben_segit_szoveg": "• káros szenvedélyek, függőségek\n\n• szorongás, pánik\n\n• önismeret, identitás keresés\n\n• párkapcsolati problémák\n\n• családi problémák\n\n• fejfájás, vagy egyéb enyhe szomatikus problémák\n\nÉrdeklődésem:\n\n• Addiktológia\n\n• Pszichoszomatika\n\n• Művészetterápia\n\n• Zeneterápia",
-      "tanitomesterek": [
-        "Mikle Gábor – Klinikai Szakpszichológus",
-        "Labancz Dániel – Klinikai szakpszichológus",
-        "Dr. Antalfai Márta – Klinikai szakpszichológus, Kiképző Pszichoterapeuta",
-        "Berki Barbara – Művészetterapeuta"
-      ],
-      "rolam_mondtak": [],
-      "rolam_mondtak_rejtett_a_forrason": true,
-      "aktualitasok": "",
-      "egyeb_fejezetek": {},
-      "oneletrajz": "## Iskolai végzettség\n-2024-2026 ELTE PPK – Addiktív Viselkedések Tanácsadó Szakpszichológiája\n-2019 – 2021 Pszichológai MA – Klinikai- és Egészségpszichológia Szakirány – Károli Gáspár Református Egyetem\n– 2016 – 2019 – Pszichológia BA – Károli Gáspár Református Egyetem\n\n## Tapasztalat\n2025- – Magyar Máltai Szeretetszolgálat Fogadó Pszichoszociális Intézet – Közösségi Addiktológia\n\n2022 – 2024 – Alkohol- és Drogsegély Ambulancia Veszprém\n\n2021 – 2024 – Magyar Máltai Szeretetszolgálat\n\n2022 – 2023 – Dorkosz Alapítvány\n\n2019 – 2020 – Pszichiátriai Nappali Gondozó – Humán Sztráda Kft.\n\n2019 – 2021 – Egyetemi Gyakorlat: GÁLFI Pszichiátria és Nyírő Gyula Kórház\n\n## Módszerpsecifikus képzettség\n– 2019 – 2021 Komplex Művészetterapeuta – Wesley János Lelkészképző Főiskola",
-      "kepzes": [
-        "2024-2026 ELTE PPK – Addiktív Viselkedések Tanácsadó Szakpszichológiája",
-        "2019 – 2021 Pszichológai MA – Klinikai- és Egészségpszichológia Szakirány – Károli Gáspár Református Egyetem",
-        "2016 – 2019 – Pszichológia BA – Károli Gáspár Református Egyetem"
-      ],
-      "oktat": false,
-      "szupervizor": false,
-      "angol_profil": false,
-      "fejezet_cimek_forras": [
-        "Bemutatkozás",
-        "Hitvallás",
-        "Amiben segíthetek",
-        "Akiktől a legtöbbet tanultam",
-        "Rólam mondták",
-        "Szakmai önéletrajz",
-        "Bejelentkezés"
-      ],
-      "elrendezes": "fejezetes",
-      "minta": [
-        "rolam_mondtak"
-      ],
-      "forras_url": "https://budaipszichologus.hu/pszichologusaink-munkatarsaink/kovacs-mate/",
-      "rolam_mondtak_sablon_kiszurve": 3
-    },
-    {
       "slug": "kuszka-adrienn",
       "nev": "Kuszka Adrienn",
       "titulus": "Pszichológus, addiktológiai tanácsadó szakpszichológus jelölt, sématerápiás konzultáns, integratív hipnoterapeuta, brainspotting szakember",
@@ -3239,125 +3142,6 @@
         "hitvallas"
       ],
       "forras_url": "https://budaipszichologus.hu/pszichologusaink-munkatarsaink/szatmari-zsolt/",
-      "rolam_mondtak_sablon_kiszurve": 0
-    },
-    {
-      "slug": "szelenyi-bence",
-      "nev": "Szelényi Bence",
-      "titulus": "Pszichológus, Relaxációs gyakorlatvezető, személyközpontú tanácsadó jelölt",
-      "titulus_variansok": [],
-      "szint": "pszichológus",
-      "szint_megjegyzes": "",
-      "szerep": "klinikus",
-      "szakteruletek": [
-        "Ha úgy érzi nem tud egyedül megbirkózni egy problémával szeretném",
-        "Amikor stresszesek vagyunk úgy érezzük egy vagy akár több…",
-        "A társas kapcsolataink áthatják az életünket. Egyes…",
-        "Az önismeret a fejlődés alapja. Az önismeret lehetővé teszi",
-        "Önértékelési problémák, önbizalomhiány",
-        "Szorongás/szorongásos problémák",
-        "Párkapcsolati és családi problémák",
-        "Életvezetési nehézségek",
-        "Relaxáció",
-        "Kommunikáció fejlesztés",
-        "Sport",
-        "Teljesítmény és motiváció kapcsolata",
-        "Krízisintervenció",
-        "Vallás és Spiritualitás",
-        "Trauma feldolgozás",
-        "Filozófia",
-        "Burnout"
-      ],
-      "korosztaly": [
-        "felnőtt"
-      ],
-      "forma": [
-        "egyéni",
-        "csoport"
-      ],
-      "helyszin": [
-        "személyes",
-        "online"
-      ],
-      "nyelv": [
-        "magyar",
-        "angol"
-      ],
-      "ar_sav": "15-20 ezer",
-      "elerhetoseg": "",
-      "kapcsolat": "",
-      "foto": "../_anyag/portrek/szelenyi-bence.png",
-      "foto_url": "https://budaipszichologus.hu/wp-content/uploads/2023/09/szelenyi_bence.png",
-      "foto_meret": "655x960",
-      "foto_jeloltek": [
-        "https://budaipszichologus.hu/wp-content/uploads/2023/09/szelenyi_bence.png",
-        "https://budaipszichologus.hu/wp-content/uploads/2023/08/Szelenyi_terapia.png"
-      ],
-      "foto_figyelmeztetes": [],
-      "motto": "“A szenvedés megszűnik szenvedésnek lenni abban a pillanatban, ha értelmet nyer.” Viktor E. Frankl",
-      "bemutatkozo_rovid": "Megnyugvással tölt el, hogy felkeresett bennünket, ugyanis az első és egyik legnehezebb lépés a gyógyulás útján maga a probléma felismerése. Empátiával gondolok Önre ennek a kihívásokkal teli folyamatnak a kezdetén.",
-      "rolam": "Kedves Látogató, szeretettel üdvözlöm!\n\nMegnyugvással tölt el, hogy felkeresett bennünket, ugyanis az első és egyik legnehezebb lépés a gyógyulás útján maga a probléma felismerése.\n\nEmpátiával gondolok Önre ennek a kihívásokkal teli folyamatnak a kezdetén. Ez az út azonban lehetőségekkel teli élmény is, amely következtében felfedezheti saját értékeit és ellenállóbbá válhat az élet nehézségeivel szemben. Ez a folyamat gyakran olyan, mint egy titkos szoba: ameddig nem tudjuk, mi lakozik bent, addig félelem tölt el bennünket, hiszen bármi lehet az ajtó mögött. Mindennel pedig képtelenség megbirkózni. Azonban, ha úgy döntünk, önként bemegyünk az ajtón, kiderülhet, hogy csak néhány dolog lakik bent, amikkel nem is olyan nehéz bánni, mint azt gondoltuk.\n\nÉn magam szenvedélyesen szeretem a pszichológiát és motivált vagyok ismereteim bővítésére, annak érdekében, hogy minél jobban és igazán személyre szabottan tudjak segíteni Önnek.\n\nA közös munka során megtapasztalhatja a feltétel nélküli elfogadást, amely gyógyítóan hathat Önmaga elfogadására. Maximálisan törekszem az empátiára, hogy a felületesség helyett igazán megismerjem Önt, és mélyen megértsem az Ön nehézségét. Mindezt pedig őszinte érdeklődéssel teszem, hiszen minden ember egyedi.\n\nKöszönöm a belém vetett bizalmát! Várom, hogy közösen benyissunk abba a titkos, de lehetőségekkel teli szobába!",
-      "hitvallas": "“Bármidet, amid az életben van, elvehetik tőled, kivéve egyet: a választási szabadságodat, hogy hogyan reagálsz egy helyzetre. Ez határozza meg a megélt életünk minőségét; nem az, hogy gazdagok vagy szegények, híresek, avagy ismeretlenek, egészségesek vagy betegek voltunk-e. Az határozza meg életminőségünket, hogy hogyan viszonyulunk ezekhez a dolgokhoz, milyen jelentéssel ruházzuk fel őket, milyen viselkedésmóddal reagálunk rájuk, milyen elmeállapotba kerülünk miattuk.”\n\nViktor E.Frankl",
-      "amiben_segit": [
-        "Ha úgy érzi nem tud egyedül megbirkózni egy problémával szeretném, ha tudná, nem lesz mindig így, és nincs egyedül. A nehézségek nagy része a megfelelő támogató közegben lebonthatóak kisebb és kevésbé ijesztő egységekre, melyek a személy egyedi erőforrásaival legyűrhetővé válnak. Ezen erőforrások meglelésében támogatom és segítem Önt.",
-        "Amikor stresszesek vagyunk úgy érezzük egy vagy akár több megoldandó helyzettel nem tudunk mit kezdeni, elakadtunk. Ez pedig félelemmel vagy szorongással tölthet el bennünket. Gyakran ez a szorongás rávetül más életterületekre is, és egyre több helyzetben érezzük a stressz szorító jelenlétét. Ekkor az önismeret segítségével megvizsgálhatjuk a stresszt kiváltó eredeti okot, és rájöhetünk, hogy csak egy adott szituáció szorongató számunkra. A félelmünk csökken, az erőforrásaink gyarapításával és felhasználásával pedig hatékonyan kezelhetjük és megszüntethetjük a stresszt.",
-        "A társas kapcsolataink áthatják az életünket. Egyes megközelítések szerint az identitásunk és a személyiségünk is elválaszthatatlan a körülöttünk élőktől. Összefonódik. Nem csoda hát, ha a problémáink egy része a kapcsolatainkból fakadnak. Ekkor segíthet igazán egy külső támogató fél, aki az Ön kapcsolati hálóján belül csakis Önre fókuszál, mindezt pedig empátiával és elfogadással teszi. Érdeklődve várom, hogy megismerhessem!",
-        "Az önismeret a fejlődés alapja. Az önismeret lehetővé teszi, hogy megértsük a múltat, elfogadjuk a jelent és aktívan tegyünk egy szebb jövőért. Azonban az önismeret nehéz, pont a benne rejlő lehetőségek miatt. Ki ne mondta volna magában, hogy majd később foglalkozom magammal? Majd, ha lesz rá energiám. Most túl megerőltető. Ezek teljesen érthető mondatok, sőt arról árulkodnak, hogy az adott probléma mennyire fontos számunkra. Ha valamilyen lelki nehézséggel makacs módon nem szeretnénk foglalkozni, onnan tudhatjuk, hogy mégis érdemes. Az önismeret lehetőséget kínál a viselkedésünk mélyebb megismerésére, így segítve minket a problémáink hatékonyabb megoldásában.",
-        "Önértékelési problémák, önbizalomhiány",
-        "Szorongás/szorongásos problémák",
-        "Párkapcsolati és családi problémák",
-        "Életvezetési nehézségek",
-        "Relaxáció",
-        "Kommunikáció fejlesztés",
-        "Sport",
-        "Teljesítmény és motiváció kapcsolata.",
-        "Krízisintervenció",
-        "Vallás és Spiritualitás",
-        "Trauma feldolgozás",
-        "Filozófia",
-        "Burnout"
-      ],
-      "amiben_segit_szoveg": "Akut élethelyzeti problémák\n\n• Ha úgy érzi nem tud egyedül megbirkózni egy problémával szeretném, ha tudná, nem lesz mindig így, és nincs egyedül. A nehézségek nagy része a megfelelő támogató közegben lebonthatóak kisebb és kevésbé ijesztő egységekre, melyek a személy egyedi erőforrásaival legyűrhetővé válnak. Ezen erőforrások meglelésében támogatom és segítem Önt.\n\nStressz\n\n• Amikor stresszesek vagyunk úgy érezzük egy vagy akár több megoldandó helyzettel nem tudunk mit kezdeni, elakadtunk. Ez pedig félelemmel vagy szorongással tölthet el bennünket. Gyakran ez a szorongás rávetül más életterületekre is, és egyre több helyzetben érezzük a stressz szorító jelenlétét. Ekkor az önismeret segítségével megvizsgálhatjuk a stresszt kiváltó eredeti okot, és rájöhetünk, hogy csak egy adott szituáció szorongató számunkra. A félelmünk csökken, az erőforrásaink gyarapításával és felhasználásával pedig hatékonyan kezelhetjük és megszüntethetjük a stresszt.\n\nTársas kapcsolatok fejlesztése\n\n• A társas kapcsolataink áthatják az életünket. Egyes megközelítések szerint az identitásunk és a személyiségünk is elválaszthatatlan a körülöttünk élőktől. Összefonódik. Nem csoda hát, ha a problémáink egy része a kapcsolatainkból fakadnak. Ekkor segíthet igazán egy külső támogató fél, aki az Ön kapcsolati hálóján belül csakis Önre fókuszál, mindezt pedig empátiával és elfogadással teszi. Érdeklődve várom, hogy megismerhessem!\n\nÖnismeret\n\n• Az önismeret a fejlődés alapja. Az önismeret lehetővé teszi, hogy megértsük a múltat, elfogadjuk a jelent és aktívan tegyünk egy szebb jövőért. Azonban az önismeret nehéz, pont a benne rejlő lehetőségek miatt. Ki ne mondta volna magában, hogy majd később foglalkozom magammal? Majd, ha lesz rá energiám. Most túl megerőltető. Ezek teljesen érthető mondatok, sőt arról árulkodnak, hogy az adott probléma mennyire fontos számunkra. Ha valamilyen lelki nehézséggel makacs módon nem szeretnénk foglalkozni, onnan tudhatjuk, hogy mégis érdemes. Az önismeret lehetőséget kínál a viselkedésünk mélyebb megismerésére, így segítve minket a problémáink hatékonyabb megoldásában.\n\nEgyéb:\n\n• Önértékelési problémák, önbizalomhiány\n\n• Szorongás/szorongásos problémák\n\n• Párkapcsolati és családi problémák\n\n• Életvezetési nehézségek\n\n• Relaxáció\n\n• Kommunikáció fejlesztés\n\nÉrdeklődési területek:\n\n• Sport\n\n• Teljesítmény és motiváció kapcsolata.\n\n• Krízisintervenció\n\n• Vallás és Spiritualitás\n\n• Trauma feldolgozás\n\n• Filozófia\n\n• Burnout",
-      "tanitomesterek": [
-        "Dr. Tringer László: Orvos, Pszichiáter.",
-        "Aki bevezetett a Rogersi személyközpontú pszichológiába és megmutatta mennyit ér az emberségesség és a feltétel nélküli elfogadás.",
-        "Pintér Gábor: Klinikai Szakpszichológus, Pszichoterapeuta",
-        "Aki egyrészt megmutatta, mennyire fontos az önismeret a segítő szakmákban, másrészt erősítette bennem a bátorságot.",
-        "Dr. Szőnyi Magda: pszichológus, relaxációs gyakorlatvezető, szimbólumterapeuta",
-        "Aki megmutatta számomra, hogy a terápiában nem a “miért?” kérdés a lényeg, hanem a “mit jelent?”. Nem lényeg, hogy sikerül-e egy gyakorlat, hanem az a lényeg, hogy ez a személyt milyen érzésekkel tölti el? Az egyéni élmény a kulcs."
-      ],
-      "rolam_mondtak": [
-        "Hónapok óta tartó szorongásaimmal kapcsolatban kerestem fel Bencét, aki a kezdetektől fogva jól átlátja és átérzi a helyzetemet. A vele való munkát közvetlennek érzem, könnyen meg tudom vele osztani a gondolataimat és a problémáimat, amiket mindig türelmesen meghallgat. Segítségével és a módszereivel egyértelmű előrelépést tapasztaltam az állapotomban és az általános hangulatom is sokkal pozitívabb, mint mielőtt a segítségét kértem.",
-        "Bencével az első alkalom során átbeszéltük milyen célokat tűzünk amiken dolgozni szeretnék. Nagyon szerettem hozzá járni, néha azon kaptam magam, hogy éppen, hogy csak elkezdődött az alkalom már vége is volt olyan jól telt az idő. A megteremtett légkörben mindig úgy éreztem, hogy bátran megoszthatom minden gondolatom.Úgy érzem nagyon sokat fejlődtem a közös munka során, ha a későbbiekben ismét szakemberhez szeretnék fordulni mindenképpen őt fogom először megkeresni.",
-        "Hónapok óta tartó szorongásaimmal kapcsolatban kerestem fel Bencét, aki a kezdetektől fogva jól átlátja és átérzi a helyzetemet. A vele való munkát közvetlennek érzem, könnyen meg tudom vele osztani a gondolataimat és a problémáimat, amiket mindig türelmesen meghallgat. Segítségével és a módszereivel egyértelmű előrelépést tapasztaltam az állapotomban és az általános hangulatom is sokkal pozitívabb, mint mielőtt a segítségét kértem. ”\nÚgy érzem nagyon sokat fejlődtem a közös munka során, ha a későbbiekben ismét szakemberhez szeretnék fordulni mindenképpen őt fogom először megkeresni."
-      ],
-      "rolam_mondtak_rejtett_a_forrason": false,
-      "aktualitasok": "",
-      "egyeb_fejezetek": {
-        "Az autogén tréningről": "Az Autogén Tréninget Schultz, német pszichiáter fejlesztette ki arra a megfigyelésre alapozva, hogy néha mi magunk is képesek vagyunk hipnotikus állapotba hozni saját magunkat, amely jótékony hatással bír a mentális és a fizikai egészségünkre. Az Autogén Tréning egy relaxációs technika, amely segít a stresszkezelésben, megnyugvásban, és lehetőséget biztosíthat önmagunk mélyebb megismerésére. Az autogén tréningnek így két fő funkciója van: a relaxáció és az önismeret. Ezeket a gyakorlatokat könnyedén lehet alkalmazni akárhol akár a tömegközlekedésen is, ha épp moderálni vagy csökkenteni szeretnénk a stresszre adott reakciónkat. A mai felgyorsult világban ez igencsak kapóra jöhet. Ha azonban a felületesebb kezelés mellett mélyebben szeretnénk megismerni önmagunkat, arra is alkalmas az Autogén Tréning. Ugyanis az ellazult, relaxált állapotban olyan tudattalan tartalmak jöhetnek a felszínre, amelyek segítségül szolgálhatnak a viselkedésünk és működésünk megismerésére. E két funkció által az Autogén Tréning egy igazán hatásos módszer, amelyet a pszichológusok Nyugat-Európában előszeretettel alkalmaznak."
-      },
-      "oneletrajz": "## Iskolai végzettség\n2020-2023\nOkleveles pszichológus\nEötvös Loránd Tudományegyetem\nTanácsadás- és Iskolapszichológia specializáció\n\n2020-2021\nAutogén Tréning – Relaxációs gyakorlatvezető\n\n2020-2021\nSnowboard Instruktori OKJ-s képzés\n\n## Szakmai tapasztalat\nRelaxációs Gyakorlatvezető Munkakör (2022 október -)\n\n• Autogén Tréning gyakorlatok vezetése\n\n• Egyéni konzultációk vezetése\n\n• A szakmai kompetencia határok tiszteletben tartása mellett egyéni autogén tréning relaxációs, és önismereti konzultációk tartása\n\n• Szupervízió igénybevétele\n\n• Workshopok megtervezése\n\nELTE Életvezetési Tanácsadás (2021 ősz)\n\n• Szakmai gyakorlat\n\n• Esetek önálló vezetése, teljes tanácsadói folyamat lebonyolítása, szupervízió\n\nELTE IK Diáktámogató Központ (2021 tavasz)\n\n• Csoportos autogén tréning\n\n• Pszichoedukáció\n\n• Kurzustartás online és offline egyaránt\n\nELTE BA Klinikai gyakorlat (2019 ősz)\n\n• Egy depresszív és egy paranoid-skizoid eset vezetése\n\nAutogén Tréning Képzés Szupervíziós eset vezetés (2021 tavasz)\n\n• 15-üléses egyéni folyamat levezetése\n\nSnowboard oktatás (2021 ősz -)\n\n• Pedagógiai gyakorlatok alkalmazása a szakmai tudás átadása mellett\n\n• Sítábor szervezése és lebonyolítása\n\n## Önismeret\n2020 február – június.\n\n• Autogén Tréning Önismereti szakasza: 30 óra\n\n2021 szeptember – 2022 december\n\n• Rogersi Személyközpontú Pszichoterápiás/Tanácsadói Módszerspecifikus Képzés Önismereti szakasza: 150 óra.\n\n2022 november –\n\n• Egyéni terápia",
-      "kepzes": [
-        "2020-2023",
-        "2020-2021",
-        "2020-2021"
-      ],
-      "oktat": true,
-      "szupervizor": false,
-      "angol_profil": true,
-      "fejezet_cimek_forras": [
-        "Hitvallás",
-        "Bemutatkozás",
-        "Miben tudok segíteni?",
-        "Akiktől a legtöbbet tanultam:",
-        "Rólam mondták",
-        "Az autogén tréningről",
-        "Szakmai önéletrajz",
-        "Bejelentkezés"
-      ],
-      "elrendezes": "fejezetes",
-      "minta": [],
-      "forras_url": "https://budaipszichologus.hu/pszichologusaink-munkatarsaink/szelenyi-bence/",
       "rolam_mondtak_sablon_kiszurve": 0
     },
     {

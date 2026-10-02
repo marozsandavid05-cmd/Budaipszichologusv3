@@ -1,15 +1,11 @@
 /* ============================================================
    PÁR- ÉS CSALÁDTERÁPIA · body.p-par
-   1 hero statement, két hang em-mel, alul cred + két belépő, jobbra CTA · 2 párként, photo-text (ules-01, peel) ·
+   1 teljes képes hero, szöveg jobb lent (ülés a zöld fotelnél) · 2 párként, photo-text (ules-01, peel) ·
    3 családként: szöveg balra, kihúzott mondat és gyakori helyzetek jobbra (lip--r) · 4 kinek való, kinek nem: két lista (wipe-d) ·
    5 gyakori kérdések: bal sticky cím, jobb details (peel) · 6 sötét záró fotó nélkül: két út sorokban (lip)
    ============================================================ */
-.p-par .hero{--lamp-x:12%;--lamp-y:18%;padding-bottom:9vh}
-.p-par .hero--statement h1{max-width:26ch}
-.p-par .hero__foot{align-items:end}
-.p-par .hero__left{display:grid;gap:1.1rem}
-.p-par .hero__entries{display:flex;gap:1.6rem;flex-wrap:wrap}
-.p-par .hero .aline{bottom:calc(6vh + .8rem)}
+.p-par .hero{--focus:50% 40%;--focus-m:60% 40%;--vx:88%;--vy:84%;--vw:52%;--vh:72%;--veil-a:.92;--veil-b:.64}
+.p-par .hero__sub em{font-style:italic;color:var(--w-gold-text)}
 
 /* 2 · párként */
 .p-par #par{--lamp-x:90%;--lamp-y:16%;padding-top:calc(var(--sec) + 5vh)}
@@ -63,8 +59,6 @@
 .p-par .closer__foot p{max-width:44ch}
 
 @media (max-width:900px){
-  .p-par .hero{padding-bottom:8vh}
-  .p-par .hero__entries{gap:1rem}
   .p-par #par{padding-top:calc(var(--sec) + 4vh)}
   .p-par .csalad__body,.p-par .csalad__side,.p-par .kinek__col:first-child,.p-par .kinek__col:last-child,.p-par .kerd__side,.p-par .kerd .faq{grid-column:1;position:static}
   .p-par .csalad__side{margin-top:1.4rem;padding-top:0}

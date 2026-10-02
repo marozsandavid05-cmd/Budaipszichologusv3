@@ -1,25 +1,16 @@
 /* ============================================================
    CSOPORTOK · body.p-csoportok
-   1 hero strip (cím bal fent, bevezető jobb, marquee alul) · 2 miért csoport quote (peel, közép) ·
+   1 teljes képes hero, szöveg középen fent az égen (csoport a stégen) · 2 miért csoport quote (peel, közép) ·
    3 négy csoportforma rows (lip--r) · 4 induló: telefonszám nagyban (wipe-d, jobbra) ·
    hair · 5 keretek két hasáb · 6 closer--text (sötét lip)
    ============================================================ */
-.p-csoportok .hero{--lamp-x:10%;--lamp-y:14%}
+.p-csoportok .hero{--focus:50% 70%;--focus-m:50% 76%;--vx:50%;--vy:20%;--vw:82%;--vh:84%;--veil-a:.9;--veil-b:.66}
 .p-csoportok #miert{--lamp-x:50%;--lamp-y:8%;padding-top:calc(var(--sec) + 5vh)}
 .p-csoportok #tipusok{--lamp-x:88%;--lamp-y:86%;padding-bottom:calc(var(--sec) + 4vh)}
 .p-csoportok #indulo{--lamp-x:14%;--lamp-y:22%;padding-top:calc(var(--sec) + 6vh)}
 .p-csoportok #keretek{--lamp-x:82%;--lamp-y:14%}
 .p-csoportok #zaro{--lamp-x:72%;--lamp-y:30%}
 
-/* hero: a marquee max-content sora ne nyújtsa a rács oszlopát (különben a fejléc jobb fele a képernyőn kívülre kerül) */
-.p-csoportok .hero--strip{grid-template-columns:minmax(0,1fr)}
-.p-csoportok .marq{min-width:0;max-width:100%}
-/* a képsor alja 6vh-t szabadon hagy a peel-nek */
-.p-csoportok .hero--strip .hero__head{padding-bottom:2.4vh}
-.p-csoportok .hero__title{display:grid;gap:.8rem}
-.p-csoportok .hero__lead{display:grid;gap:1rem;max-width:44ch;justify-items:start;padding-bottom:.4rem}
-.p-csoportok .hero__lead p{color:var(--w-muted)}
-.p-csoportok .marq__row{padding-bottom:calc(3vh + 6vh)}
 
 /* 2 · idézet */
 .p-csoportok .quote blockquote{grid-column:3 / 11;text-align:center}
@@ -48,8 +39,6 @@
 .p-csoportok .kf dd a{color:var(--w-gold-text);border-bottom:1px solid var(--w-line)}
 
 @media (max-width:900px){
-  .p-csoportok .hero__lead{max-width:100%}
-  .p-csoportok .marq__row{padding-bottom:calc(2vh + 5vh)}
   .p-csoportok .quote blockquote{grid-column:1;text-align:left}
   .p-csoportok .quote blockquote footer{text-align:left}
   .p-csoportok .rows__kinek{grid-column:2;justify-self:start}
