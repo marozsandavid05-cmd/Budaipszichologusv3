@@ -124,32 +124,83 @@
   </section>
 
   <!-- REGISZTER · egysoros eszköztár (darabszám, lenyíló Szűrők, rendezés) a lista fölött, a sorok teljes szélességben, minden sor helyben nyílik -->
+  <!-- REGISZTER · bal oldalt sticky szűrő-oszlop (darabszám + chipek, a v3 logikája, David kérése 2026-10-05), jobbra a sorok, minden sor helyben nyílik -->
   <section class="reg reg--full amb surface" data-world="nap" id="regiszter">
+    <aside class="reg__side">
+      <p class="reg__count"><span class="num" data-reg-count>35</span><small>szakember a szűrés szerint</small></p>
+      <div>
+        <p class="eyebrow reg__label">Kinek</p>
+        <div class="chips">
+          <button class="chip" type="button" data-filter="kinek" data-value="magamnak" aria-pressed="false">Magamnak</button>
+          <button class="chip" type="button" data-filter="kinek" data-value="gyereknek" aria-pressed="false">Gyereknek, kamasznak</button>
+          <button class="chip" type="button" data-filter="kinek" data-value="parkent" aria-pressed="false">Párként</button>
+          <button class="chip" type="button" data-filter="kinek" data-value="csaladkent" aria-pressed="false">Családként</button>
+          <button class="chip" type="button" data-filter="kinek" data-value="cegkent" aria-pressed="false">Cégként</button>
+          <button class="chip" type="button" data-filter="kinek" data-value="sportolokent" aria-pressed="false">Sportolóként</button>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow reg__label">Miben</p>
+        <div class="chips">
+          <!-- GEN:chips-miben:start -->
+<button class="chip" type="button" data-filter="miben" data-value="szorongas" aria-pressed="false">Szorongás, pánik</button>
+<button class="chip" type="button" data-filter="miben" data-value="hangulat" aria-pressed="false">Hangulat, depresszió</button>
+<button class="chip" type="button" data-filter="miben" data-value="kieges" aria-pressed="false">Kiégés, stressz</button>
+<button class="chip" type="button" data-filter="miben" data-value="gyasz" aria-pressed="false">Gyász, veszteség, trauma</button>
+<button class="chip" type="button" data-filter="miben" data-value="parkapcsolat" aria-pressed="false">Párkapcsolat</button>
+<button class="chip" type="button" data-filter="miben" data-value="csalad" aria-pressed="false">Család, gyereknevelés</button>
+<button class="chip" type="button" data-filter="miben" data-value="fuggoseg" aria-pressed="false">Függőség</button>
+<button class="chip" type="button" data-filter="miben" data-value="test" aria-pressed="false">Evés, test, alvás</button>
+<button class="chip" type="button" data-filter="miben" data-value="onismeret" aria-pressed="false">Önismeret, önértékelés</button>
+<button class="chip" type="button" data-filter="miben" data-value="eletvezetes" aria-pressed="false">Életvezetés, döntés</button>
+<button class="chip" type="button" data-filter="miben" data-value="karrier" aria-pressed="false">Karrier, vezetés</button>
+<button class="chip" type="button" data-filter="miben" data-value="krizis" aria-pressed="false">Krízis, változás</button>
+<button class="chip" type="button" data-filter="miben" data-value="sport" aria-pressed="false">Sport, teljesítmény</button>
+<!-- GEN:chips-miben:end -->
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow reg__label">Forma</p>
+        <div class="chips">
+          <button class="chip" type="button" data-filter="forma" data-value="egyeni" aria-pressed="false">Egyéni</button>
+          <button class="chip" type="button" data-filter="forma" data-value="par" aria-pressed="false">Pár</button>
+          <button class="chip" type="button" data-filter="forma" data-value="csalad" aria-pressed="false">Család</button>
+          <button class="chip" type="button" data-filter="forma" data-value="csoport" aria-pressed="false">Csoport</button>
+          <button class="chip" type="button" data-filter="forma" data-value="ceges" aria-pressed="false">Céges</button>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow reg__label">Mód és nyelv</p>
+        <div class="chips">
+          <button class="chip" type="button" data-filter="mod" data-value="szemelyes" aria-pressed="false">Személyesen</button>
+          <button class="chip" type="button" data-filter="mod" data-value="online" aria-pressed="false">Online is</button>
+          <button class="chip" type="button" data-filter="nyelv" data-value="angol" aria-pressed="false">Angolul is</button>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow reg__label">Díjsáv, 50 perc</p>
+        <div class="chips">
+          <button class="chip num" type="button" data-filter="ar" data-value="15-18" aria-pressed="false">15-18 ezer Ft</button>
+          <button class="chip num" type="button" data-filter="ar" data-value="15-20" aria-pressed="false">15-20 ezer Ft</button>
+          <button class="chip num" type="button" data-filter="ar" data-value="18-25" aria-pressed="false">18-25 ezer Ft</button>
+          <button class="chip num" type="button" data-filter="ar" data-value="25-30" aria-pressed="false">25-30 ezer Ft</button>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow reg__label">Szerep a szakképzőhelyen</p>
+        <div class="chips">
+          <button class="chip" type="button" data-filter="szerep" data-value="oktato" aria-pressed="false">Oktató</button>
+          <button class="chip" type="button" data-filter="szerep" data-value="szupervizor" aria-pressed="false">Szupervízor</button>
+        </div>
+      </div>
+      <button class="btn btn--text" type="button" data-reg-reset hidden>Szűrők törlése</button>
+      <p class="reg__note">Az arany pont a sorszám mellett: a szakképzőhely oktatója vagy szupervízora. Kattintson a sorra: három mondat, két gomb.</p>
+    </aside>
     <div class="reg__main">
-      <div class="reg__tools" role="group" aria-label="Szűrés és rendezés">
-        <p class="reg__count"><b class="num" data-reg-count>35</b> szakember</p>
-        <details class="tools__more">
-          <summary>Szűrők <b data-reg-active hidden></b></summary>
-          <div class="tools__grid">
-            <label class="tool"><span>Téma</span><select data-filter="miben">
-        <!-- GEN:options-miben:start -->
-<option value="">bármelyik</option><option value="szorongas">szorongás, pánik</option><option value="hangulat">hangulat, depresszió</option><option value="kieges">kiégés, stressz</option><option value="gyasz">gyász, veszteség, trauma</option><option value="parkapcsolat">párkapcsolat</option><option value="csalad">család, gyereknevelés</option><option value="fuggoseg">függőség</option><option value="test">evés, test, alvás</option><option value="onismeret">önismeret, önértékelés</option><option value="eletvezetes">életvezetés, döntés</option><option value="karrier">karrier, vezetés</option><option value="krizis">krízis, változás</option><option value="sport">sport, teljesítmény</option>
-<!-- GEN:options-miben:end -->
-        </select></label>
-            <label class="tool"><span>Kinek</span><select data-filter="kinek"><option value="">bárkinek</option><option value="magamnak">nekem, felnőttként</option><option value="gyereknek">gyereknek, kamasznak</option><option value="parkent">párként</option><option value="csaladkent">családként</option><option value="cegkent">cégként</option><option value="sportolokent">sportolóként</option></select></label>
-            <label class="tool"><span>Forma</span><select data-filter="forma"><option value="">bármilyen</option><option value="egyeni">egyéni</option><option value="par">pár</option><option value="csalad">család</option><option value="csoport">csoport</option><option value="ceges">céges</option></select></label>
-            <label class="tool"><span>Mód</span><select data-filter="mod"><option value="">mindegy</option><option value="szemelyes">személyesen</option><option value="online">online is</option></select></label>
-            <label class="tool"><span>Díjsáv, 50 perc</span><select data-filter="ar"><option value="">bármelyik</option><option value="15-18">15-18 ezer Ft</option><option value="15-20">15-20 ezer Ft</option><option value="18-25">18-25 ezer Ft</option><option value="25-30">25-30 ezer Ft</option></select></label>
-            <label class="tool"><span>Nyelv</span><select data-filter="nyelv"><option value="">magyarul</option><option value="angol">angolul is</option></select></label>
-            <label class="tool"><span>Szerep a képzőhelyen</span><select data-filter="szerep"><option value="">mindegy</option><option value="oktato">oktató</option><option value="szupervizor">szupervízor</option></select></label>
-          </div>
-        </details>
-        <p class="tools__note small muted">Az arany pont a sorszám mellett: oktató vagy szupervízor</p>
-        <div class="tools__end">
-          <button class="btn btn--text tools__reset" type="button" data-reg-reset hidden>Szűrők törlése</button>
-          <div class="seg" role="group" aria-label="Rendezés">
-            <button type="button" data-sort="alap" aria-pressed="true">sorszám</button><button type="button" data-sort="nev" aria-pressed="false">névsor</button>
-          </div>
+      <div class="reg__bar">
+        <span></span>
+        <div class="seg" role="group" aria-label="Rendezés">
+          <button type="button" data-sort="alap" aria-pressed="true">sorszám</button><button type="button" data-sort="nev" aria-pressed="false">névsor</button>
         </div>
       </div>
       <div class="reg__list">
